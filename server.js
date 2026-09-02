@@ -283,8 +283,29 @@ function authPlayer(room, body) {
 }
 
 const server = http.createServer((req, res) => {
-  const u = new URL(req.url, "http://x");
-  const parts = u.pathname.split("/").filter(Boolean); // e.g. ["api","rooms","K7X9P2","join"]
+  const u = new URL(req.url, "http://x"); // <-- u is defined HERE, inside
+  const parts = u.pathname.split("/").filter(Boolean);
+
+  if (req.method === "OPTIONS") {
+    res.writeHead(204, { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "Content-Type", "Access-Control-Allow-Methods": "GET,POST,OPTIONS" });
+    return res.end();
+  }
+
+  // ADD THIS TEMP ROOT ROUTE FOR TESTING
+  if (u.pathname === "/") {
+    res.writeHead(200, {"Content-Type":"text/plain"});
+    return res.end("JEHU API is running. Rooms: " + rooms.size);
+  }
+
+  if (u.pathname === "/health") { return json(res, 200, { ok: true, rooms: rooms.size }); }
+
+  if (parts[0] === "api" && parts[1] === "rooms") {
+    //... the rest of your api code stays the same
+  }
+
+  // fallback to static files
+  serveStatic(req, res, u.pathname);
+});
 
   if (req.method === "OPTIONS") {
     res.writeHead(204, { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "Content-Type", "Access-Control-Allow-Methods": "GET,POST,OPTIONS" });
