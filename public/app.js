@@ -1,225 +1,157 @@
-let session = JSON.parse(sessionStorage.getItem("jehuCampSession") || "null");
-let es = null;
-let roundTickInterval = null;
+const $ = s => document.querySelector(s);
+const ROUND_TIME = 35;
+let socket, me = null, room = null, current = null, answered = false, lastResults = [];
 
-const el = document.getElementById("app");
+const state = { avatar: "🛡️", name: localStorage.getItem("jehu-arena-name") || "" };
 
-function saveSession(s) { session = s; sessionStorage.setItem("jehuCampSession", JSON.stringify(s)); }
-function clearSession() { session = null; sessionStorage.removeItem("jehuCampSession"); }
-
-async function post(path, body) {
-  const r = await fetch(path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body || {}) });
-  const data = await r.json().catch(() => ({}));
-  if (!r.ok) throw new Error(data.error || "Request failed");
-  return data;
+function show(id) {
+  document.querySelectorAll(".screen").forEach(x => x.classList.remove("active"));
+  $("#" + id).classList.add("active");
+  window.scrollTo({top:0, behavior:"smooth"});
 }
-
-function connectStream() {
-  if (es) es.close();
-  es = new EventSource(`/api/rooms/${session.code}/stream?playerId=${encodeURIComponent(session.playerId)}&token=${encodeURIComponent(session.token)}`);
-  es.addEventListener("state", (e) => render(JSON.parse(e.data)));
-  es.onerror = () => { /* EventSource auto-reconnects */ };
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
-
-async function createRoom(mode, roundCount, name) {
-  const data = await post("/api/rooms", { mode, roundCount, name });
-  saveSession({ code: data.code, playerId: data.playerId, token: data.token });
-  connectStream();
+function connect() {
+  const proto = location.protocol === "https:" ? "wss" : "ws";
+  socket = new WebSocket(`${proto}://${location.host}`);
+  socket.onopen = () => setStatus("ONLINE", true);
+  socket.onclose = () => setStatus("OFFLINE", false);
+  socket.onerror = () => setStatus("CONNECTION ERROR", false);
+  socket.onmessage = e => handle(JSON.parse(e.data));
 }
-async function joinRoom(code, name) {
-  const data = await post(`/api/rooms/${code.toUpperCase()}/join`, { name });
-  saveSession({ code: data.code, playerId: data.playerId, token: data.token });
-  connectStream();
+function setStatus(t, ok) {
+  $("#status").textContent = t;
+  $("#status").className = "status " + (ok ? "ok" : "bad");
 }
-function leaveRoom() { if (es) es.close(); clearSession(); renderHome(); }
-
-function renderHome(err) {
-  el.innerHTML = `
-   <div class="wrap">
-    <div class="crest">🏕️</div>
-    <h1>JEHU CAMP</h1>
-    <p class="lead">Multiplayer Pressure Protocol. Everyone gets the same scam. Everyone decides privately. Nobody sees the others' answers until it's locked.</p>
-    ${err ? `<div class="err">${err}</div>` : ""}
-    <div class="card">
-      <h2>Create a camp</h2>
-      <input id="hostName" placeholder="Your name" maxlength="20">
-      <div class="row">
-        <label><input type="radio" name="mode" value="duel" checked> ⚔️ Defender Duel<small>Compete — every player for themselves, correctness beats speed</small></label>
-        <label><input type="radio" name="mode" value="household"> 🛡️ Household Shield<small>Cooperate — one shared shield, everyone survives or falls together</small></label>
-      </div>
-      <label>Rounds
-        <select id="roundCount"><option>6</option><option selected>10</option><option>14</option><option>16</option></select>
-      </label>
-      <button class="btn" id="createBtn">Create Camp</button>
-    </div>
-    <div class="card">
-      <h2>Join a camp</h2>
-      <input id="joinCode" placeholder="ROOM CODE" maxlength="6" style="text-transform:uppercase">
-      <input id="joinName" placeholder="Your name" maxlength="20">
-      <button class="btn secondary" id="joinBtn">Join Camp</button>
-    </div>
-   </div>`;
-  document.getElementById("createBtn").onclick = async () => {
-    const name = document.getElementById("hostName").value.trim();
-    const mode = document.querySelector('input[name="mode"]:checked').value;
-    const roundCount = Number(document.getElementById("roundCount").value);
-    try { await createRoom(mode, roundCount, name); } catch (e) { renderHome(e.message); }
-  };
-  document.getElementById("joinBtn").onclick = async () => {
-    const code = document.getElementById("joinCode").value.trim();
-    const name = document.getElementById("joinName").value.trim();
-    try { await joinRoom(code, name); } catch (e) { renderHome(e.message); }
-  };
-  const params = new URLSearchParams(location.search);
-  if (params.get("join")) document.getElementById("joinCode").value = params.get("join").toUpperCase();
+function send(type, payload={}) {
+  if (!socket || socket.readyState !== 1) return alert("Connection is not ready.");
+  socket.send(JSON.stringify({type, ...payload}));
 }
-
-function render(state) {
-  if (state.state === "lobby") return renderLobby(state);
-  if (state.state === "round") return renderRound(state);
-  if (state.state === "reveal") return renderReveal(state);
-  if (state.state === "ended") return renderEnded(state);
+function nameOrDefault() {
+  const n = ($("#name").value.trim() || state.name || "Defender").slice(0,22);
+  state.name = n; localStorage.setItem("jehu-arena-name", n); return n;
 }
-
-function renderLobby(state) {
-  const me = state.players.find(p => p.id === session.playerId);
-  const isHost = me && me.isHost;
-  el.innerHTML = `
-   <div class="wrap">
-    <div class="crest">🏕️</div>
-    <h1>JEHU CAMP</h1>
-    <div class="card">
-      <div class="kicker">${state.mode === "household" ? "🛡️ Household Shield" : "⚔️ Defender Duel"}</div>
-      <h2>Room code</h2>
-      <div class="code">${state.code}</div>
-      <button class="btn secondary" id="copyLink">Copy invite link</button>
-      <p class="hint">${state.totalRounds} rounds. Share the code or link with whoever's joining.</p>
-    </div>
-    <div class="card">
-      <h2>Players (${state.players.length}/8)</h2>
-      <div class="plist">${state.players.map(p => `<div class="prow ${p.connected ? "" : "off"}"><span>${p.isHost ? "👑 " : ""}${p.name}${p.id === session.playerId ? " (you)" : ""}</span><span>${p.connected ? "online" : "offline"}</span></div>`).join("")}</div>
-      ${isHost
-        ? `<button class="btn" id="startBtn" ${state.players.length < 2 ? "disabled" : ""}>Start Camp</button>${state.players.length < 2 ? `<p class="hint">Need at least 2 players to start.</p>` : ""}`
-        : `<p class="hint">Waiting for the host to start…</p>`}
-      <button class="btn secondary" id="leaveBtn">Leave</button>
-    </div>
-   </div>`;
-  document.getElementById("copyLink").onclick = () => {
-    const link = `${location.origin}${location.pathname}?join=${state.code}`;
-    if (navigator.clipboard) navigator.clipboard.writeText(link);
-    toast("Invite link copied");
-  };
-  document.getElementById("leaveBtn").onclick = leaveRoom;
-  if (isHost) document.getElementById("startBtn").onclick = async () => {
-    try { await post(`/api/rooms/${state.code}/start`, { playerId: session.playerId, token: session.token }); }
-    catch (e) { toast(e.message); }
-  };
+function createRoom() {
+  if (!socket || socket.readyState !== 1) return;
+  send("room:create", {name:nameOrDefault(), avatar:state.avatar, mode:$("#mode").value, rounds:Number($("#rounds").value)});
 }
-
-function renderRound(state) {
-  clearInterval(roundTickInterval);
-  const already = state.players.find(p => p.id === session.playerId)?.answered;
-  el.innerHTML = `
-   <div class="wrap">
-    <div class="topbar"><span class="tag">${state.round.tag.toUpperCase()}</span><span>Round ${state.roundIndex + 1} / ${state.totalRounds}</span>${state.shield !== undefined ? `<span>🛡️ ${state.shield}</span>` : ""}</div>
-    <div class="timerbar"><i id="timerFill"></i></div>
-    <div class="card">
-      <div class="question">${state.round.prompt}</div>
-      <div class="choices">${state.round.choices.map((c, i) => `<button class="choice" data-i="${i}" ${already ? "disabled" : ""}>${c}</button>`).join("")}</div>
-      ${already ? `<p class="hint">Locked in. Waiting for the others…</p>` : ""}
-    </div>
-    <div class="card">
-      <h2>Who's answered</h2>
-      <div class="plist">${state.players.map(p => `<div class="prow ${p.connected ? "" : "off"}"><span>${p.name}${p.id === session.playerId ? " (you)" : ""}</span><span>${p.answered ? "🔒 Locked" : "…thinking"}</span></div>`).join("")}</div>
-    </div>
-   </div>`;
-  if (!already) {
-    el.querySelectorAll(".choice").forEach(btn => {
-      btn.onclick = async () => {
-        el.querySelectorAll(".choice").forEach(b => b.disabled = true);
-        try { await post(`/api/rooms/${state.code}/answer`, { playerId: session.playerId, token: session.token, choice: Number(btn.dataset.i) }); }
-        catch (e) { toast(e.message); }
-      };
-    });
-  }
-  const fill = document.getElementById("timerFill");
-  const totalMs = state.roundEndsAt - (state.roundEndsAt - 25000);
-  function tick() {
-    const remain = Math.max(0, state.roundEndsAt - Date.now());
-    const pct = Math.max(0, Math.min(100, remain / 25000 * 100));
-    if (fill) fill.style.width = pct + "%";
-    if (remain <= 0) clearInterval(roundTickInterval);
-  }
-  tick();
-  roundTickInterval = setInterval(tick, 200);
+function joinRoom() {
+  const code = $("#joinCode").value.trim().toUpperCase();
+  if (code.length !== 6) return toast("Enter the 6-character room code.");
+  send("room:join", {code, name:nameOrDefault(), avatar:state.avatar});
 }
-
-function renderReveal(state) {
-  clearInterval(roundTickInterval);
-  const me = state.players.find(p => p.id === session.playerId);
-  const isHost = me && me.isHost;
-  const r = state.reveal;
-  const isLastRound = state.roundIndex + 1 >= state.totalRounds || (state.shield !== undefined && state.shield <= 0);
-  el.innerHTML = `
-   <div class="wrap">
-    <div class="topbar"><span class="tag">${r.tag.toUpperCase()}</span><span>Round ${state.roundIndex + 1} / ${state.totalRounds}</span>${state.shield !== undefined ? `<span>🛡️ ${state.shield}</span>` : ""}</div>
-    <div class="card">
-      <div class="question">${r.prompt}</div>
-      <div class="choices">${r.choices.map((c, i) => `<div class="choice static ${i === r.correct ? "good" : ""}">${c}${i === r.correct ? " ✅" : ""}</div>`).join("")}</div>
-      <div class="feedback good"><b>Why</b><br>${r.explain}</div>
-    </div>
-    <div class="card">
-      <h2>Round results</h2>
-      <div class="plist">${r.answers.map(a => `<div class="prow"><span>${a.name}</span><span>${a.choice === null ? "No answer" : (a.correct ? "✅ Correct" : "❌ Wrong")}</span></div>`).join("")}</div>
-    </div>
-    <div class="card">
-      <h2>${state.mode === "household" ? "Shield status" : "Leaderboard"}</h2>
-      <div class="plist">${[...state.players].sort((a, b) => b.score - a.score).map(p => `<div class="prow"><span>${p.name}${p.id === session.playerId ? " (you)" : ""}${p.streak > 1 ? ` 🔥${p.streak}` : ""}</span><span>${state.mode === "duel" ? p.score + " pts" : ""}</span></div>`).join("")}</div>
-    </div>
-    ${isHost ? `<button class="btn" id="nextBtn">${isLastRound ? "See Results" : "Next Round"}</button>` : `<p class="hint">Waiting for the host to continue…</p>`}
-   </div>`;
-  if (isHost) document.getElementById("nextBtn").onclick = async () => {
-    try { await post(`/api/rooms/${state.code}/next`, { playerId: session.playerId, token: session.token }); }
-    catch (e) { toast(e.message); }
-  };
+function handle(m) {
+  if (m.type === "room:created") { room=m; renderLobby(); }
+  if (m.type === "room:joined") { me=m.me; room=m.lobby; renderLobby(); }
+  if (m.type === "lobby:update") { room=m; renderLobby(); }
+  if (m.type === "round:start") startRound(m);
+  if (m.type === "answer:locked") { answered=true; renderChoices(); toast("Decision locked."); }
+  if (m.type === "players:update") { room.players=m.players; renderScoreboard(); }
+  if (m.type === "round:reveal") revealRound(m);
+  if (m.type === "game:finished") finishGame(m);
+  if (m.type === "error") toast(m.message);
 }
-
-function renderEnded(state) {
-  const res = state.results;
-  el.innerHTML = `
-   <div class="wrap">
-    <div class="crest">${res.mode === "household" ? (res.survived ? "🛡️" : "💥") : "🏆"}</div>
-    <h1>${res.mode === "household" ? (res.survived ? "You survived." : "The scammer got in.") : "Camp complete"}</h1>
-    ${res.mode === "household" ? `<p class="lead">Final shield: ${res.shield}/100</p>` : ""}
-    <div class="card">
-      <h2>${res.mode === "household" ? "Team" : "Final standings"}</h2>
-      <div class="plist">${res.players.map((p, i) => `<div class="prow"><span>${res.mode === "duel" ? `#${i + 1} ` : ""}${p.name}${p.id === session.playerId ? " (you)" : ""}</span><span>${res.mode === "duel" ? p.score + " pts" : ""}</span></div>`).join("")}</div>
-    </div>
-    <div class="card">
-      <h2>Your vulnerability profile</h2>
-      ${renderProfile(res.players.find(p => p.id === session.playerId))}
-    </div>
-    <button class="btn" id="againBtn">Back to home</button>
-   </div>`;
-  document.getElementById("againBtn").onclick = leaveRoom;
+function renderLobby() {
+  show("lobby");
+  $("#roomCode").textContent = room.code;
+  $("#shareLink").value = `${location.origin}/?join=${room.code}`;
+  $("#hostControls").classList.toggle("hidden", room.hostId !== me.id);
+  $("#startBtn").disabled = room.players.length < 2 || room.hostId !== me.id;
+  $("#playerCount").textContent = `${room.players.length}/8`;
+  $("#players").innerHTML = room.players.map(p => `
+    <div class="player ${p.id===me.id?"self":""}">
+      <span class="avatar">${esc(p.avatar)}</span><span><b>${esc(p.name)}</b><small>${p.id===room.hostId?"HOST":"DEFENDER"}</small></span>
+      <span class="readyDot"></span>
+    </div>`).join("");
 }
-
-function renderProfile(p) {
-  if (!p || !p.tagStats || Object.keys(p.tagStats).length === 0) return `<p class="hint">No rounds recorded.</p>`;
-  const rows = Object.entries(p.tagStats).map(([tag, s]) => {
-    const pct = s.total ? Math.round((s.correct / s.total) * 100) : 0;
-    return `<div class="skillrow"><span>${tag}${tag === p.weakestTag ? " ⚠️" : ""}</span><div class="meter"><i style="width:${pct}%"></i></div><b>${pct}%</b></div>`;
+function copyLink() {
+  navigator.clipboard?.writeText($("#shareLink").value).then(()=>toast("Invite link copied."));
+}
+function startGame() { send("room:start"); }
+function startRound(m) {
+  current=m; answered=false; show("arena");
+  $("#roundNo").textContent = `ROUND ${m.round} / ${m.totalRounds}`;
+  $("#category").textContent = m.scenario.category;
+  $("#shieldWrap").classList.toggle("hidden", room.mode !== "team");
+  $("#shield").textContent = `${m.teamShield ?? 100}%`;
+  $("#scenarioTitle").textContent = m.scenario.title;
+  $("#scenarioText").textContent = m.scenario.message;
+  $("#evidence").innerHTML = m.scenario.evidence.map(x=>`<span>${esc(x)}</span>`).join("");
+  $("#timer").textContent = ROUND_TIME;
+  renderChoices();
+  renderScoreboard();
+  const end = m.endsAt;
+  clearInterval(window.tick);
+  window.tick = setInterval(()=> {
+    const left=Math.max(0, Math.ceil((end-Date.now())/1000));
+    $("#timer").textContent=left;
+    if(left<=0) clearInterval(window.tick);
+  },250);
+}
+function renderChoices() {
+  $("#choices").innerHTML = current.scenario.options.map((x,i)=>`
+    <button class="choice ${answered ? "locked":""}" ${answered?"disabled":""} onclick="answer(${i})">
+      <span>${String.fromCharCode(65+i)}</span>${esc(x)}
+    </button>`).join("");
+  $("#lock").textContent = answered ? "DECISION LOCKED" : "CHOOSE YOUR RESPONSE";
+}
+function answer(i) {
+  if(answered) return;
+  send("round:answer",{choice:i});
+}
+function renderScoreboard() {
+  const ps=(room?.players||[]).slice().sort((a,b)=>b.score-a.score);
+  $("#scoreboard").innerHTML=ps.map((p,i)=>`
+    <div class="rank"><b>${i+1}</b><span class="avatar">${esc(p.avatar)}</span><span class="grow">${esc(p.name)}<small>${p.streak} streak</small></span><strong>${p.score}</strong>${p.answered?'<i>✓</i>':''}</div>`).join("");
+}
+function revealRound(m) {
+  lastResults=m.results; room.players=m.players; clearInterval(window.tick);
+  const mine=m.results.find(x=>x.id===me.id);
+  $("#revealTitle").textContent = mine?.correct ? "🛡️ Your defense held." : "⚠️ The pressure got through.";
+  $("#revealTitle").className = mine?.correct ? "goodText" : "badText";
+  $("#correctAnswer").textContent = m.scenario?.options?.[m.correct] || "Correct response";
+  $("#lesson").textContent=m.lesson;
+  $("#points").textContent = mine ? `+${mine.points} XP` : "+0 XP";
+  $("#shieldWrap").classList.toggle("hidden", room.mode !== "team");
+  $("#shield").textContent = `${m.teamShield ?? 100}%`;
+  $("#resultList").innerHTML=m.results.map(r=>{
+    const p=m.players.find(x=>x.id===r.id);
+    return `<div class="resultRow"><span>${esc(p?.avatar||"🛡️")} ${esc(p?.name||"Defender")}</span><b class="${r.correct?"goodText":"badText"}">${r.correct?"CORRECT":"MISSED"}</b><strong>${r.points>0?"+":""}${r.points}</strong></div>`;
   }).join("");
-  return rows + (p.weakestTag ? `<p class="hint">Your softest spot right now: <b>${p.weakestTag}</b>. Worth a visit to the matching Cyber Academy lesson in JEHU.</p>` : "");
+  show("reveal");
 }
-
-function toast(msg) {
-  let t = document.getElementById("toast");
-  if (!t) { t = document.createElement("div"); t.id = "toast"; document.body.appendChild(t); }
-  t.textContent = msg; t.classList.add("show");
-  clearTimeout(window._toastTimer);
-  window._toastTimer = setTimeout(() => t.classList.remove("show"), 2500);
+function nextAfterReveal() {
+  // Server schedules the next round; return to a waiting reveal screen.
+  $("#waiting").textContent="Preparing the next threat...";
 }
-
-if (session && session.code) connectStream();
-else renderHome();
+function finishGame(m) {
+  clearInterval(window.tick);
+  $("#finalList").innerHTML=m.ranking.map((p,i)=>`
+    <div class="finalRank ${i===0?"champ":""}">
+      <b>#${i+1}</b><span class="avatar">${esc(p.avatar)}</span><span class="grow"><strong>${esc(p.name)}</strong><small>${p.streak} final streak</small></span><strong>${p.score} XP</strong>
+    </div>`).join("");
+  $("#champion").textContent=m.ranking[0]?.name || "Defenders";
+  show("finished");
+}
+function leaveRoom() {
+  send("room:leave");
+  room=null; me=null; current=null;
+  show("home");
+}
+function restart() { send("room:restart"); }
+function toast(t) {
+  $("#toast").textContent=t; $("#toast").classList.add("show");
+  clearTimeout(window.toastT); window.toastT=setTimeout(()=>$("#toast").classList.remove("show"),2600);
+}
+function chooseAvatar(el) {
+  document.querySelectorAll(".avatarPick").forEach(x=>x.classList.remove("selected"));
+  el.classList.add("selected"); state.avatar=el.dataset.a;
+}
+window.addEventListener("DOMContentLoaded",()=>{
+  $("#name").value=state.name;
+  const join=new URLSearchParams(location.search).get("join");
+  if(join) $("#joinCode").value=join;
+  document.querySelectorAll(".avatarPick").forEach(x=>x.addEventListener("click",()=>chooseAvatar(x)));
+  connect();
+});
