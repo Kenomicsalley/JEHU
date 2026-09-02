@@ -3,11 +3,19 @@
 // Real-time push via Server-Sent Events (SSE); actions via JSON POST.
 // Rooms are in-memory (see README for why, and what v2 changes).
 
-const http = require("http");
-const fs = require("fs");
-const path = require("path");
-const crypto = require("crypto");
+const http = require('http');
+const url = require('url');
 
+const server = http.createServer((req, res) => {
+  // Define u inside the request handler
+  const u = url.parse(req.url, true);
+
+  if (u.pathname === '/') {
+    // Your root route logic
+  }
+});
+
+server.listen(process.env.PORT || 3000);
 const PORT = process.env.PORT || 3000;
 const ROUND_MS = 25000;        // time players get to answer a round
 const REVEAL_AUTO_MS = 20000;  // if host goes AFK on the reveal screen, auto-advance
