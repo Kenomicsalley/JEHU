@@ -1,40 +1,25 @@
-# JEHU Arena — Multiplayer Cyber Awareness
+# JEHU ARENA — V2
 
-A real-time multiplayer extension for **JEHU**, the Kenomicsalley cybersecurity awareness game.
+**Kenomicsalley | Keep Your Trust Guarded**
 
-## Game concept: Pressure Protocol
+JEHU Arena is a browser-based cybersecurity awareness game. V2 keeps the real-time multiplayer experience and adds **JEHU vs Computer**, with four difficulty levels.
 
-2–8 defenders join the same room from separate phones or computers.
+## Modes
 
-Each round:
-1. Everyone receives the same realistic scam/fraud scenario.
-2. Players inspect the message and evidence.
-3. Each player privately chooses a response.
-4. The decision locks.
-5. The server reveals the safest response.
-6. Everyone sees the educational debrief and the round leaderboard.
-7. Correct decisions earn the most XP; speed is a secondary bonus.
-8. The final scoreboard crowns the strongest defender.
+- **Defender Duel:** 2–8 human players compete.
+- **Household Shield:** 2–8 human players cooperate.
+- **JEHU vs Computer:** one human plays against a local AI-style opponent.
 
-### Modes
-- **Defender Duel** — competitive individual scoring.
-- **Household Shield** — the same engine, intended for families/households. The UI is ready for a future cooperative scoring layer.
+### Computer difficulty
 
-## Why this fits JEHU
+| Level | Behaviour |
+|---|---|
+| Rookie | Forgiving and inconsistent |
+| Analyst | Solid defensive judgement |
+| Elite | Strong and difficult |
+| JEHU Guardian | Very consistent, intentionally tough but beatable |
 
-The original JEHU already teaches the six psychological buttons — trust, urgency, fear, curiosity, sympathy and greed — and includes a campaign, digital simulator, Scam Lab, Cyber Academy, AI Threat Lab, security checkup, incident response, XP and achievements. The Arena turns those lessons into a social decision experience rather than another quiz.
-
-## Architecture
-
-- Node.js
-- Express
-- WebSocket (`ws`)
-- Static HTML/CSS/JS frontend
-- Server-authoritative rooms and scoring
-- In-memory room state for the first deployment
-- No database required for this MVP
-- Railway-compatible health endpoint at `/health`
-- WebSocket connection automatically uses `wss://` when deployed over HTTPS
+The computer is **not connected to a paid AI service**. Its decisions are generated locally from the same scenario evidence the player receives, keeping the feature free to run.
 
 ## Run locally
 
@@ -43,23 +28,27 @@ npm install
 npm start
 ```
 
-Open http://localhost:3000
-
-Open the same URL on multiple devices on your network (using the host computer's LAN address) or deploy to Railway.
+Then open `http://localhost:3000`.
 
 ## Railway
 
-1. Push this folder to a GitHub repository.
-2. In Railway, create a new project from the GitHub repository.
-3. Railway detects Node.js from `package.json`.
-4. Start command: `npm start` (already in `railway.toml`).
-5. Health check: `/health`.
-6. Railway's public HTTPS domain will support WebSockets through `wss://`.
+The app is designed for Railway with a Node start command of `node server.js`. WebSocket connections automatically use `wss://` when the site is served over HTTPS.
 
-## Important production upgrade before large public launch
+The first multiplayer deployment uses in-memory room state. For a larger production deployment, add Redis/shared state, persistence, reconnect/resume, rate limiting, moderation and observability.
 
-The current server stores rooms in memory. This is intentional for the first multiplayer deployment: it keeps the system simple and cheap. For a multi-instance production environment, add Redis/pub-sub or another shared realtime state layer, persistent player accounts, rate limiting, abuse controls, telemetry, and database-backed profiles.
+## Project structure
+
+```text
+server.js
+package.json
+railway.toml
+public/
+  index.html
+  styles.css
+  app.js
+  solo/index.html
+```
 
 ## Safety
 
-JEHU is a defensive education platform. Scenario content teaches recognition, verification and recovery. It deliberately does not provide operational instructions for fraud, credential theft, malware, unauthorized access, or other criminal activity.
+JEHU is a defensive awareness product. Scenarios are designed to teach recognition, verification and recovery—not to provide operational instructions for committing fraud.
