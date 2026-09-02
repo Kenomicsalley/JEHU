@@ -1,0 +1,13 @@
+{
+  "name": "jehu-camp",
+  "version": "1.0.0",
+  "description": "JEHU CAMP — multiplayer Pressure Protocol rounds for JEHU, a Kenomicsalley cyber awareness project.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {}
+}
