@@ -1,3 +1,8 @@
+// If no static file, at least show something
+if (u.pathname === '/') {
+  res.writeHead(200, {"Content-Type":"text/html"});
+  return res.end("<h1>JEHU CAMP is Live</h1><p>Go to /index.html</p>");
+}
 // JEHU CAMP — multiplayer server
 // Zero external dependencies: Node's built-in http module only.
 // Real-time push via Server-Sent Events (SSE); actions via JSON POST.
@@ -9,6 +14,10 @@ const path = require("path");
 const crypto = require("crypto");
 
 const PORT = process.env.PORT || 3000;
+// ... later
+server.listen(PORT, '0.0.0.0', () => {
+  console.log(`JEHU CAMP listening on :${PORT}`)
+})
 const ROUND_MS = 25000;        // time players get to answer a round
 const REVEAL_AUTO_MS = 20000;  // if host goes AFK on the reveal screen, auto-advance
 const ROOM_TTL_MS = 1000 * 60 * 60 * 3; // rooms older than 3h with no activity get swept
