@@ -32,9 +32,10 @@
         <button class="avatarPick" data-a="🔎">🔎</button><button class="avatarPick" data-a="🤖">🤖</button>
       </div>
       <div class="fields">
-        <label>Mode<select id="mode"><option value="duel">Defender Duel</option><option value="team">Household Shield</option></select></label>
+        <label>Multiplayer mode<select id="mode"><option value="duel">Defender Duel</option><option value="team">Household Shield</option></select></label>
         <label>Rounds<select id="rounds"><option>7</option><option>5</option><option>10</option><option>3</option></select></label>
       </div>
+      <button class="btn computer" onclick="openComputerSetup()">🤖 PLAY AGAINST COMPUTER</button>
       <button class="btn primary" onclick="createRoom()">CREATE ROOM</button>
       <div class="or">OR JOIN A ROOM</div>
       <div class="join"><input id="joinCode" maxlength="6" placeholder="ABC123"><button class="btn" onclick="joinRoom()">JOIN</button></div>
@@ -47,6 +48,58 @@
     <article><b>🏠 Built for households</b><small>Put the room link in a family group and play from separate phones on the same Wi‑Fi or anywhere online.</small></article>
   </div>
   <div class="solo"><a href="/solo/">← Open the full JEHU Solo Academy</a></div>
+</section>
+
+<section id="computerSetup" class="screen">
+  <div class="topline"><div><div class="eyebrow">SINGLE DEFENDER</div><h2>Challenge the machine.</h2></div><button class="ghost" onclick="show('home')">Back</button></div>
+  <div class="computerGrid">
+    <div class="panel computerIntro">
+      <div class="botBadge">🤖</div><h1>JEHU vs AI</h1>
+      <p>Think you can outsmart the computer? 😅 Pick your difficulty and prove that careful verification beats pressure.</p>
+      <div class="warningNote"><b>JEHU rule:</b> higher difficulty does not mean the computer gets to cheat. It simply becomes better at reading the same evidence you see.</div>
+    </div>
+    <div class="panel">
+      <label class="settingLabel">Difficulty</label>
+      <div class="difficultyGrid">
+        <button class="difficulty selected" data-diff="rookie"><b>ROOKIE</b><small>Learning the ropes</small></button>
+        <button class="difficulty" data-diff="analyst"><b>ANALYST</b><small>Thinks before acting</small></button>
+        <button class="difficulty" data-diff="elite"><b>ELITE</b><small>Hard to fool</small></button>
+        <button class="difficulty" data-diff="guardian"><b>JEHU GUARDIAN</b><small>Can you beat it?</small></button>
+      </div>
+      <label class="settingLabel">Rounds<select id="botRounds"><option>7</option><option>5</option><option>10</option><option>3</option></select></label>
+      <button class="btn primary" onclick="startComputerGame()">START CHALLENGE</button>
+    </div>
+  </div>
+</section>
+
+<section id="computerArena" class="screen">
+  <div class="arenaTop"><span id="botRoundNo">ROUND</span><span id="botCategory">THREAT</span><span class="botVs">YOU <b>VS</b> 🤖</span><strong><i id="botTimer">35</i>s</strong></div>
+  <div class="arenaGrid">
+    <main class="scenario panel">
+      <div class="eyebrow">PRESSURE PROTOCOL • AI CHALLENGE</div>
+      <h1 id="botScenarioTitle">Threat</h1>
+      <div class="message" id="botScenarioText"></div>
+      <div class="evidence" id="botEvidence"></div>
+      <div class="lockLabel" id="botLock">CHOOSE YOUR RESPONSE</div>
+      <div id="botChoices"></div>
+    </main>
+    <aside class="panel scoreboard"><div class="panelHead"><h3>Challenge board</h3><span>🤖</span></div><div class="botScoreCard"><span>You</span><strong id="botUserScore">0</strong></div><div class="botScoreCard"><span>Computer</span><strong id="botAIScore">0</strong></div><div class="botThinking" id="botThinking">AI is analysing the evidence…</div></aside>
+  </div>
+</section>
+
+<section id="computerReveal" class="screen">
+  <div class="reveal panel">
+    <div class="eyebrow">AI ROUND DEBRIEF</div><h1 id="botRevealTitle">Result</h1>
+    <div class="points" id="botPoints">+0 XP</div>
+    <div class="correct"><small>SAFEST RESPONSE</small><b id="botCorrectAnswer"></b></div>
+    <div class="lesson"><b>Why?</b><p id="botLesson"></p></div>
+    <div class="aiDecision" id="botDecision"></div>
+    <div class="waiting" id="botWaiting">Next threat loading...</div>
+  </div>
+</section>
+
+<section id="computerFinished" class="screen">
+  <div class="final panel"><div class="eyebrow">AI CHALLENGE COMPLETE</div><h1 id="botFinalTitle">Verdict.</h1><p class="muted" id="botFinalSummary"></p><div class="finalVs"><div><span>YOU</span><strong id="botFinalUser">0</strong></div><div>VS</div><div><span>🤖 COMPUTER</span><strong id="botFinalAI">0</strong></div></div><div class="actions"><button class="btn primary" onclick="startComputerGame()">PLAY AGAIN</button><button class="ghost" onclick="show('home')">HOME</button></div></div>
 </section>
 
 <section id="lobby" class="screen">

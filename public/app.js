@@ -2,156 +2,68 @@ const $ = s => document.querySelector(s);
 const ROUND_TIME = 35;
 let socket, me = null, room = null, current = null, answered = false, lastResults = [];
 
-const state = { avatar: "🛡️", name: localStorage.getItem("jehu-arena-name") || "" };
+const state = { avatar: "🛡️", name: localStorage.getItem("jehu-arena-name") || "", botDifficulty: "rookie" };
 
-function show(id) {
-  document.querySelectorAll(".screen").forEach(x => x.classList.remove("active"));
-  $("#" + id).classList.add("active");
-  window.scrollTo({top:0, behavior:"smooth"});
-}
-function esc(s) {
-  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-}
-function connect() {
-  const proto = location.protocol === "https:" ? "wss" : "ws";
-  socket = new WebSocket(`${proto}://${location.host}`);
-  socket.onopen = () => setStatus("ONLINE", true);
-  socket.onclose = () => setStatus("OFFLINE", false);
-  socket.onerror = () => setStatus("CONNECTION ERROR", false);
-  socket.onmessage = e => handle(JSON.parse(e.data));
-}
-function setStatus(t, ok) {
-  $("#status").textContent = t;
-  $("#status").className = "status " + (ok ? "ok" : "bad");
-}
-function send(type, payload={}) {
-  if (!socket || socket.readyState !== 1) return alert("Connection is not ready.");
-  socket.send(JSON.stringify({type, ...payload}));
-}
-function nameOrDefault() {
-  const n = ($("#name").value.trim() || state.name || "Defender").slice(0,22);
-  state.name = n; localStorage.setItem("jehu-arena-name", n); return n;
-}
-function createRoom() {
-  if (!socket || socket.readyState !== 1) return;
-  send("room:create", {name:nameOrDefault(), avatar:state.avatar, mode:$("#mode").value, rounds:Number($("#rounds").value)});
-}
-function joinRoom() {
-  const code = $("#joinCode").value.trim().toUpperCase();
-  if (code.length !== 6) return toast("Enter the 6-character room code.");
-  send("room:join", {code, name:nameOrDefault(), avatar:state.avatar});
-}
-function handle(m) {
-  if (m.type === "room:created") { room=m; renderLobby(); }
-  if (m.type === "room:joined") { me=m.me; room=m.lobby; renderLobby(); }
-  if (m.type === "lobby:update") { room=m; renderLobby(); }
-  if (m.type === "round:start") startRound(m);
-  if (m.type === "answer:locked") { answered=true; renderChoices(); toast("Decision locked."); }
-  if (m.type === "players:update") { room.players=m.players; renderScoreboard(); }
-  if (m.type === "round:reveal") revealRound(m);
-  if (m.type === "game:finished") finishGame(m);
-  if (m.type === "error") toast(m.message);
-}
-function renderLobby() {
-  show("lobby");
-  $("#roomCode").textContent = room.code;
-  $("#shareLink").value = `${location.origin}/?join=${room.code}`;
-  $("#hostControls").classList.toggle("hidden", room.hostId !== me.id);
-  $("#startBtn").disabled = room.players.length < 2 || room.hostId !== me.id;
-  $("#playerCount").textContent = `${room.players.length}/8`;
-  $("#players").innerHTML = room.players.map(p => `
-    <div class="player ${p.id===me.id?"self":""}">
-      <span class="avatar">${esc(p.avatar)}</span><span><b>${esc(p.name)}</b><small>${p.id===room.hostId?"HOST":"DEFENDER"}</small></span>
-      <span class="readyDot"></span>
-    </div>`).join("");
-}
-function copyLink() {
-  navigator.clipboard?.writeText($("#shareLink").value).then(()=>toast("Invite link copied."));
-}
-function startGame() { send("room:start"); }
-function startRound(m) {
-  current=m; answered=false; show("arena");
-  $("#roundNo").textContent = `ROUND ${m.round} / ${m.totalRounds}`;
-  $("#category").textContent = m.scenario.category;
-  $("#shieldWrap").classList.toggle("hidden", room.mode !== "team");
-  $("#shield").textContent = `${m.teamShield ?? 100}%`;
-  $("#scenarioTitle").textContent = m.scenario.title;
-  $("#scenarioText").textContent = m.scenario.message;
-  $("#evidence").innerHTML = m.scenario.evidence.map(x=>`<span>${esc(x)}</span>`).join("");
-  $("#timer").textContent = ROUND_TIME;
-  renderChoices();
-  renderScoreboard();
-  const end = m.endsAt;
-  clearInterval(window.tick);
-  window.tick = setInterval(()=> {
-    const left=Math.max(0, Math.ceil((end-Date.now())/1000));
-    $("#timer").textContent=left;
-    if(left<=0) clearInterval(window.tick);
-  },250);
-}
-function renderChoices() {
-  $("#choices").innerHTML = current.scenario.options.map((x,i)=>`
-    <button class="choice ${answered ? "locked":""}" ${answered?"disabled":""} onclick="answer(${i})">
-      <span>${String.fromCharCode(65+i)}</span>${esc(x)}
-    </button>`).join("");
-  $("#lock").textContent = answered ? "DECISION LOCKED" : "CHOOSE YOUR RESPONSE";
-}
-function answer(i) {
-  if(answered) return;
-  send("round:answer",{choice:i});
-}
-function renderScoreboard() {
-  const ps=(room?.players||[]).slice().sort((a,b)=>b.score-a.score);
-  $("#scoreboard").innerHTML=ps.map((p,i)=>`
-    <div class="rank"><b>${i+1}</b><span class="avatar">${esc(p.avatar)}</span><span class="grow">${esc(p.name)}<small>${p.streak} streak</small></span><strong>${p.score}</strong>${p.answered?'<i>✓</i>':''}</div>`).join("");
-}
-function revealRound(m) {
-  lastResults=m.results; room.players=m.players; clearInterval(window.tick);
-  const mine=m.results.find(x=>x.id===me.id);
-  $("#revealTitle").textContent = mine?.correct ? "🛡️ Your defense held." : "⚠️ The pressure got through.";
-  $("#revealTitle").className = mine?.correct ? "goodText" : "badText";
-  $("#correctAnswer").textContent = m.scenario?.options?.[m.correct] || "Correct response";
-  $("#lesson").textContent=m.lesson;
-  $("#points").textContent = mine ? `+${mine.points} XP` : "+0 XP";
-  $("#shieldWrap").classList.toggle("hidden", room.mode !== "team");
-  $("#shield").textContent = `${m.teamShield ?? 100}%`;
-  $("#resultList").innerHTML=m.results.map(r=>{
-    const p=m.players.find(x=>x.id===r.id);
-    return `<div class="resultRow"><span>${esc(p?.avatar||"🛡️")} ${esc(p?.name||"Defender")}</span><b class="${r.correct?"goodText":"badText"}">${r.correct?"CORRECT":"MISSED"}</b><strong>${r.points>0?"+":""}${r.points}</strong></div>`;
-  }).join("");
-  show("reveal");
-}
-function nextAfterReveal() {
-  // Server schedules the next round; return to a waiting reveal screen.
-  $("#waiting").textContent="Preparing the next threat...";
-}
-function finishGame(m) {
-  clearInterval(window.tick);
-  $("#finalList").innerHTML=m.ranking.map((p,i)=>`
-    <div class="finalRank ${i===0?"champ":""}">
-      <b>#${i+1}</b><span class="avatar">${esc(p.avatar)}</span><span class="grow"><strong>${esc(p.name)}</strong><small>${p.streak} final streak</small></span><strong>${p.score} XP</strong>
-    </div>`).join("");
-  $("#champion").textContent=m.ranking[0]?.name || "Defenders";
-  show("finished");
-}
-function leaveRoom() {
-  send("room:leave");
-  room=null; me=null; current=null;
-  show("home");
-}
-function restart() { send("room:restart"); }
-function toast(t) {
-  $("#toast").textContent=t; $("#toast").classList.add("show");
-  clearTimeout(window.toastT); window.toastT=setTimeout(()=>$("#toast").classList.remove("show"),2600);
-}
-function chooseAvatar(el) {
-  document.querySelectorAll(".avatarPick").forEach(x=>x.classList.remove("selected"));
-  el.classList.add("selected"); state.avatar=el.dataset.a;
-}
-window.addEventListener("DOMContentLoaded",()=>{
-  $("#name").value=state.name;
-  const join=new URLSearchParams(location.search).get("join");
-  if(join) $("#joinCode").value=join;
-  document.querySelectorAll(".avatarPick").forEach(x=>x.addEventListener("click",()=>chooseAvatar(x)));
-  connect();
-});
+// Local AI challenge pack. It deliberately uses the same defensive principles as multiplayer.
+const BOT_SCENARIOS = [
+  {category:"BANK IMPERSONATION", title:"The OTP Call", message:"A caller says they are from your bank. They know your name and the last four digits of your account. They say a suspicious transfer is being stopped and ask for the OTP that just arrived on your phone.", evidence:["Unsolicited call","Requests OTP","Creates urgency","Knows partial details"], options:["Read the OTP so the transfer can be blocked","Hang up and contact the bank through an official channel","Ask for the caller's staff ID, then provide the OTP","Tell them you will call back using the number they gave you"], correct:1, lesson:"A genuine bank representative should not need you to disclose an OTP or PIN. End the call and independently contact the bank through a trusted channel.", buttons:["TRUST","URGENCY"]},
+  {category:"PHISHING", title:"Ten Minutes Left", message:"A text says: 'SECURITY ALERT: Your account will be permanently blocked in 10 minutes. Verify now: secure-check.example'. The sender name looks like your bank.", evidence:["10-minute deadline","Link included","Sender name can be spoofed","Threat of account loss"], options:["Tap the link immediately","Reply asking if it is real","Open your bank app or type the official website yourself","Forward it to a friend and ask them to test it"], correct:2, lesson:"Urgency is being used to bypass careful thinking. Do not use the message's link. Go to the service through an independently verified route.", buttons:["URGENCY","FEAR"]},
+  {category:"AUTHORITY", title:"The Investigator", message:"Someone claiming to be a senior fraud investigator says your account is compromised. They instruct you to move your money to a 'safe account' while they investigate.", evidence:["Authority claim","Safe-account story","Money transfer requested","High pressure"], options:["Move the money as instructed","Ask for their name and transfer details","End the conversation and verify with your bank independently","Send a small amount first to test the account"], correct:2, lesson:"'Safe account' transfers are a classic social-engineering pattern. Treat unexpected instructions to move money as a major warning sign.", buttons:["TRUST","FEAR"]},
+  {category:"CURIOSITY", title:"Is This You?", message:"A friend’s WhatsApp account sends: 'Bro 😂 is this you in this video?' followed by a shortened link. The message feels like something your friend might actually write.", evidence:["Unexpected link","Emotional curiosity","Compromised account possible","Shortened URL"], options:["Open it quickly","Ask your friend through another channel whether they sent it","Send the link to someone else first","Download whatever the page asks for"], correct:1, lesson:"A compromised account can send believable messages. Verify unexpected links out-of-band before opening them.", buttons:["CURIOSITY","TRUST"]},
+  {category:"GREED", title:"You Won ₦5 Million", message:"A social post says you have won ₦5 million. To release the prize, you must pay a ₦25,000 'processing and verification fee' today.", evidence:["Unexpected prize","Upfront fee","Deadline","No prior entry"], options:["Pay the fee because ₦25,000 is small compared with ₦5m","Ask for their official registration details","Ignore it and verify the promotion through the organisation's official channels","Give them your bank details instead"], correct:2, lesson:"Unexpected prizes combined with an upfront payment request are a strong scam signal. Verify the promotion independently and never let the prize pressure you into paying.", buttons:["GREED","URGENCY"]},
+  {category:"SYMPATHY", title:"Emergency Message", message:"A saved contact messages you: 'Please help me. I'm at the hospital. I lost my phone and need ₦80,000 urgently. Send it to this new account.'",
+    evidence:["Emotional emergency","New account","Unusual payment request","Pressure to act fast"], options:["Send it immediately","Call the person using a known number to verify","Ask them for a photo of their ID","Post the message publicly to see if anyone knows them"], correct:1, lesson:"Real emergencies can happen, but scammers exploit sympathy. Verify the person's identity using a trusted, independent contact route before sending money.", buttons:["SYMPATHY","URGENCY"]},
+  {category:"BUSINESS FRAUD", title:"New Supplier Account", message:"An email from a supplier says their bank account has changed and asks you to use the new details for today's ₦1.8m payment. The email thread looks familiar.", evidence:["Payment change","Large amount","Familiar thread can be compromised","No independent confirmation"], options:["Pay using the new details","Reply to the same email asking them to confirm","Verify the change using a previously known phone number or trusted contact","Split the payment between the old and new accounts"], correct:2, lesson:"Business email compromise can hijack real conversations. Payment-detail changes should be independently verified using a trusted channel.", buttons:["TRUST","CURIOSITY"]},
+  {category:"AI IMPERSONATION", title:"It Sounds Like Mum", message:"You receive a voice call that sounds exactly like a family member. The caller says they are stranded and need you to transfer money immediately. The voice quality is slightly unusual.", evidence:["Voice can be cloned","Urgent money request","Slightly unusual audio","Caller asks for secrecy"], options:["Transfer immediately because you recognise the voice","Ask a personal question only they would know","Hang up and call the family member on your normal saved number","Keep them talking until they give more details, then transfer"], correct:2, lesson:"AI-generated voices can imitate people convincingly. For an unexpected urgent money request, verify using a known contact route rather than trusting the voice alone.", buttons:["TRUST","SYMPATHY","URGENCY"]},
+  {category:"QR PHISHING", title:"Free Reward QR", message:"A poster at an event says: 'Scan this QR to claim your free data bundle.' The page asks you to enter your banking login to 'confirm identity'.",
+    evidence:["QR code","Free reward","Login request","Untrusted landing page"], options:["Enter your login because the QR is on an official-looking poster","Scan it and check the page carefully before entering anything","Do not enter banking credentials; verify the offer through the provider's official site","Give the page your OTP if it asks for one"], correct:2, lesson:"QR codes can hide phishing destinations. Never enter banking credentials into an unverified page, especially to claim a small reward.", buttons:["CURIOSITY","GREED"]},
+  {category:"FAKE SUPPORT", title:"Verified Support Account", message:"You complain publicly about a failed payment. A new account with a bank logo replies: 'DM us your card number, PIN and OTP so we can reverse the transaction.'",
+    evidence:["Public complaint","Impersonation account","Requests PIN + OTP","Unsolicited DM"], options:["Send the requested details privately","Check whether the account is the bank's official support account and contact it through a trusted channel","Send only the card number","Ask them to call you and provide the OTP by phone"], correct:1, lesson:"Scammers monitor public complaints and impersonate support teams. PINs and OTPs should never be shared. Verify support channels independently.", buttons:["TRUST","AUTHORITY"]}
+];
+
+const DIFFICULTY = {
+  rookie:{label:"ROOKIE", accuracy:.58, speed:[9000,15000], mistakes:.42},
+  analyst:{label:"ANALYST", accuracy:.72, speed:[6500,11500], mistakes:.28},
+  elite:{label:"ELITE", accuracy:.84, speed:[4200,8500], mistakes:.16},
+  guardian:{label:"JEHU GUARDIAN", accuracy:.93, speed:[2500,6500], mistakes:.07}
+};
+
+function show(id) { document.querySelectorAll(".screen").forEach(x => x.classList.remove("active")); $("#"+id).classList.add("active"); window.scrollTo({top:0,behavior:"smooth"}); }
+function esc(s) { return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function connect(){ const proto=location.protocol==="https:"?"wss":"ws"; socket=new WebSocket(`${proto}://${location.host}`); socket.onopen=()=>setStatus("ONLINE",true); socket.onclose=()=>setStatus("OFFLINE",false); socket.onerror=()=>setStatus("CONNECTION ERROR",false); socket.onmessage=e=>handle(JSON.parse(e.data)); }
+function setStatus(t,ok){ $("#status").textContent=t; $("#status").className="status "+(ok?"ok":"bad"); }
+function send(type,payload={}){ if(!socket||socket.readyState!==1)return alert("Connection is not ready."); socket.send(JSON.stringify({type,...payload})); }
+function nameOrDefault(){const n=($("#name").value.trim()||state.name||"Defender").slice(0,22);state.name=n;localStorage.setItem("jehu-arena-name",n);return n;}
+function createRoom(){if(socket?.readyState!==1)return;send("room:create",{name:nameOrDefault(),avatar:state.avatar,mode:$("#mode").value,rounds:Number($("#rounds").value)});}
+function joinRoom(){const code=$("#joinCode").value.trim().toUpperCase();if(code.length!==6)return toast("Enter the 6-character room code.");send("room:join",{code,name:nameOrDefault(),avatar:state.avatar});}
+function handle(m){if(m.type==="room:created"){room=m;me={id:m.hostId};renderLobby();} if(m.type==="room:joined"){me=m.me;room=m.lobby;renderLobby();} if(m.type==="lobby:update"){room=m;renderLobby();} if(m.type==="round:start")startRound(m); if(m.type==="answer:locked"){answered=true;renderChoices();toast("Decision locked.");} if(m.type==="players:update"){room.players=m.players;renderScoreboard();} if(m.type==="round:reveal")revealRound(m); if(m.type==="game:finished")finishGame(m); if(m.type==="error")toast(m.message);}
+function renderLobby(){show("lobby");$("#roomCode").textContent=room.code;$("#shareLink").value=`${location.origin}/?join=${room.code}`;$("#hostControls").classList.toggle("hidden",room.hostId!==me.id);$("#startBtn").disabled=room.players.length<2||room.hostId!==me.id;$("#playerCount").textContent=`${room.players.length}/8`;$("#players").innerHTML=room.players.map(p=>`<div class="player ${p.id===me.id?"self":""}"><span class="avatar">${esc(p.avatar)}</span><span><b>${esc(p.name)}</b><small>${p.id===room.hostId?"HOST":"DEFENDER"}</small></span><span class="readyDot"></span></div>`).join("");}
+function copyLink(){navigator.clipboard?.writeText($("#shareLink").value).then(()=>toast("Invite link copied."));}
+function startGame(){send("room:start");}
+function startRound(m){current=m;answered=false;show("arena");$("#roundNo").textContent=`ROUND ${m.round} / ${m.totalRounds}`;$("#category").textContent=m.scenario.category;$("#shieldWrap").classList.toggle("hidden",room.mode!=="team");$("#shield").textContent=`${m.teamShield??100}%`;$("#scenarioTitle").textContent=m.scenario.title;$("#scenarioText").textContent=m.scenario.message;$("#evidence").innerHTML=m.scenario.evidence.map(x=>`<span>${esc(x)}</span>`).join("");$("#timer").textContent=ROUND_TIME;renderChoices();renderScoreboard();clearInterval(window.tick);window.tick=setInterval(()=>{const left=Math.max(0,Math.ceil((m.endsAt-Date.now())/1000));$("#timer").textContent=left;if(left<=0)clearInterval(window.tick);},250);}
+function renderChoices(){$("#choices").innerHTML=current.scenario.options.map((x,i)=>`<button class="choice ${answered?"locked":""}" ${answered?"disabled":""} onclick="answer(${i})"><span>${String.fromCharCode(65+i)}</span>${esc(x)}</button>`).join("");$("#lock").textContent=answered?"DECISION LOCKED":"CHOOSE YOUR RESPONSE";}
+function answer(i){if(answered)return;send("round:answer",{choice:i});}
+function renderScoreboard(){const ps=(room?.players||[]).slice().sort((a,b)=>b.score-a.score);$("#scoreboard").innerHTML=ps.map((p,i)=>`<div class="rank"><b>${i+1}</b><span class="avatar">${esc(p.avatar)}</span><span class="grow">${esc(p.name)}<small>${p.streak} streak</small></span><strong>${p.score}</strong>${p.answered?'<i>✓</i>':''}</div>`).join("");}
+function revealRound(m){lastResults=m.results;room.players=m.players;clearInterval(window.tick);const mine=m.results.find(x=>x.id===me.id);$("#revealTitle").textContent=mine?.correct?"🛡️ Your defense held.":"⚠️ The pressure got through.";$("#revealTitle").className=mine?.correct?"goodText":"badText";$("#correctAnswer").textContent=m.scenario?.options?.[m.correct]||"Correct response";$("#lesson").textContent=m.lesson;$("#points").textContent=mine?`+${mine.points} XP`:"+0 XP";$("#shieldWrap").classList.toggle("hidden",room.mode!=="team");$("#shield").textContent=`${m.teamShield??100}%`;$("#resultList").innerHTML=m.results.map(r=>{const p=m.players.find(x=>x.id===r.id);return `<div class="resultRow"><span>${esc(p?.avatar||"🛡️")} ${esc(p?.name||"Defender")}</span><b class="${r.correct?"goodText":"badText"}">${r.correct?"CORRECT":"MISSED"}</b><strong>${r.points>0?"+":""}${r.points}</strong></div>`;}).join("");show("reveal");}
+function finishGame(m){clearInterval(window.tick);$("#finalList").innerHTML=m.ranking.map((p,i)=>`<div class="finalRank ${i===0?"champ":""}"><b>#${i+1}</b><span class="avatar">${esc(p.avatar)}</span><span class="grow"><strong>${esc(p.name)}</strong><small>${p.streak} final streak</small></span><strong>${p.score} XP</strong></div>`).join("");$("#champion").textContent=m.ranking[0]?.name||"Defenders";show("finished");}
+function leaveRoom(){send("room:leave");room=null;me=null;current=null;show("home");}
+function restart(){send("room:restart");}
+function toast(t){$("#toast").textContent=t;$("#toast").classList.add("show");clearTimeout(window.toastT);window.toastT=setTimeout(()=>$("#toast").classList.remove("show"),2600);}
+function chooseAvatar(el){document.querySelectorAll(".avatarPick").forEach(x=>x.classList.remove("selected"));el.classList.add("selected");state.avatar=el.dataset.a;}
+
+// ---------------- JEHU vs COMPUTER ----------------
+let bot = {difficulty:"rookie", round:0,total:7,userScore:0,aiScore:0,current:null,answered:false,lockedChoice:null,aiLockedChoice:null,aiLocked:false};
+function openComputerSetup(){show("computerSetup");document.querySelectorAll(".difficulty").forEach(x=>x.classList.toggle("selected",x.dataset.diff===state.botDifficulty));}
+function chooseDifficulty(el){document.querySelectorAll(".difficulty").forEach(x=>x.classList.remove("selected"));el.classList.add("selected");state.botDifficulty=el.dataset.diff;bot.difficulty=state.botDifficulty;}
+function startComputerGame(){bot={difficulty:state.botDifficulty,round:0,total:Number($("#botRounds").value),userScore:0,aiScore:0,current:null,answered:false,lockedChoice:null,aiLockedChoice:null,aiLocked:false};nextBotRound();}
+function shuffle(arr){return arr.map(v=>[Math.random(),v]).sort((a,b)=>a[0]-b[0]).map(x=>x[1]);}
+function nextBotRound(){if(bot.round>=bot.total)return finishBot();bot.round++;bot.answered=false;bot.lockedChoice=null;bot.current=BOT_SCENARIOS[(bot.round-1)%BOT_SCENARIOS.length];show("computerArena");$("#botRoundNo").textContent=`ROUND ${bot.round} / ${bot.total}`;$("#botCategory").textContent=bot.current.category;$("#botScenarioTitle").textContent=bot.current.title;$("#botScenarioText").textContent=bot.current.message;$("#botEvidence").innerHTML=bot.current.evidence.map(x=>`<span>${esc(x)}</span>`).join("");$("#botUserScore").textContent=bot.userScore;$("#botAIScore").textContent=bot.aiScore;$("#botLock").textContent="CHOOSE YOUR RESPONSE";$("#botThinking").textContent=`🤖 ${DIFFICULTY[bot.difficulty].label} is analysing the evidence…`;renderBotChoices();clearInterval(window.botTick);const end=Date.now()+ROUND_TIME*1000;$("#botTimer").textContent=ROUND_TIME;window.botTick=setInterval(()=>{const left=Math.max(0,Math.ceil((end-Date.now())/1000));$("#botTimer").textContent=left;if(left<=0){clearInterval(window.botTick);if(!bot.answered)botAnswer(null);}},250);scheduleAI();}
+function renderBotChoices(){const s=bot.current;$("#botChoices").innerHTML=s.options.map((x,i)=>`<button class="choice ${bot.answered?"locked":""}" ${bot.answered?"disabled":""} onclick="botAnswer(${i})"><span>${String.fromCharCode(65+i)}</span>${esc(x)}</button>`).join("");}
+function botAnswer(i){if(bot.answered)return;bot.answered=true;bot.lockedChoice=i;clearInterval(window.botTick);$("#botChoices").innerHTML=bot.current.options.map((x,n)=>`<button class="choice ${n===i?"botSelected":"locked"}" disabled><span>${String.fromCharCode(65+n)}</span>${esc(x)}</button>`).join("");$("#botLock").textContent=i===null?"TIME EXPIRED — NO DECISION":"DECISION LOCKED";$("#botThinking").textContent=bot.aiLocked?"🤖 Computer has also locked. Comparing defences…":"🤖 Waiting for the computer to lock its decision…";if(bot.aiLocked)setTimeout(revealBotRound,500);}
+let aiTimer;
+function scheduleAI(){clearTimeout(aiTimer);const d=DIFFICULTY[bot.difficulty];const delay=d.speed[0]+Math.random()*(d.speed[1]-d.speed[0]);aiTimer=setTimeout(()=>{bot.aiLockedChoice=aiChoice();bot.aiLocked=true;$("#botThinking").textContent="🤖 Computer decision locked.";if(bot.answered)setTimeout(revealBotRound,500);},delay);}
+function aiChoice(){const s=bot.current,d=DIFFICULTY[bot.difficulty];if(Math.random()>d.accuracy){const wrong=s.options.map((_,i)=>i).filter(i=>i!==s.correct);return wrong[Math.floor(Math.random()*wrong.length)];}return s.correct;}
+function revealBotRound(){if(!bot.answered||!bot.aiLocked)return;const s=bot.current, ai=bot.aiLockedChoice;const userCorrect=bot.lockedChoice===s.correct;const aiCorrect=ai===s.correct;const userSpeed=bot.lockedChoice===null?0:Math.max(0,Math.round((ROUND_TIME-(Number($("#botTimer").textContent)||0))*0.6));const userPoints=userCorrect?100+userSpeed:0;const aiPoints=aiCorrect?100+Math.max(0,Math.floor(Math.random()*18)):0;bot.userScore+=userPoints;bot.aiScore+=aiPoints;$("#botRevealTitle").textContent=userCorrect?"🛡️ You read the trap.":"⚠️ The pressure got through.";$("#botRevealTitle").className=userCorrect?"goodText":"badText";$("#botPoints").textContent=`+${userPoints} XP`;$("#botCorrectAnswer").textContent=s.options[s.correct];$("#botLesson").textContent=s.lesson;$("#botDecision").innerHTML=`<div><span>YOU</span><b class="${userCorrect?"goodText":"badText"}">${userCorrect?"CORRECT":"WRONG / MISSED"}</b></div><div><span>🤖 COMPUTER • ${DIFFICULTY[bot.difficulty].label}</span><b class="${aiCorrect?"goodText":"badText"}">${aiCorrect?"CORRECT":"WRONG"}</b></div>`;$("#botWaiting").textContent=`Computer chose: ${esc(s.options[ai])}`;$("#botUserScore").textContent=bot.userScore;$("#botAIScore").textContent=bot.aiScore;show("computerReveal");setTimeout(nextBotRound,2600);}
+function finishBot(){clearInterval(window.botTick);clearTimeout(aiTimer);const u=bot.userScore,a=bot.aiScore;$("#botFinalUser").textContent=u;$("#botFinalAI").textContent=a;$("#botFinalTitle").textContent=u>a?"🏆 You beat the machine!":u===a?"🤝 It's a draw!":"🤖 The machine wins this one.";$("#botFinalSummary").textContent=`${DIFFICULTY[bot.difficulty].label} difficulty • ${bot.total} rounds • Safety first, speed second.`;show("computerFinished");}
+
+window.addEventListener("DOMContentLoaded",()=>{$("#name").value=state.name;const join=new URLSearchParams(location.search).get("join");if(join)$("#joinCode").value=join;document.querySelectorAll(".avatarPick").forEach(x=>x.addEventListener("click",()=>chooseAvatar(x)));document.querySelectorAll(".difficulty").forEach(x=>x.addEventListener("click",()=>chooseDifficulty(x)));connect();});
