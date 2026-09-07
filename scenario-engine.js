@@ -38,13 +38,29 @@ function chainForDifficulty(difficulty, usedIds) {
   const pool = available.length ? available : candidates;
   return pool[crypto.randomInt(pool.length)] || null;
 }
+function normalizeScenario(s) {
+  if (!s || typeof s !== 'object') return null;
+  // Accept the current JEHU schema and older V1/V2 aliases so a stale data file
+  // cannot produce a blank question/options panel after deployment.
+  const message = s.message ?? s.question ?? s.prompt ?? s.description ?? '';
+  const evidence = Array.isArray(s.evidence) ? s.evidence
+    : (Array.isArray(s.clues) ? s.clues : (Array.isArray(s.signals) ? s.signals : []));
+  const options = Array.isArray(s.options) ? s.options
+    : (Array.isArray(s.choices) ? s.choices : (Array.isArray(s.responses) ? s.responses : []));
+  const correct = Number.isInteger(s.correct) ? s.correct
+    : (Number.isInteger(s.correctIndex) ? s.correctIndex : s.answerIndex);
+  return { ...s, message, evidence, options, correct };
+}
+
 function publicScenario(s, reveal = false) {
+  const n = normalizeScenario(s);
+  if (!n) return null;
   const base = {
-    id:s.id, title:s.title, category:s.category, difficulty:s.difficulty || 1,
-    type:s.type || 'scenario', message:s.message, evidence:s.evidence || [], options:s.options || [],
-    buttons:s.buttons || [], lesson:s.lesson, consequence:s.consequence || null,
-    stage:s.stage || 1, chainId:s.chainId || null, chainTotal:s.chainTotal || 1,
-    legitimate:s.legitimate === true
+    id:n.id, title:n.title, category:n.category, difficulty:n.difficulty || 1,
+    type:n.type || 'scenario', message:n.message, evidence:n.evidence, options:n.options,
+    buttons:n.buttons || [], lesson:n.lesson || '', consequence:n.consequence || null,
+    stage:n.stage || 1, chainId:n.chainId || null, chainTotal:n.chainTotal || 1,
+    legitimate:n.legitimate === true
   };
   if (reveal) base.correct = s.correct;
   // Never expose the answer before reveal; this also protects public API consumers from trivial cheating.

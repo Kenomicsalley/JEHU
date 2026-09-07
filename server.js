@@ -22,6 +22,11 @@ const ROOM_TTL = 1000 * 60 * 60 * 3;
 const ROUND_TIME = 35;
 const REVEAL_TIME = 8;
 
+// Fail loudly in Railway logs if a deployment contains a scenario payload that
+// cannot render a playable question. This prevents silent blank rounds.
+const malformedScenarioCount = scenarios.filter(s => !s || !s.title || !s.message && !s.question && !s.prompt || !Array.isArray(s.options) && !Array.isArray(s.choices) && !Array.isArray(s.responses)).length;
+if (malformedScenarioCount) console.warn(`[JEHU] ${malformedScenarioCount} scenario(s) have incomplete question/option fields.`);
+
 app.get("/api/scenarios", (_req, res) => res.json(scenarios.map(s => publicScenario(s, false))));
 app.get("/api/chains", (_req, res) => res.json(chains));
 app.get("/api/scenario-stats", (_req, res) => res.json(scenarioStats()));
