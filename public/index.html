@@ -18,13 +18,13 @@
     <div class="heroMain">
       <div class="eyebrow">REAL-TIME MULTIPLAYER CYBER AWARENESS</div>
       <h1>Can your household<br><em>spot the scam?</em></h1>
-      <p>JEHU Arena turns cybersecurity awareness into a live social game. Create a room, send the link to your household or friends, and face the same scam scenario together — then see who made the safest decision.</p>
+      <p>JEHU — Train the Human Firewall. JEHU Arena turns cybersecurity awareness into a live social game. Create a room, send the link to your household or friends, and face the same scam scenario together — then see who made the safest decision.</p>
       <div class="principles"><span>PAUSE</span><span>VERIFY</span><span>DECIDE</span><span>DEFEND</span></div>
     </div>
     <div class="heroCard">
       <div class="miniTitle">THE GAME</div>
       <h2>Pressure Protocol</h2>
-      <p>2–8 players • 3–10 rounds • mobile friendly</p>
+      <p>2–8 players • 3–10 rounds • 300+ evolving cases • 4 difficulty levels • mobile friendly</p>
       <label>Your defender name<input id="name" maxlength="22" placeholder="e.g. Ali"></label>
       <div class="avatars">
         <button class="avatarPick selected" data-a="🛡️">🛡️</button><button class="avatarPick" data-a="🦅">🦅</button>
@@ -33,9 +33,12 @@
       </div>
       <div class="fields">
         <label>Multiplayer mode<select id="mode"><option value="duel">Defender Duel</option><option value="team">Household Shield</option></select></label>
+        <label>Difficulty<select id="difficulty"><option value="rookie">Rookie</option><option value="analyst">Analyst</option><option value="elite">Elite</option><option value="guardian">JEHU Guardian</option></select></label>
         <label>Rounds<select id="rounds"><option>7</option><option>5</option><option>10</option><option>3</option></select></label>
       </div>
       <button class="btn computer" onclick="openComputerSetup()">🤖 PLAY AGAINST COMPUTER</button>
+      <button class="btn emergencyBtn" onclick="openEmergencyRoom()">🚨 JEHU EMERGENCY ROOM</button>
+      <button class="btn" onclick="openCaseFiles()">📁 JEHU CASE FILES</button>
       <button class="btn primary" onclick="createRoom()">CREATE ROOM</button>
       <div class="or">OR JOIN A ROOM</div>
       <div class="join"><input id="joinCode" maxlength="6" placeholder="ABC123"><button class="btn" onclick="joinRoom()">JOIN</button></div>
@@ -48,6 +51,28 @@
     <article><b>🏠 Built for households</b><small>Put the room link in a family group and play from separate phones on the same Wi‑Fi or anywhere online.</small></article>
   </div>
   <div class="solo"><a href="/solo/">← Open the full JEHU Solo Academy</a></div>
+</section>
+
+<section id="emergencyRoom" class="screen">
+  <div class="topline"><div><div class="eyebrow">WHEN THE ATTACK MAY HAVE ALREADY HAPPENED</div><h2>JEHU Emergency Room</h2><p class="muted">Choose what happened. JEHU gives you a calm, defensive response plan. Use your bank, network provider, platform or authority's independently verified official channels for real-world action.</p></div><button class="ghost" onclick="show('home')">Back</button></div>
+  <div id="emergencyGrid" class="emergencyGrid"></div>
+  <div id="emergencyDetail" class="panel emergencyDetail hidden"><div class="eyebrow" id="emergencyCategory"></div><h2 id="emergencyTitle"></h2><div id="emergencySteps"></div><div class="lesson emergencyAvoid"><b>AVOID</b><div id="emergencyAvoidList"></div></div></div>
+</section>
+
+<section id="caseFiles" class="screen">
+  <div class="topline"><div><div class="eyebrow">BRANCHING INCIDENT SIMULATION</div><h2>JEHU Case Files</h2><p class="muted">Follow a cyber incident from the first contact to the consequence. Your decisions change what happens next.</p></div><button class="ghost" onclick="show('home')">Back</button></div>
+  <div class="caseGrid" id="caseGrid"></div>
+</section>
+
+<section id="caseArena" class="screen">
+  <div class="arenaTop"><span id="caseStage">CASE STAGE</span><span id="caseCategory">THREAT</span><strong><i id="caseTimer">45</i>s</strong></div>
+  <div class="caseArena">
+    <main class="scenario panel"><div class="eyebrow">JEHU CASE FILE</div><h1 id="caseTitle">Incident</h1><div class="caseMeta" id="caseMeta"></div><div class="message" id="caseMessage"></div><div class="evidence" id="caseEvidence"></div><div class="lockLabel">WHAT DO YOU DO?</div><div id="caseChoices"></div></main>
+  </div>
+</section>
+
+<section id="caseOutcome" class="screen">
+  <div class="reveal panel"><div class="eyebrow">CASE FILE CLOSED</div><h1 id="caseOutcomeTitle">Outcome</h1><div class="caseOutcome" id="caseOutcomeBox"></div><div class="caseActions"><button class="btn primary" onclick="openCaseFiles()">ANOTHER CASE</button><button class="ghost" onclick="show('home')">HOME</button></div></div>
 </section>
 
 <section id="computerSetup" class="screen">
@@ -94,7 +119,7 @@
     <div class="correct"><small>SAFEST RESPONSE</small><b id="botCorrectAnswer"></b></div>
     <div class="lesson"><b>Why?</b><p id="botLesson"></p></div>
     <div class="aiDecision" id="botDecision"></div>
-    <div class="waiting" id="botWaiting">Next threat loading...</div>
+    <div class="waiting" id="botWaiting">Review your decision before the next threat.</div>
   </div>
 </section>
 
@@ -106,7 +131,7 @@
   <div class="topline"><div><div class="eyebrow">ROOM CREATED</div><h2>Assemble your defenders.</h2></div><button class="ghost" onclick="leaveRoom()">Leave</button></div>
   <div class="lobbyGrid">
     <div class="panel">
-      <div class="roomCodeLabel">ROOM CODE</div><div class="roomCode" id="roomCode">------</div>
+      <div class="roomCodeLabel">ROOM CODE</div><div class="roomCode" id="roomCode">------</div><div class="muted">DIFFICULTY: <b id="roomDifficulty">ROOKIE</b></div>
       <input id="shareLink" readonly>
       <button class="btn primary" onclick="copyLink()">COPY INVITE LINK</button>
       <p class="muted">Send the link or six-character code to the people you want to play with.</p>
@@ -143,7 +168,7 @@
 </section>
 
 <section id="finished" class="screen">
-  <div class="final panel"><div class="eyebrow">MISSION COMPLETE</div><h1>Household verdict.</h1><p class="muted">Top defender: <b id="champion"></b></p><div id="finalList"></div>
+  <div class="final panel"><div class="eyebrow">MISSION COMPLETE</div><h1>Household verdict.</h1><p class="muted">Top defender: <b id="champion"></b></p><div id="finalList"></div><div id="profileSummary" class="profileSummary"></div>
   <div class="actions"><button class="btn primary" onclick="restart()">PLAY AGAIN</button><button class="ghost" onclick="leaveRoom()">NEW ROOM</button></div></div>
 </section>
 
