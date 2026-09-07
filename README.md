@@ -2,6 +2,8 @@
 
 **Kenomicsalley | Keep Your Trust Guarded**
 
+### JEHU — Train the Human Firewall
+
 JEHU Arena is a browser-based cybersecurity awareness game. V2 keeps the real-time multiplayer experience and adds **JEHU vs Computer**, with four difficulty levels.
 
 ## Modes
@@ -52,3 +54,25 @@ public/
 ## Safety
 
 JEHU is a defensive awareness product. Scenarios are designed to teach recognition, verification and recovery—not to provide operational instructions for committing fraud.
+
+
+## Scenario & Threat Simulation Engine
+
+JEHU now ships with **300 scenarios**, including **280 scam/fraud cases and 20 legitimate verification cases**, plus **40 reusable multi-stage attack chains**, **10 branching Case Files**, and **8 Emergency Room playbooks**.
+
+The content is data-driven: scenarios live in `data/scenarios.json`, chains in `data/chains.json`, Case Files in `data/casefiles.json`, and recovery guidance in `data/emergency.json`. Adding a new threat should normally require adding content data and running `npm run validate:content`, not changing the game engine.
+
+### Learning systems
+- **JEHU Emergency Room:** defensive response paths for incidents that may already have happened.
+- **Multi-stage attack chains:** threats can develop across several linked scenarios.
+- **Branching Case Files:** player decisions can change the next stage and final outcome.
+- **Adaptive computer:** targets recurring weak psychological buttons when enough evidence exists.
+- **Legitimate cases:** teaches verification rather than blanket distrust.
+- **Defender Intelligence:** surfaces strengths and watch-outs across the six-button framework.
+- **Difficulty gates:** Rookie, Analyst, Elite and JEHU Guardian.
+
+### Six-button framework
+Trust • Urgency • Fear • Curiosity • Sympathy • Greed
+
+### Content growth
+The scenario schema is designed to scale beyond **500 and 1,000 scenarios**. New content should use stable IDs and include difficulty, category, evidence, choices, answer, lesson, legitimacy and psychological-button metadata where applicable. Run `npm run validate:content` before deployment.

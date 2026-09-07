@@ -3,6 +3,7 @@ const path = require("path");
 const crypto = require("crypto");
 const express = require("express");
 const { WebSocketServer } = require("ws");
+const { scenarios, chains, emergency, LEVELS: DIFFICULTY_LEVELS, pickForMatch, chainForDifficulty, publicScenario, stats: scenarioStats, casefiles, caseFilesForDifficulty, publicCaseFile, getCaseFile, getCaseNode } = require("./scenario-engine");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -10,11 +11,8 @@ const rooms = new Map();
 
 app.disable("x-powered-by");
 app.get("/health", (_req, res) => res.json({ ok: true, service: "jehu-arena", rooms: rooms.size }));
-app.use(express.static(path.join(__dirname, "public")));
 
-app.get("*", (_req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
+app.use(express.static(path.join(__dirname, "public")));
 
 const server = http.createServer(app);
 const wss = new WebSocketServer({ server });
@@ -24,88 +22,15 @@ const ROOM_TTL = 1000 * 60 * 60 * 3;
 const ROUND_TIME = 35;
 const REVEAL_TIME = 8;
 
-const scenarios = [
-  {
-    id: "A01", title: "The Bank Call", category: "TRUST",
-    message: "A caller says they are from your bank. They know your name and the last four digits of your account. They say a suspicious transfer is happening and ask for the OTP that just arrived on your phone.",
-    evidence: ["Unexpected caller", "Partial personal details", "OTP request", "Fear of account loss"],
-    options: ["Give the OTP", "Hang up and call the bank using a trusted number", "Ask the caller to send another code"],
-    correct: 1,
-    lesson: "Partial knowledge does not prove identity. One-time codes are not something an unexpected caller should receive."
-  },
-  {
-    id: "A02", title: "10 Minutes", category: "URGENCY",
-    message: "A text says: “Your account will be permanently blocked in 10 minutes. Verify now.” A link is included.",
-    evidence: ["Countdown pressure", "Threat of loss", "Unexpected link", "Demand for immediate action"],
-    options: ["Click immediately", "Pause and verify through the official app/site", "Forward it to a friend"],
-    correct: 1,
-    lesson: "Urgency is a lever. Breaking the sender's communication path gives you time to verify."
-  },
-  {
-    id: "A03", title: "Safe Account", category: "FEAR",
-    message: "Someone claiming to be an investigator says your account is connected to a crime. They demand that you transfer your money to a “safe account” immediately.",
-    evidence: ["Authority claim", "Fear", "Money transfer", "Isolation"],
-    options: ["Transfer the money", "Ask for a badge number and comply", "Do not transfer; independently verify the claim"],
-    correct: 2,
-    lesson: "Threats and authority claims should make you verify, not surrender control of your money."
-  },
-  {
-    id: "A04", title: "Is This You?", category: "CURIOSITY",
-    message: "A friend's account sends: “Is this you in this video? 😂” followed by an unfamiliar link. The message is unusual for them.",
-    evidence: ["Curiosity hook", "Unexpected link", "Friend account may be compromised", "Emotional trigger"],
-    options: ["Open the link", "Verify with the friend through another channel", "Ask them to resend it"],
-    correct: 1,
-    lesson: "Familiar accounts can be compromised. Verify unexpected links before opening them."
-  },
-  {
-    id: "A05", title: "The Millionaire Prize", category: "GREED",
-    message: "You receive a message saying you won ₦5,000,000. To release it, you must pay a ₦25,000 processing fee within 20 minutes.",
-    evidence: ["Unexpected prize", "Upfront fee", "Scarcity", "Huge reward"],
-    options: ["Pay the fee", "Send your ID first", "Stop and treat the fee demand as a major scam signal"],
-    correct: 2,
-    lesson: "Unexpected prizes plus upfront fees are a classic fraud pattern."
-  },
-  {
-    id: "A06", title: "Hospital Emergency", category: "SYMPATHY",
-    message: "A person you met online says their child is in hospital and urgently asks for ₦50,000. They say refusing means you do not care.",
-    evidence: ["Emotional story", "Urgency", "Money request", "Guilt"],
-    options: ["Send immediately", "Verify the identity and story independently", "Borrow money for them"],
-    correct: 1,
-    lesson: "Compassion is good. Verification keeps compassion from being exploited."
-  },
-  {
-    id: "A07", title: "Changed Supplier", category: "BUSINESS",
-    message: "An email from a supplier says their bank account has changed and asks you to pay today's ₦850,000 invoice to a new account immediately.",
-    evidence: ["Payment-detail change", "Large amount", "Urgency", "Email-only verification"],
-    options: ["Pay the new account", "Verify using a previously known contact method", "Reply asking if the change is real"],
-    correct: 1,
-    lesson: "Payment changes should be verified outside the channel that requested the change."
-  },
-  {
-    id: "A08", title: "AI Voice", category: "AI",
-    message: "You receive a voice note that sounds exactly like a family member. They say they lost their phone and need money urgently. The number is unfamiliar.",
-    evidence: ["Familiar voice", "Changed number", "Urgency", "Money request"],
-    options: ["Send the money", "Verify through a known number or trusted channel", "Ask for a voice note proving it"],
-    correct: 1,
-    lesson: "A convincing voice is no longer strong identity proof. Change channel and verify."
-  },
-  {
-    id: "A09", title: "Fake Support", category: "IMPERSONATION",
-    message: "You complain about your bank on social media. An account using the bank's logo replies and asks you to DM your PIN and OTP so they can “fix” the issue.",
-    evidence: ["Impersonation", "Social-media contact", "PIN request", "OTP request"],
-    options: ["Send the details", "Use the bank's official app/site support", "Send only the PIN"],
-    correct: 1,
-    lesson: "Use official support channels. Legitimate support should not need your password, PIN or OTP."
-  },
-  {
-    id: "A10", title: "The QR Reward", category: "QR PHISHING",
-    message: "A poster says: “Scan to claim your reward.” The QR code opens a page asking for your banking login.",
-    evidence: ["Reward lure", "QR code", "Login page", "Unexpected destination"],
-    options: ["Log in", "Close it and navigate to the official service yourself", "Enter the password but not the OTP"],
-    correct: 1,
-    lesson: "QR codes are just links in another form. Inspect the destination and verify it."
-  }
-];
+app.get("/api/scenarios", (_req, res) => res.json(scenarios.map(s => publicScenario(s, false))));
+app.get("/api/chains", (_req, res) => res.json(chains));
+app.get("/api/scenario-stats", (_req, res) => res.json(scenarioStats()));
+app.get("/api/emergency", (_req, res) => res.json(emergency));
+app.get("/api/casefiles", (req, res) => res.json(caseFilesForDifficulty(req.query.difficulty || "rookie")));
+app.get("/api/casefiles/:id", (req, res) => { const c = getCaseFile(req.params.id); if (!c) return res.status(404).json({message:"Case file not found"}); res.json(publicCaseFile(c)); });
+app.get("/api/casefiles/:id/node/:nodeId", (req, res) => { const c = getCaseFile(req.params.id); if (!c) return res.status(404).json({message:"Case file not found"}); const n = getCaseNode(c, req.params.nodeId); if (!n) return res.status(404).json({message:"Case node not found"}); if (!n.scenario) return res.json({ terminal:n.terminal, summary:n.summary }); const scenario = scenarios.find(s => s.id === n.scenario); if (!scenario) return res.status(500).json({message:"Scenario missing"}); res.json(publicScenario(scenario, true)); });
+
+app.get("*", (_req, res) => { res.sendFile(path.join(__dirname, "public", "index.html")); });
 
 function cleanName(name) {
   return String(name || "Defender").replace(/[<>]/g, "").trim().slice(0, 22) || "Defender";
@@ -129,7 +54,7 @@ function publicPlayers(room) {
 }
 function lobby(room) {
   return {
-    code: room.code, hostId: room.hostId, mode: room.mode,
+    code: room.code, hostId: room.hostId, mode: room.mode, difficulty: room.difficulty,
     players: publicPlayers(room), maxPlayers: MAX_PLAYERS
   };
 }
@@ -141,17 +66,35 @@ function startRound(room) {
   clearRoundTimer(room);
   room.round++;
   room.answers = new Map();
-  room.scenario = scenarios[Math.floor(Math.random() * scenarios.length)];
+
+  let scenario;
+  if (room.chain && room.chainIndex < room.chain.stages.length) {
+    const id = room.chain.stages[room.chainIndex++];
+    scenario = scenarios.find(s => s.id === id);
+  } else {
+    room.chain = null;
+    room.chainIndex = 0;
+    // About one in four eligible rounds becomes a multi-stage attack when possible.
+    if (Math.random() < 0.25) {
+      const c = chainForDifficulty(room.difficulty, room.usedScenarioIds);
+      if (c) {
+        room.chain = c;
+        room.chainIndex = 1;
+        scenario = scenarios.find(s => s.id === c.stages[0]);
+      }
+    }
+    if (!scenario) scenario = pickForMatch(room.difficulty, room.usedScenarioIds);
+  }
+  room.scenario = scenario;
+  room.usedScenarioIds.add(scenario.id);
   room.phase = "question";
   room.roundStartedAt = Date.now();
   broadcast(room, "round:start", {
     round: room.round,
     totalRounds: room.totalRounds,
     endsAt: room.roundStartedAt + ROUND_TIME * 1000,
-    scenario: {
-      id: room.scenario.id, title: room.scenario.title, category: room.scenario.category,
-      message: room.scenario.message, evidence: room.scenario.evidence, options: room.scenario.options
-    },
+    scenario: publicScenario(room.scenario, false),
+    chain: room.chain ? { id:room.chain.id, title:room.chain.title, stage:room.chainIndex, total:room.chain.stages.length } : null,
     players: publicPlayers(room)
   });
   room.timer = setTimeout(() => reveal(room), ROUND_TIME * 1000);
@@ -181,16 +124,23 @@ function reveal(room) {
       p.streak = 0;
     }
     results.push({ id: p.id, correct, points, choice: a ? a.choice : null, elapsed });
+    for (const button of (room.scenario.buttons || [])) {
+      p.buttonStats[button] = p.buttonStats[button] || { seen: 0, correct: 0 };
+      p.buttonStats[button].seen += 1;
+      if (correct) p.buttonStats[button].correct += 1;
+    }
   });
   if (room.mode === "team") {
     const correctCount = results.filter(r => r.correct).length;
-    const missing = room.players.size - results.length;
+    const missing = results.filter(r => r.choice === null).length;
     room.teamShield = Math.max(0, Math.min(100, room.teamShield + correctCount * 7 - missing * 8 - (room.players.size - correctCount - missing) * 5));
   }
   broadcast(room, "round:reveal", {
     round: room.round, correct: room.scenario.correct,
-    scenario: { title: room.scenario.title, options: room.scenario.options },
-    teamShield: room.teamShield, lesson: room.scenario.lesson, results, players: publicPlayers(room)
+    scenario: publicScenario(room.scenario, true),
+    teamShield: room.teamShield, lesson: room.scenario.lesson, consequence: room.scenario.consequence || null,
+    chain: room.chain ? { id:room.chain.id, title:room.chain.title, stage:room.chainIndex, total:room.chain.stages.length, next:room.chainIndex < room.chain.stages.length } : null,
+    results, players: publicPlayers(room)
   });
   if (room.round >= room.totalRounds) {
     room.timer = setTimeout(() => finish(room), REVEAL_TIME * 1000);
@@ -203,7 +153,12 @@ function finish(room) {
   clearRoundTimer(room);
   room.phase = "finished";
   const ranking = publicPlayers(room).sort((a,b) => b.score - a.score);
-  broadcast(room, "game:finished", { ranking });
+  const defenderProfiles = [...room.players.values()].map(p => {
+    const entries = Object.entries(p.buttonStats || {}).map(([button, v]) => ({ button, seen:v.seen, correct:v.correct, resilience:v.seen ? Math.round(v.correct / v.seen * 100) : 0 }));
+    entries.sort((a,b) => a.resilience - b.resilience);
+    return { id:p.id, name:p.name, strengths:entries.slice(-2).reverse(), watchouts:entries.slice(0,2) };
+  });
+  broadcast(room, "game:finished", { ranking, defenderProfiles });
 }
 function removePlayer(room, id) {
   room.players.delete(id);
@@ -227,11 +182,13 @@ wss.on("connection", ws => {
       const id = crypto.randomUUID();
       const room = {
         code: c, hostId: id, mode: m.mode === "team" ? "team" : "duel",
+        difficulty: DIFFICULTY_LEVELS[m.difficulty] ? m.difficulty : "rookie",
+        usedScenarioIds: new Set(),
         totalRounds: Math.min(10, Math.max(3, Number(m.rounds) || 7)),
-        round: 0, phase: "lobby", teamShield: 100, players: new Map(), answers: new Map(), createdAt: Date.now(), timer: null
+        round: 0, phase: "lobby", teamShield: 100, chain: null, chainIndex: 0, players: new Map(), answers: new Map(), createdAt: Date.now(), timer: null
       };
       rooms.set(c, room);
-      room.players.set(id, { id, ws, name: cleanName(m.name), avatar: m.avatar || "🛡️", score: 0, streak: 0 });
+      room.players.set(id, { id, ws, name: cleanName(m.name), avatar: m.avatar || "🛡️", score: 0, streak: 0, buttonStats: {} });
       ws.roomCode = c; ws.playerId = id;
       send(ws, "room:created", lobby(room));
       send(ws, "room:joined", { me: room.players.get(id), lobby: lobby(room) });
@@ -245,7 +202,7 @@ wss.on("connection", ws => {
       if (room.phase !== "lobby") return send(ws, "error", { message: "That game has already started." });
       if (room.players.size >= MAX_PLAYERS) return send(ws, "error", { message: "Room is full." });
       const id = crypto.randomUUID();
-      room.players.set(id, { id, ws, name: cleanName(m.name), avatar: m.avatar || "🛡️", score: 0, streak: 0 });
+      room.players.set(id, { id, ws, name: cleanName(m.name), avatar: m.avatar || "🛡️", score: 0, streak: 0, buttonStats: {} });
       ws.roomCode = c; ws.playerId = id;
       send(ws, "room:joined", { me: room.players.get(id), lobby: lobby(room) });
       broadcast(room, "lobby:update", lobby(room));
@@ -280,8 +237,8 @@ wss.on("connection", ws => {
     }
     if (m.type === "room:restart") {
       if (room.hostId !== me.id) return;
-      room.players.forEach(p => { p.score = 0; p.streak = 0; });
-      room.round = 0; room.phase = "lobby"; room.teamShield = 100; room.answers.clear();
+      room.players.forEach(p => { p.score = 0; p.streak = 0; p.buttonStats = {}; });
+      room.round = 0; room.phase = "lobby"; room.teamShield = 100; room.chain = null; room.chainIndex = 0; room.answers.clear(); room.usedScenarioIds.clear();
       broadcast(room, "lobby:update", lobby(room));
       return;
     }
