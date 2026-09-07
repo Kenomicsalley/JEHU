@@ -1,0 +1,402 @@
+[
+  {
+    "id": "CHAIN-21",
+    "title": "The Bank Pressure Escalation",
+    "difficulty": 1,
+    "stages": [
+      "A01",
+      "A02",
+      "A03"
+    ]
+  },
+  {
+    "id": "CHAIN-22",
+    "title": "The Prize and Payment Trap",
+    "difficulty": 1,
+    "stages": [
+      "A05",
+      "A06",
+      "A10"
+    ]
+  },
+  {
+    "id": "CHAIN-23",
+    "title": "The Curiosity-to-Urgency Trap",
+    "difficulty": 1,
+    "stages": [
+      "A04",
+      "A02",
+      "A05"
+    ]
+  },
+  {
+    "id": "CHAIN-01",
+    "title": "Account Takeover Recovery",
+    "difficulty": 4,
+    "stages": [
+      "A11",
+      "A14",
+      "A78"
+    ]
+  },
+  {
+    "id": "CHAIN-02",
+    "title": "The Compromised Supplier",
+    "difficulty": 4,
+    "stages": [
+      "A07",
+      "A18",
+      "A53"
+    ]
+  },
+  {
+    "id": "CHAIN-03",
+    "title": "The Money Mule Trap",
+    "difficulty": 4,
+    "stages": [
+      "A32",
+      "A31",
+      "A80"
+    ]
+  },
+  {
+    "id": "CHAIN-04",
+    "title": "The Family Impersonation Ladder",
+    "difficulty": 4,
+    "stages": [
+      "A43",
+      "A08",
+      "A44"
+    ]
+  },
+  {
+    "id": "CHAIN-05",
+    "title": "The Marketplace Payment Trap",
+    "difficulty": 3,
+    "stages": [
+      "A51",
+      "A24",
+      "A52"
+    ]
+  },
+  {
+    "id": "CHAIN-06",
+    "title": "The SIM-Swap Lockout",
+    "difficulty": 4,
+    "stages": [
+      "A13",
+      "A73",
+      "A12"
+    ]
+  },
+  {
+    "id": "CHAIN-07",
+    "title": "The Recovery-Code Heist",
+    "difficulty": 4,
+    "stages": [
+      "A55",
+      "A29",
+      "A74"
+    ]
+  },
+  {
+    "id": "CHAIN-08",
+    "title": "The Fake Bank Manager",
+    "difficulty": 3,
+    "stages": [
+      "A45",
+      "A46",
+      "A47"
+    ]
+  },
+  {
+    "id": "CHAIN-09",
+    "title": "The Rental Deposit Switch",
+    "difficulty": 3,
+    "stages": [
+      "A36",
+      "A17",
+      "A25"
+    ]
+  },
+  {
+    "id": "CHAIN-10",
+    "title": "The Investment Recovery Double Scam",
+    "difficulty": 3,
+    "stages": [
+      "A20",
+      "A37",
+      "A38"
+    ]
+  },
+  {
+    "id": "CHAIN-11",
+    "title": "The Fake Job Recruitment Funnel",
+    "difficulty": 3,
+    "stages": [
+      "A16",
+      "A35",
+      "A57"
+    ]
+  },
+  {
+    "id": "CHAIN-12",
+    "title": "The QR Login Ambush",
+    "difficulty": 4,
+    "stages": [
+      "A10",
+      "A63",
+      "A19"
+    ]
+  },
+  {
+    "id": "CHAIN-13",
+    "title": "The Business Executive Impersonation",
+    "difficulty": 4,
+    "stages": [
+      "A54",
+      "A28",
+      "A18"
+    ]
+  },
+  {
+    "id": "CHAIN-14",
+    "title": "The Device Compromise Ladder",
+    "difficulty": 3,
+    "stages": [
+      "A56",
+      "A60",
+      "A62"
+    ]
+  },
+  {
+    "id": "CHAIN-15",
+    "title": "The Cloud Account Hijack",
+    "difficulty": 3,
+    "stages": [
+      "A66",
+      "A75",
+      "A26"
+    ]
+  },
+  {
+    "id": "CHAIN-16",
+    "title": "The Social Media Verification Trap",
+    "difficulty": 4,
+    "stages": [
+      "A67",
+      "A09",
+      "A65"
+    ]
+  },
+  {
+    "id": "CHAIN-17",
+    "title": "The Fake Authority Pressure Campaign",
+    "difficulty": 3,
+    "stages": [
+      "A48",
+      "A72",
+      "A03"
+    ]
+  },
+  {
+    "id": "CHAIN-18",
+    "title": "The Delivery-to-Bank Fraud",
+    "difficulty": 3,
+    "stages": [
+      "A40",
+      "A15",
+      "A39"
+    ]
+  },
+  {
+    "id": "CHAIN-19",
+    "title": "The Romance-to-Investment Pipeline",
+    "difficulty": 4,
+    "stages": [
+      "A69",
+      "A37",
+      "A30"
+    ]
+  },
+  {
+    "id": "CHAIN-20",
+    "title": "The AI Deepfake Business Attack",
+    "difficulty": 4,
+    "stages": [
+      "A21",
+      "A64",
+      "A53"
+    ]
+  },
+  {
+    "id": "CHAIN-24",
+    "title": "The Account Takeover Spiral",
+    "difficulty": 4,
+    "stages": [
+      "A143",
+      "A150",
+      "A182"
+    ]
+  },
+  {
+    "id": "CHAIN-25",
+    "title": "The Money Mule Escalation",
+    "difficulty": 4,
+    "stages": [
+      "A124",
+      "A090",
+      "A136"
+    ]
+  },
+  {
+    "id": "CHAIN-26",
+    "title": "The AI Family Impersonation",
+    "difficulty": 4,
+    "stages": [
+      "A248",
+      "A180",
+      "A122"
+    ]
+  },
+  {
+    "id": "CHAIN-27",
+    "title": "The Fake Recruiter Pipeline",
+    "difficulty": 4,
+    "stages": [
+      "A203",
+      "A252",
+      "A136"
+    ]
+  },
+  {
+    "id": "CHAIN-28",
+    "title": "The Rental Deposit Trap",
+    "difficulty": 3,
+    "stages": [
+      "A222",
+      "A098",
+      "A146"
+    ]
+  },
+  {
+    "id": "CHAIN-29",
+    "title": "The Supplier Switch",
+    "difficulty": 4,
+    "stages": [
+      "A241",
+      "A099",
+      "A130"
+    ]
+  },
+  {
+    "id": "CHAIN-30",
+    "title": "The QR-to-Credential Attack",
+    "difficulty": 3,
+    "stages": [
+      "A205",
+      "A271",
+      "A133"
+    ]
+  },
+  {
+    "id": "CHAIN-31",
+    "title": "The Fake Recovery Loop",
+    "difficulty": 4,
+    "stages": [
+      "A295",
+      "A170",
+      "A096"
+    ]
+  },
+  {
+    "id": "CHAIN-32",
+    "title": "The SIM Swap Window",
+    "difficulty": 4,
+    "stages": [
+      "A153",
+      "A146",
+      "A096"
+    ]
+  },
+  {
+    "id": "CHAIN-33",
+    "title": "The Public Wi-Fi Compromise",
+    "difficulty": 3,
+    "stages": [
+      "A279",
+      "A134",
+      "A098"
+    ]
+  },
+  {
+    "id": "CHAIN-34",
+    "title": "The Executive Deepfake",
+    "difficulty": 4,
+    "stages": [
+      "A239",
+      "A264",
+      "A089"
+    ]
+  },
+  {
+    "id": "CHAIN-35",
+    "title": "The Emotional Money Trail",
+    "difficulty": 3,
+    "stages": [
+      "A174",
+      "A126",
+      "A097"
+    ]
+  },
+  {
+    "id": "CHAIN-36",
+    "title": "The Delivery Refund Chain",
+    "difficulty": 3,
+    "stages": [
+      "A214",
+      "A106",
+      "A147"
+    ]
+  },
+  {
+    "id": "CHAIN-37",
+    "title": "The Cloud Account Breach",
+    "difficulty": 4,
+    "stages": [
+      "A226",
+      "A139",
+      "A264"
+    ]
+  },
+  {
+    "id": "CHAIN-38",
+    "title": "The Fake Support Escalation",
+    "difficulty": 3,
+    "stages": [
+      "A267",
+      "A147",
+      "A160"
+    ]
+  },
+  {
+    "id": "CHAIN-39",
+    "title": "The Identity Harvest",
+    "difficulty": 3,
+    "stages": [
+      "A143",
+      "A199",
+      "A094"
+    ]
+  },
+  {
+    "id": "CHAIN-40",
+    "title": "The Investment Romance Chain",
+    "difficulty": 4,
+    "stages": [
+      "A169",
+      "A289",
+      "A109"
+    ]
+  }
+]

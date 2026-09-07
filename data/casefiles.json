@@ -1,0 +1,632 @@
+[
+  {
+    "id": "CASE-01",
+    "title": "The Safe Account Trap",
+    "category": "FINANCIAL MANIPULATION",
+    "difficulty": 2,
+    "brief": "A stranger's money enters your account. What happens next depends on your decisions.",
+    "nodes": [
+      {
+        "id": "start",
+        "scenario": "A14",
+        "next": {
+          "0": "forward",
+          "1": "verify",
+          "2": "verify"
+        }
+      },
+      {
+        "id": "verify",
+        "scenario": "A03",
+        "next": {
+          "0": "forward",
+          "1": "forward",
+          "2": "contain"
+        }
+      },
+      {
+        "id": "forward",
+        "scenario": "A15",
+        "next": {
+          "0": "collapse",
+          "1": "contain",
+          "2": "contain"
+        }
+      },
+      {
+        "id": "contain",
+        "scenario": "A12",
+        "next": {
+          "0": "collapse",
+          "1": "end_good",
+          "2": "collapse",
+          "3": "collapse"
+        }
+      },
+      {
+        "id": "collapse",
+        "scenario": "A16",
+        "next": {
+          "0": "end_bad",
+          "1": "end_bad",
+          "2": "end_good",
+          "3": "end_bad"
+        }
+      },
+      {
+        "id": "end_good",
+        "terminal": "good",
+        "summary": "You stopped the unexplained transfer trail and moved the case into a verified reporting/recovery path."
+      },
+      {
+        "id": "end_bad",
+        "terminal": "bad",
+        "summary": "The attack escalated because you became the transfer point for money you could not independently explain."
+      }
+    ]
+  },
+  {
+    "id": "CASE-02",
+    "title": "Your Account Is Under Attack",
+    "category": "ACCOUNT TAKEOVER",
+    "difficulty": 2,
+    "brief": "A warning becomes an account compromise. Secure it before the attacker gets further in.",
+    "nodes": [
+      {
+        "id": "start",
+        "scenario": "A11",
+        "next": {
+          "0": "escalate",
+          "1": "secure",
+          "2": "escalate",
+          "3": "escalate"
+        }
+      },
+      {
+        "id": "secure",
+        "scenario": "A17",
+        "next": {
+          "0": "secure2",
+          "1": "secure2",
+          "2": "secure2",
+          "3": "escalate"
+        }
+      },
+      {
+        "id": "secure2",
+        "scenario": "A18",
+        "next": {
+          "0": "escalate",
+          "1": "contain",
+          "2": "contain",
+          "3": "escalate"
+        }
+      },
+      {
+        "id": "escalate",
+        "scenario": "A19",
+        "next": {
+          "0": "end_bad",
+          "1": "contain",
+          "2": "end_bad",
+          "3": "end_bad"
+        }
+      },
+      {
+        "id": "contain",
+        "scenario": "A12",
+        "next": {
+          "0": "end_bad",
+          "1": "end_good",
+          "2": "end_bad",
+          "3": "end_bad"
+        }
+      },
+      {
+        "id": "end_good",
+        "terminal": "good",
+        "summary": "You contained the account compromise by using verified recovery and security controls."
+      },
+      {
+        "id": "end_bad",
+        "terminal": "bad",
+        "summary": "The attacker gained more room to operate because the response relied on unverified contact or unsafe credentials."
+      }
+    ]
+  },
+  {
+    "id": "CASE-03",
+    "title": "The Family Voice",
+    "category": "AI IMPERSONATION",
+    "difficulty": 3,
+    "brief": "A familiar voice asks for urgent help. The voice is convincing\u2014but identity still has to be verified.",
+    "nodes": [
+      {
+        "id": "start",
+        "scenario": "A08",
+        "next": {
+          "0": "pressure",
+          "1": "verify",
+          "2": "verify"
+        }
+      },
+      {
+        "id": "verify",
+        "scenario": "A06",
+        "next": {
+          "0": "pressure",
+          "1": "safe",
+          "2": "pressure"
+        }
+      },
+      {
+        "id": "pressure",
+        "scenario": "A20",
+        "next": {
+          "0": "end_bad",
+          "1": "verify2",
+          "2": "end_bad",
+          "3": "end_bad"
+        }
+      },
+      {
+        "id": "verify2",
+        "scenario": "A21",
+        "next": {
+          "0": "end_bad",
+          "1": "safe",
+          "2": "end_bad"
+        }
+      },
+      {
+        "id": "safe",
+        "scenario": "A22",
+        "next": {
+          "0": "end_bad",
+          "1": "end_good",
+          "2": "end_bad"
+        }
+      },
+      {
+        "id": "end_good",
+        "terminal": "good",
+        "summary": "You treated the voice as a clue, not proof, and verified the request independently."
+      },
+      {
+        "id": "end_bad",
+        "terminal": "bad",
+        "summary": "The impersonator used urgency and familiarity to push you past verification."
+      }
+    ]
+  },
+  {
+    "id": "CASE-04",
+    "title": "The Supplier Payment Switch",
+    "category": "BUSINESS EMAIL COMPROMISE",
+    "difficulty": 3,
+    "brief": "A familiar supplier thread requests a bank-account change. One payment decision can change the entire case.",
+    "nodes": [
+      {
+        "id": "start",
+        "scenario": "A07",
+        "next": {
+          "0": "fraud",
+          "1": "verify",
+          "2": "verify"
+        }
+      },
+      {
+        "id": "verify",
+        "scenario": "A23",
+        "next": {
+          "0": "fraud",
+          "1": "safe",
+          "2": "fraud"
+        }
+      },
+      {
+        "id": "fraud",
+        "scenario": "A24",
+        "next": {
+          "0": "end_bad",
+          "1": "safe",
+          "2": "end_bad",
+          "3": "end_bad"
+        }
+      },
+      {
+        "id": "safe",
+        "scenario": "A25",
+        "next": {
+          "0": "end_bad",
+          "1": "end_good",
+          "2": "end_bad"
+        }
+      },
+      {
+        "id": "end_good",
+        "terminal": "good",
+        "summary": "You independently verified the payment change before releasing funds."
+      },
+      {
+        "id": "end_bad",
+        "terminal": "bad",
+        "summary": "The familiar email thread created false confidence and the payment process was compromised."
+      }
+    ]
+  },
+  {
+    "id": "CASE-05",
+    "title": "The SIM Swap Window",
+    "category": "ACCOUNT TAKEOVER",
+    "difficulty": 3,
+    "brief": "Your phone suddenly loses service. The next decisions determine whether an attacker can capture your accounts.",
+    "nodes": [
+      {
+        "id": "start",
+        "scenario": "A26",
+        "next": {
+          "0": "wait",
+          "1": "carrier",
+          "2": "wait",
+          "3": "wait"
+        }
+      },
+      {
+        "id": "carrier",
+        "scenario": "A27",
+        "next": {
+          "0": "end_bad",
+          "1": "secure",
+          "2": "end_bad",
+          "3": "end_bad"
+        }
+      },
+      {
+        "id": "wait",
+        "scenario": "A28",
+        "next": {
+          "0": "end_bad",
+          "1": "secure",
+          "2": "end_bad"
+        }
+      },
+      {
+        "id": "secure",
+        "scenario": "A29",
+        "next": {
+          "0": "end_bad",
+          "1": "contain",
+          "2": "end_bad",
+          "3": "end_bad"
+        }
+      },
+      {
+        "id": "contain",
+        "scenario": "A12",
+        "next": {
+          "0": "end_bad",
+          "1": "end_good",
+          "2": "end_bad",
+          "3": "end_bad"
+        }
+      },
+      {
+        "id": "end_good",
+        "terminal": "good",
+        "summary": "You treated sudden loss of service as a possible security incident and secured the affected accounts."
+      },
+      {
+        "id": "end_bad",
+        "terminal": "bad",
+        "summary": "The attacker gained time because the unusual SIM event was not treated as a possible takeover."
+      }
+    ]
+  },
+  {
+    "id": "CASE-06",
+    "title": "The Fake Recovery Expert",
+    "category": "RECOVERY SCAM",
+    "difficulty": 3,
+    "brief": "After an incident, someone promises to recover your money or account\u2014for a fee and your information.",
+    "nodes": [
+      {
+        "id": "start",
+        "scenario": "A30",
+        "next": {
+          "0": "pay",
+          "1": "verify",
+          "2": "verify"
+        }
+      },
+      {
+        "id": "pay",
+        "scenario": "A31",
+        "next": {
+          "0": "end_bad",
+          "1": "verify",
+          "2": "end_bad"
+        }
+      },
+      {
+        "id": "verify",
+        "scenario": "A32",
+        "next": {
+          "0": "end_bad",
+          "1": "safe",
+          "2": "end_bad",
+          "3": "end_bad"
+        }
+      },
+      {
+        "id": "safe",
+        "scenario": "A33",
+        "next": {
+          "0": "end_bad",
+          "1": "end_good",
+          "2": "end_bad"
+        }
+      },
+      {
+        "id": "end_good",
+        "terminal": "good",
+        "summary": "You rejected an unsolicited recovery offer and used a verified incident-response route."
+      },
+      {
+        "id": "end_bad",
+        "terminal": "bad",
+        "summary": "The second scam exploited the first incident and attempted to steal more money or credentials."
+      }
+    ]
+  },
+  {
+    "id": "CASE-07",
+    "title": "The Job That Needed Your Account",
+    "category": "JOB SCAM / MONEY MULE",
+    "difficulty": 2,
+    "brief": "A promising job offer slowly turns into a request to receive and move money through your account.",
+    "nodes": [
+      {
+        "id": "start",
+        "scenario": "A34",
+        "next": {
+          "0": "apply",
+          "1": "verify",
+          "2": "verify"
+        }
+      },
+      {
+        "id": "apply",
+        "scenario": "A35",
+        "next": {
+          "0": "mule",
+          "1": "verify",
+          "2": "mule"
+        }
+      },
+      {
+        "id": "verify",
+        "scenario": "A36",
+        "next": {
+          "0": "mule",
+          "1": "safe",
+          "2": "mule"
+        }
+      },
+      {
+        "id": "mule",
+        "scenario": "A14",
+        "next": {
+          "0": "end_bad",
+          "1": "safe",
+          "2": "end_bad"
+        }
+      },
+      {
+        "id": "safe",
+        "scenario": "A37",
+        "next": {
+          "0": "end_bad",
+          "1": "end_good",
+          "2": "end_bad"
+        }
+      },
+      {
+        "id": "end_good",
+        "terminal": "good",
+        "summary": "You recognised that a legitimate job should not require your personal account to act as an unexplained money-transfer route."
+      },
+      {
+        "id": "end_bad",
+        "terminal": "bad",
+        "summary": "The job story was used to recruit you into moving money you could not independently explain."
+      }
+    ]
+  },
+  {
+    "id": "CASE-08",
+    "title": "The QR-to-Bank Trap",
+    "category": "QR PHISHING",
+    "difficulty": 2,
+    "brief": "A reward QR code leads into a sequence designed to harvest credentials and one-time codes.",
+    "nodes": [
+      {
+        "id": "start",
+        "scenario": "A10",
+        "next": {
+          "0": "credential",
+          "1": "safe",
+          "2": "credential"
+        }
+      },
+      {
+        "id": "credential",
+        "scenario": "A38",
+        "next": {
+          "0": "otp",
+          "1": "safe",
+          "2": "otp",
+          "3": "otp"
+        }
+      },
+      {
+        "id": "otp",
+        "scenario": "A01",
+        "next": {
+          "0": "end_bad",
+          "1": "safe",
+          "2": "end_bad"
+        }
+      },
+      {
+        "id": "safe",
+        "scenario": "A39",
+        "next": {
+          "0": "end_bad",
+          "1": "end_good",
+          "2": "end_bad"
+        }
+      },
+      {
+        "id": "end_good",
+        "terminal": "good",
+        "summary": "You refused to let a QR code bypass normal verification and protected your banking credentials."
+      },
+      {
+        "id": "end_bad",
+        "terminal": "bad",
+        "summary": "The reward was bait. Each step tried to normalise a more dangerous request."
+      }
+    ]
+  },
+  {
+    "id": "CASE-09",
+    "title": "The Marketplace Courier",
+    "category": "MARKETPLACE FRAUD",
+    "difficulty": 2,
+    "brief": "A buyer or seller introduces a courier, payment link and pressure to complete the deal immediately.",
+    "nodes": [
+      {
+        "id": "start",
+        "scenario": "A40",
+        "next": {
+          "0": "link",
+          "1": "verify",
+          "2": "link"
+        }
+      },
+      {
+        "id": "link",
+        "scenario": "A41",
+        "next": {
+          "0": "credential",
+          "1": "safe",
+          "2": "credential"
+        }
+      },
+      {
+        "id": "credential",
+        "scenario": "A09",
+        "next": {
+          "0": "end_bad",
+          "1": "safe",
+          "2": "end_bad"
+        }
+      },
+      {
+        "id": "verify",
+        "scenario": "A42",
+        "next": {
+          "0": "end_bad",
+          "1": "safe",
+          "2": "end_bad"
+        }
+      },
+      {
+        "id": "safe",
+        "scenario": "A43",
+        "next": {
+          "0": "end_bad",
+          "1": "end_good",
+          "2": "end_bad"
+        }
+      },
+      {
+        "id": "end_good",
+        "terminal": "good",
+        "summary": "You kept payment and verification inside trusted channels instead of following a stranger's payment workflow."
+      },
+      {
+        "id": "end_bad",
+        "terminal": "bad",
+        "summary": "The transaction was redirected into a fake payment or support flow."
+      }
+    ]
+  },
+  {
+    "id": "CASE-10",
+    "title": "The Authority Countdown",
+    "category": "AUTHORITY / EXTORTION",
+    "difficulty": 4,
+    "brief": "A caller claims to be an official investigator and gives you a countdown. Your goal is to separate authority from proof.",
+    "nodes": [
+      {
+        "id": "start",
+        "scenario": "A03",
+        "next": {
+          "0": "transfer",
+          "1": "badge",
+          "2": "verify"
+        }
+      },
+      {
+        "id": "transfer",
+        "scenario": "A44",
+        "next": {
+          "0": "end_bad",
+          "1": "verify",
+          "2": "end_bad",
+          "3": "end_bad"
+        }
+      },
+      {
+        "id": "badge",
+        "scenario": "A45",
+        "next": {
+          "0": "end_bad",
+          "1": "verify",
+          "2": "end_bad"
+        }
+      },
+      {
+        "id": "verify",
+        "scenario": "A46",
+        "next": {
+          "0": "end_bad",
+          "1": "safe",
+          "2": "end_bad",
+          "3": "end_bad"
+        }
+      },
+      {
+        "id": "safe",
+        "scenario": "A47",
+        "next": {
+          "0": "end_bad",
+          "1": "end_good",
+          "2": "end_bad"
+        }
+      },
+      {
+        "id": "end_good",
+        "terminal": "good",
+        "summary": "You recognised that an authority claim must still be independently verified before money or credentials move."
+      },
+      {
+        "id": "end_bad",
+        "terminal": "bad",
+        "summary": "The attacker used authority, fear and time pressure to replace verification with obedience."
+      }
+    ]
+  }
+]
