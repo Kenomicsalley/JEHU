@@ -9,22 +9,34 @@
 <body>
 <div class="shell">
 <header class="top">
-  <a class="brand" href="/"><span class="crest">🛡️</span><span><b>JEHU</b><small>ARENA • KENOMICSALLEY</small></span></a>
+  <a class="brand" href="/"><span class="crest">🛡️</span><span><b>JEHU</b><small>TRAIN THE HUMAN FIREWALL • KENOMICSALLEY</small></span></a>
+  <nav class="topNav" aria-label="JEHU navigation">
+    <button onclick="show('home')">⌂ <span>HOME</span></button>
+    <button onclick="openEmergencyRoom()">🚨 <span>EMERGENCY</span></button>
+    <button onclick="openCaseFiles()">📁 <span>CASE FILES</span></button>
+    <a href="/solo/">🎓 <span>JEHU ACADEMY</span></a>
+  </nav>
   <div class="status" id="status">CONNECTING</div>
 </header>
+<button id="homeDock" class="homeDock hidden" onclick="show('home')">⌂ HOME</button>
 
 <section id="home" class="screen active">
-  <div class="hero">
-    <div class="heroMain">
-      <div class="eyebrow">REAL-TIME MULTIPLAYER CYBER AWARENESS</div>
-      <h1>Can your household<br><em>spot the scam?</em></h1>
-      <p>JEHU — Train the Human Firewall. JEHU Arena turns cybersecurity awareness into a live social game. Create a room, send the link to your household or friends, and face the same scam scenario together — then see who made the safest decision.</p>
+  <div class="hero heroV2">
+    <div class="heroMain heroCinema">
+      <div class="eyebrow">JEHU • TRAIN THE HUMAN FIREWALL</div>
+      <h1>Defend the<br><em>human mind.</em></h1>
+      <p>JEHU is a living cybersecurity game built to train ordinary people against manipulation, fraud and AI-powered deception. Learn the pressure. Break the pressure. Defend the decision.</p>
       <div class="principles"><span>PAUSE</span><span>VERIFY</span><span>DECIDE</span><span>DEFEND</span></div>
+      <div class="heroActions">
+        <button class="btn primary" onclick="document.getElementById('name').focus();document.getElementById('homeArena').scrollIntoView({behavior:'smooth'})">ENTER THE ARENA</button>
+        <button class="btn gold" onclick="openJehuCampaign()">⚔️ JEHU • BIBLICAL CAMPAIGN</button>
+      </div>
+      <div class="heroStats"><div><b>300+</b><small>Threat scenarios</small></div><div><b>40</b><small>Attack chains</small></div><div><b>10</b><small>Case Files</small></div><div><b>8</b><small>Emergency guides</small></div></div>
     </div>
-    <div class="heroCard">
-      <div class="miniTitle">THE GAME</div>
-      <h2>Pressure Protocol</h2>
-      <p>2–8 players • 3–10 rounds • 300+ evolving cases • 4 difficulty levels • mobile friendly</p>
+    <div class="heroCard" id="homeArena">
+      <div class="miniTitle">PRESSURE PROTOCOL</div>
+      <h2>Choose your battlefield.</h2>
+      <p>Train alone, face the machine, or bring your people into the same threat.</p>
       <label>Your defender name<input id="name" maxlength="22" placeholder="e.g. Ali"></label>
       <div class="avatars">
         <button class="avatarPick selected" data-a="🛡️">🛡️</button><button class="avatarPick" data-a="🦅">🦅</button>
@@ -37,30 +49,85 @@
         <label>Rounds<select id="rounds"><option>7</option><option>5</option><option>10</option><option>3</option></select></label>
       </div>
       <button class="btn computer" onclick="openComputerSetup()">🤖 PLAY AGAINST COMPUTER</button>
-      <button class="btn emergencyBtn" onclick="openEmergencyRoom()">🚨 JEHU EMERGENCY ROOM</button>
-      <button class="btn" onclick="openCaseFiles()">📁 JEHU CASE FILES</button>
-      <button class="btn primary" onclick="createRoom()">CREATE ROOM</button>
+      <button class="btn primary" onclick="createRoom()">CREATE MULTIPLAYER ROOM</button>
       <div class="or">OR JOIN A ROOM</div>
       <div class="join"><input id="joinCode" maxlength="6" placeholder="ABC123"><button class="btn" onclick="joinRoom()">JOIN</button></div>
     </div>
   </div>
-  <div class="featureGrid">
-    <article><b>🎭 Same story, different decisions</b><small>Everyone receives the same pressure scenario. Nobody can hide behind a quiz answer.</small></article>
-    <article><b>⚡ Speed matters — but safety matters more</b><small>Correct decisions earn the most. Fast wrong decisions don't win the game.</small></article>
-    <article><b>🧠 Debrief every round</b><small>Players see why the safest choice won and learn the manipulation pattern.</small></article>
-    <article><b>🏠 Built for households</b><small>Put the room link in a family group and play from separate phones on the same Wi‑Fi or anywhere online.</small></article>
+
+  <div class="moduleGrid">
+    <button class="moduleCard arenaModule" onclick="document.getElementById('homeArena').scrollIntoView({behavior:'smooth'})"><span class="moduleIcon">⚔️</span><div><b>JEHU ARENA</b><small>Live multiplayer cyber-threat simulation. 2–8 defenders.</small></div><strong>PLAY →</strong></button>
+    <button class="moduleCard" onclick="openEmergencyRoom()"><span class="moduleIcon">🚨</span><div><b>EMERGENCY ROOM</b><small>What do you do when the attack may have already happened?</small></div><strong>ENTER →</strong></button>
+    <button class="moduleCard" onclick="openCaseFiles()"><span class="moduleIcon">📁</span><div><b>CASE FILES</b><small>Branching incidents where one decision changes the next stage.</small></div><strong>OPEN →</strong></button>
+    <a class="moduleCard" href="/solo/"><span class="moduleIcon">🎓</span><div><b>JEHU ACADEMY</b><small>Learn the patterns, practice the instincts, build your defender skill.</small></div><strong>LEARN →</strong></a>
+    <button class="moduleCard campaignModule" onclick="openJehuCampaign()"><span class="moduleIcon">🐎</span><div><b>JEHU • BIBLICAL CAMPAIGN</b><small>A cinematic strategy-action story inspired by 2 Kings 9–10.</small></div><strong>RIDE →</strong></button>
   </div>
-  <div class="solo"><a href="/solo/">← Open the full JEHU Solo Academy</a></div>
+
+  <div class="featureGrid">
+    <article><b>🎭 Same threat, different decisions</b><small>Everyone receives the same pressure scenario and must defend their own decision.</small></article>
+    <article><b>🧠 Learn the six pressure buttons</b><small>Trust, urgency, fear, curiosity, sympathy and greed become visible attack surfaces.</small></article>
+    <article><b>🤖 AI is a training opponent</b><small>JEHU uses AI-themed threats as scenarios without treating AI itself as the enemy.</small></article>
+    <article><b>🛡️ Build the human firewall</b><small>The goal is not perfect knowledge. It is the habit of pausing and verifying under pressure.</small></article>
+  </div>
+</section>
+
+<section id="jehuCampaign" class="screen">
+  <div class="topline campaignTop"><div><div class="eyebrow">STORY CAMPAIGN • INSPIRED BY 2 KINGS 9–10</div><h2>JEHU: THE FURIOUS CHARIOT</h2><p class="muted">A cinematic, non-graphic action campaign inspired by the biblical account of Jehu. The campaign is a game adaptation, not a replacement for the biblical text.</p></div><button class="ghost" onclick="show('home')">⌂ HOME</button></div>
+  <div class="campaignIntro panel">
+    <div class="campaignCopy"><span class="campaignSeal">🐎</span><div><h1>Ride hard.<br><em>Answer to nothing but the mission.</em></h1><p>The throne has been given to corruption. The anointing has been placed on you to end it. Ride down the men sent to stop you, break the house that built its power on injustice, and clear out what's left standing in the stronghold — so that order, and something worth calling justice, can be rebuilt where it was lost.</p></div></div>
+    <div class="campaignChapters">
+      <button class="chapter active" data-mission="ride" onclick="selectCampaignMission('ride')"><span>Ⅰ</span><b>The Furious Ride</b><small>Horse • bow • pursuit</small></button>
+      <button class="chapter" data-mission="chariot" onclick="selectCampaignMission('chariot')"><span>Ⅱ</span><b>Chariot of Fire</b><small>Volley • formation • defense</small></button>
+      <button class="chapter" data-mission="city" onclick="selectCampaignMission('city')"><span>Ⅲ</span><b>Siege of the Stronghold</b><small>Strategy • gates • command</small></button>
+    </div>
+  </div>
+  <div class="campaignGame panel">
+    <div class="campaignHUD"><span id="campaignMissionLabel">MISSION I • THE FURIOUS RIDE</span><span>WAVE <b id="campaignWave">1</b>/3</span><span>SCORE <b id="campaignScore">0</b></span><span>CHARIOT INTEGRITY <b id="campaignHP">100</b>%</span></div>
+    <div class="canvasWrap">
+      <canvas id="jehuCanvas" width="1100" height="560" aria-label="JEHU biblical campaign game"></canvas>
+      <div class="missionBriefing" id="missionBriefing">
+        <div class="briefingBox">
+          <div class="eyebrow">MISSION BRIEFING</div>
+          <h2 id="briefLabel">MISSION I • THE FURIOUS RIDE</h2>
+          <p id="briefNarrative" class="muted"></p>
+          <div class="objectives">
+            <div class="objective"><b>PRIMARY</b><span id="objPrimary"></span></div>
+            <div class="objective"><b>SECONDARY</b><span id="objSecondary"></span></div>
+            <div class="objective"><b>MASTERY</b><span id="objMaster"></span></div>
+          </div>
+          <button class="btn gold" onclick="beginCampaignMission()">⚔️ BEGIN MISSION</button>
+        </div>
+      </div>
+      <div class="missionComplete hidden" id="missionComplete">
+        <div class="briefingBox">
+          <div class="eyebrow" id="completeEyebrow">MISSION COMPLETE</div>
+          <h2 id="completeTitle">The road is secured.</h2>
+          <p class="muted" id="completeNarrative"></p>
+          <div class="statGrid">
+            <div><b id="statAccuracy">0%</b><small>ACCURACY</small></div>
+            <div><b id="statTime">0:00</b><small>TIME</small></div>
+            <div><b id="statNeutralized">0</b><small>NEUTRALISED</small></div>
+            <div><b id="statIntegrity">0%</b><small>CHARIOT INTEGRITY</small></div>
+          </div>
+          <div class="masteryStars" id="masteryStars">★★★</div>
+          <div class="campaignControls"><button class="btn gold" onclick="beginCampaignMission()">↻ RUN IT BACK</button><button class="btn" id="nextChapterBtn" onclick="advanceChapter()">NEXT CHAPTER →</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="campaignControls"><button class="btn" onclick="campaignMove(-1)">← MOVE</button><button class="btn gold" onclick="campaignFire()">🏹 FIRE</button><button class="btn" onclick="campaignMove(1)">MOVE →</button><button class="ghost" onclick="beginCampaignMission()">↻ RESET MISSION</button></div>
+    <div class="campaignNarrative" id="campaignNarrative">The watchman sees the company approaching. The ride begins.</div>
+  </div>
+  <div class="campaignRules grid3"><article class="panel"><b>THE BOW</b><p class="muted">Tap FIRE to release an arrow. Hit hostile targets before they reach your formation.</p></article><article class="panel"><b>THE CHARIOT</b><p class="muted">Switch to the chariot chapter for rapid volley fire and formation defence.</p></article><article class="panel"><b>THE STORY</b><p class="muted">Chapters borrow settings and motifs from 2 Kings 9–10 while the playable battles are fictionalised and non-graphic.</p></article></div>
 </section>
 
 <section id="emergencyRoom" class="screen">
-  <div class="topline"><div><div class="eyebrow">WHEN THE ATTACK MAY HAVE ALREADY HAPPENED</div><h2>JEHU Emergency Room</h2><p class="muted">Choose what happened. JEHU gives you a calm, defensive response plan. Use your bank, network provider, platform or authority's independently verified official channels for real-world action.</p></div><button class="ghost" onclick="show('home')">Back</button></div>
+  <div class="topline"><div><div class="eyebrow">WHEN THE ATTACK MAY HAVE ALREADY HAPPENED</div><h2>JEHU Emergency Room</h2><p class="muted">Choose what happened. JEHU gives you a calm, defensive response plan. Use your bank, network provider, platform or authority's independently verified official channels for real-world action.</p></div><button class="ghost" onclick="show('home')">⌂ HOME</button></div>
   <div id="emergencyGrid" class="emergencyGrid"></div>
   <div id="emergencyDetail" class="panel emergencyDetail hidden"><div class="eyebrow" id="emergencyCategory"></div><h2 id="emergencyTitle"></h2><div id="emergencySteps"></div><div class="lesson emergencyAvoid"><b>AVOID</b><div id="emergencyAvoidList"></div></div></div>
 </section>
 
 <section id="caseFiles" class="screen">
-  <div class="topline"><div><div class="eyebrow">BRANCHING INCIDENT SIMULATION</div><h2>JEHU Case Files</h2><p class="muted">Follow a cyber incident from the first contact to the consequence. Your decisions change what happens next.</p></div><button class="ghost" onclick="show('home')">Back</button></div>
+  <div class="topline"><div><div class="eyebrow">BRANCHING INCIDENT SIMULATION</div><h2>JEHU Case Files</h2><p class="muted">Follow a cyber incident from the first contact to the consequence. Your decisions change what happens next.</p></div><button class="ghost" onclick="show('home')">⌂ HOME</button></div>
   <div class="caseGrid" id="caseGrid"></div>
 </section>
 
@@ -76,7 +143,7 @@
 </section>
 
 <section id="computerSetup" class="screen">
-  <div class="topline"><div><div class="eyebrow">SINGLE DEFENDER</div><h2>Challenge the machine.</h2></div><button class="ghost" onclick="show('home')">Back</button></div>
+  <div class="topline"><div><div class="eyebrow">SINGLE DEFENDER</div><h2>Challenge the machine.</h2></div><button class="ghost" onclick="show('home')">⌂ HOME</button></div>
   <div class="computerGrid">
     <div class="panel computerIntro">
       <div class="botBadge">🤖</div><h1>JEHU vs AI</h1>
@@ -102,7 +169,7 @@
   <div class="arenaGrid">
     <main class="scenario panel">
       <div class="eyebrow">PRESSURE PROTOCOL • AI CHALLENGE</div>
-      <h1 id="botScenarioTitle">Threat</h1>
+      <h1 id="botScenarioTitle">Threat</h1><span class="chainBadge hidden" id="botChainBadge">CHAIN</span>
       <div class="message" id="botScenarioText"></div>
       <div class="evidence" id="botEvidence"></div>
       <div class="lockLabel" id="botLock">CHOOSE YOUR RESPONSE</div>
@@ -146,7 +213,7 @@
   <div class="arenaGrid">
     <main class="scenario panel">
       <div class="eyebrow">PRESSURE PROTOCOL</div>
-      <h1 id="scenarioTitle">Threat</h1>
+      <h1 id="scenarioTitle">Threat</h1><span class="chainBadge hidden" id="chainBadge">CHAIN</span>
       <div class="message" id="scenarioText"></div>
       <div class="evidence" id="evidence"></div>
       <div class="lockLabel" id="lock">CHOOSE YOUR RESPONSE</div>
