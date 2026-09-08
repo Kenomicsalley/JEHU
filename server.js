@@ -51,6 +51,9 @@ function send(ws, type, payload = {}) {
 function broadcast(room, type, payload = {}) {
   room.players.forEach(p => send(p.ws, type, payload));
 }
+function publicPlayer(p) {
+  return { id: p.id, name: p.name, avatar: p.avatar, score: p.score, streak: p.streak };
+}
 function publicPlayers(room) {
   return [...room.players.values()].map(p => ({
     id: p.id, name: p.name, avatar: p.avatar, score: p.score, streak: p.streak,
@@ -196,7 +199,7 @@ wss.on("connection", ws => {
       room.players.set(id, { id, ws, name: cleanName(m.name), avatar: m.avatar || "🛡️", score: 0, streak: 0, buttonStats: {} });
       ws.roomCode = c; ws.playerId = id;
       send(ws, "room:created", lobby(room));
-      send(ws, "room:joined", { me: room.players.get(id), lobby: lobby(room) });
+      send(ws, "room:joined", { me: publicPlayer(room.players.get(id)), lobby: lobby(room) });
       return;
     }
 
@@ -209,7 +212,7 @@ wss.on("connection", ws => {
       const id = crypto.randomUUID();
       room.players.set(id, { id, ws, name: cleanName(m.name), avatar: m.avatar || "🛡️", score: 0, streak: 0, buttonStats: {} });
       ws.roomCode = c; ws.playerId = id;
-      send(ws, "room:joined", { me: room.players.get(id), lobby: lobby(room) });
+      send(ws, "room:joined", { me: publicPlayer(room.players.get(id)), lobby: lobby(room) });
       broadcast(room, "lobby:update", lobby(room));
       return;
     }
@@ -267,3 +270,5 @@ setInterval(() => {
 }, 10 * 60 * 1000);
 
 server.listen(PORT, () => console.log(`JEHU Arena listening on ${PORT}`));
+
+module.exports = { server, wss, rooms, app };

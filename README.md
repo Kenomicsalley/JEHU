@@ -2,6 +2,39 @@
 
 **Kenomicsalley | Keep Your Trust Guarded**
 
+## v2.1 fixes (read this first if you pulled this build)
+
+Two real bugs were found and fixed in this pass — both verified with actual
+running tests, not just read-through:
+
+1. **Server crash on every room join (multiplayer only).** `room:joined`
+   was sending the *entire* internal player record back to the client,
+   which included the raw WebSocket connection object. Serializing that
+   with `JSON.stringify` throws `Converting circular structure to JSON` —
+   uncaught, inside a WebSocket message handler, which crashes the whole
+   Node process. In practice: the moment anyone created or joined a room,
+   the server died, so no round could ever start. Fixed by sending only
+   the public player fields (`id`, `name`, `avatar`, `score`, `streak`).
+   Verified by actually running `server.js` end-to-end (room create → join
+   → start → answer → reveal → finish, both Duel and Household modes) and
+   confirming a full game completes without a crash.
+2. **Missing `#chainBadge` / `#botChainBadge` elements (both Arena and
+   Computer mode).** `startRound()` and `nextBotRound()` both look up
+   these elements and call `.classList.toggle(...)` on them immediately
+   after setting the scenario title — but neither element existed in
+   `index.html`. That throws `Cannot read properties of null`, which
+   aborts the function *before* it reaches the lines that render the
+   message, evidence, answer choices, or start the countdown timer. This
+   is the direct cause of "no questions/options, timer stuck at 35" in
+   **both** multiplayer and vs-computer modes, since both functions have
+   the same bug independently. Fixed by adding both elements to
+   `index.html`. Verified by auditing every `$("#id")` reference in
+   `app.js` against `index.html` — all 97 now resolve, zero missing.
+
+Bug 2 explains the reported symptom directly and affects both modes;
+bug 1 would have caused a second, separate failure specific to
+multiplayer even after bug 2 was fixed. Both needed fixing.
+
 ### JEHU — Train the Human Firewall
 
 JEHU Arena is a browser-based cybersecurity awareness game. V2 keeps the real-time multiplayer experience and adds **JEHU vs Computer**, with four difficulty levels.

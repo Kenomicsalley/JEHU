@@ -101,3 +101,72 @@ The architecture is intentionally open-ended: new chains are data records, not n
 ### Content quality principle
 
 A larger library is useful only if it remains varied and educational. JEHU should prefer realistic, defensively framed cases; include legitimate situations; teach verification and recovery; and avoid operational details that would help a criminal execute an attack.
+
+## Front Page & JEHU Biblical Campaign — V2.1
+
+The JEHU front page is now structured as a product dashboard rather than a single multiplayer form. The primary modules are:
+
+- **JEHU Arena** — live 2–8 player cyber-threat simulation.
+- **JEHU Emergency Room** — dedicated post-incident defensive playbooks.
+- **JEHU Case Files** — branching incident simulations.
+- **JEHU Academy** — the learning/solo experience.
+- **JEHU: The Furious Chariot** — a separate story-driven action campaign inspired by the biblical narrative around Jehu.
+
+Every module exposes a persistent Home route/button so users can return to the main JEHU command centre.
+
+### Biblical Campaign design principles
+
+The campaign is explicitly labelled **inspired by 2 Kings 9–10**. The biblical account establishes Jehu's chariot ride to Jezreel, his reputation for driving furiously, his use of a bow against Joram, and subsequent campaign events. The playable combat is deliberately **fictionalised and non-graphic**: hostile units are abstract targets, and the player is rewarded for accuracy, timing and objective completion rather than graphic violence.
+
+The first campaign version contains three chapters:
+
+1. **The Furious Ride** — horseback movement and precision bow fire.
+2. **Chariot of Fire** — rapid chariot movement and multi-arrow volley fire.
+3. **The Stronghold** — a strategic objective chapter built around breaking hostile formations and securing a city objective.
+
+The campaign engine is intentionally separated from JEHU Arena so future chapters can add story, maps, boss encounters, upgrades, difficulty and achievements without altering the cybersecurity multiplayer engine.
+
+### Campaign v1.1 — story throughline and liveliness pass
+
+The three chapters now carry one continuous story beat instead of three
+disconnected shooting galleries: **a corrupt throne has to be confronted
+before anything resembling justice can be rebuilt.** Concretely:
+
+1. **The Furious Ride** — riding to confront a throne built on injustice;
+   enemy units are the **Royal Guard** sent to slow the approach.
+2. **Chariot of Fire** — the confrontation itself; enemy units are the
+   **House of Ahab**'s formation, framed as "what was built on injustice
+   doesn't step aside on its own."
+3. **The Stronghold** — the aftermath: clearing what's left of the old
+   order (**Corrupt Court**) so the standard of justice has a chance to be
+   restored. Deliberately framed around clearing a *court/formation*, not
+   individuals — kept symbolic and non-graphic throughout, same as before.
+
+Every chapter still carries the "story campaign, inspired by 2 Kings 9–10,
+not a depiction of it" framing, now printed directly on the play screen
+itself, not just the intro copy.
+
+**What's new mechanically:**
+- A **mission briefing** screen per chapter: narrative + three explicit
+  objectives (Primary / Secondary / Mastery), matching the "objectives
+  before the action" structure from the original brief.
+- A **mission-complete** screen with real computed stats: accuracy (hits ÷
+  shots fired), time, enemies neutralised, chariot integrity, and a 1–3
+  star mastery rating derived from the chapter's own integrity/accuracy
+  thresholds — not a flat "good job."
+- Hit particles on every kill, a screen-shake + red flash when a target
+  breaks through (instead of the HP bar just silently dropping), and a
+  large on-canvas wave-clear banner between waves.
+- Enemy tokens now show the chapter's actual antagonist label (Royal
+  Guard / House of Ahab / Corrupt Court) instead of a generic "HOSTILE."
+- `advanceChapter()` chains straight into the next chapter's briefing on a
+  win, so a full III-chapter run is playable back-to-back without
+  returning to the module home screen each time.
+
+**Deliberately not attempted in this pass** (real scope, not a quick add):
+a world map, RPG-style riding/archery/chariot/command progression trees,
+save state across sessions, boss encounters, and city-siege strategy
+layers. Those need their own data model (persistent player progression)
+and are the natural next milestone once this three-chapter version has
+actually been played.
+
