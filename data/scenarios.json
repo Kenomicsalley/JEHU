@@ -2034,10 +2034,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the money to the different account they specify",
+      "Verify the transfer directly with your bank before returning anything, and never to a different account",
+      "Send back only part of the amount to be safe",
+      "Tell them to contact your bank directly to sort it out"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2060,10 +2060,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the money to the different account they specify",
+      "Verify the transfer directly with your bank before returning anything, and never to a different account",
+      "Send back only part of the amount to be safe",
+      "Tell them to contact your bank directly to sort it out"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2086,10 +2086,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Accept the refund and forward the requested portion",
+      "Decline to receive or forward funds on a stranger's behalf, and verify the refund through the seller's official channel",
+      "Accept the refund but forward only a small part of it",
+      "Ask a friend to receive the refund on your behalf instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2112,10 +2112,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Accept the refund and forward the requested portion",
+      "Decline to receive or forward funds on a stranger's behalf, and verify the refund through the seller's official channel",
+      "Accept the refund but forward only a small part of it",
+      "Ask a friend to receive the refund on your behalf instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2139,10 +2139,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Provide the card details and OTP requested",
+      "Refuse to share card details or OTPs, and contact your bank directly to confirm any upgrade",
+      "Give the card number but withhold the OTP",
+      "Ask the caller to call your bank's official line instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2165,10 +2165,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Provide the card details and OTP requested",
+      "Refuse to share card details or OTPs, and contact your bank directly to confirm any upgrade",
+      "Give the card number but withhold the OTP",
+      "Ask the caller to call your bank's official line instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2191,10 +2191,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the release fee through the link provided",
+      "Don't pay any 'release fee', and check the transfer status directly through your bank's official app",
+      "Pay a smaller amount than requested to test it",
+      "Forward the link to someone else to check first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2217,10 +2217,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the release fee through the link provided",
+      "Don't pay any 'release fee', and check the transfer status directly through your bank's official app",
+      "Pay a smaller amount than requested to test it",
+      "Forward the link to someone else to check first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2244,10 +2244,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Return the payment shown in the screenshot right away",
+      "Don't return anything based on a screenshot alone — verify the claim directly with your bank first",
+      "Return half the amount as a compromise",
+      "Tell them to raise it with your bank directly instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2270,10 +2270,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Return the payment shown in the screenshot right away",
+      "Don't return anything based on a screenshot alone — verify the claim directly with your bank first",
+      "Return half the amount as a compromise",
+      "Tell them to raise it with your bank directly instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2297,10 +2297,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Receive the funds and withdraw the cash as asked",
+      "Refuse to receive or withdraw funds on someone else's behalf — this is a common money-laundering pattern",
+      "Withdraw only part of the amount in cash",
+      "Suggest a friend handle the cash withdrawal instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2323,10 +2323,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Receive the funds and withdraw the cash as asked",
+      "Refuse to receive or withdraw funds on someone else's behalf — this is a common money-laundering pattern",
+      "Withdraw only part of the amount in cash",
+      "Suggest a friend handle the cash withdrawal instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2349,10 +2349,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Call the number provided in the message right away",
+      "Ignore the number given and check your account's beneficiary list directly through your bank's official app or number",
+      "Call the number but avoid giving any details",
+      "Ask a family member to call the number instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2375,10 +2375,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Call the number provided in the message right away",
+      "Ignore the number given and check your account's beneficiary list directly through your bank's official app or number",
+      "Call the number but avoid giving any details",
+      "Ask a family member to call the number instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2401,10 +2401,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Confirm the PIN as requested",
+      "Never share your PIN over the phone — verify any card delivery directly with your bank",
+      "Give part of the PIN as a compromise",
+      "Ask them to confirm the delivery with someone else at your address"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2427,10 +2427,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Confirm the PIN as requested",
+      "Never share your PIN over the phone — verify any card delivery directly with your bank",
+      "Give part of the PIN as a compromise",
+      "Ask them to confirm the delivery with someone else at your address"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2453,10 +2453,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Enter your banking password on the link to accept the payment",
+      "Never enter your banking password on a payment link — log in only through your bank's official app to check for funds",
+      "Enter a decoy password to see what happens",
+      "Ask the buyer to send the money a different way instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2479,10 +2479,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Enter your banking password on the link to accept the payment",
+      "Never enter your banking password on a payment link — log in only through your bank's official app to check for funds",
+      "Enter a decoy password to see what happens",
+      "Ask the buyer to send the money a different way instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2505,10 +2505,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Move the funds as instructed to help trace the transaction",
+      "Refuse to move funds for a 'tracing' request — no legitimate bank process requires this, verify through official channels",
+      "Move a small amount to see what they do",
+      "Ask a colleague at the bank to confirm the request instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2531,10 +2531,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Move the funds as instructed to help trace the transaction",
+      "Refuse to move funds for a 'tracing' request — no legitimate bank process requires this, verify through official channels",
+      "Move a small amount to see what they do",
+      "Ask a colleague at the bank to confirm the request instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2557,10 +2557,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Let them use your account to receive the money",
+      "Decline — receiving money on someone else's behalf can make you a money mule, even for an acquaintance",
+      "Let them use it just this once for a small amount",
+      "Suggest they ask another friend to receive it instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2583,10 +2583,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Let them use your account to receive the money",
+      "Decline — receiving money on someone else's behalf can make you a money mule, even for an acquaintance",
+      "Let them use it just this once for a small amount",
+      "Suggest they ask another friend to receive it instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2609,10 +2609,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Accept the offer and start receiving/forwarding funds",
+      "Decline — being paid to move other people's money through your account is a serious financial crime, regardless of the commission",
+      "Try it once with a small transfer to see if it's legitimate",
+      "Recommend the offer to someone else instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2635,10 +2635,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Accept the offer and start receiving/forwarding funds",
+      "Decline — being paid to move other people's money through your account is a serious financial crime, regardless of the commission",
+      "Try it once with a small transfer to see if it's legitimate",
+      "Recommend the offer to someone else instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2662,10 +2662,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Agree to collect the payments into your personal account",
+      "Refuse — a real business does not route customer payments through a personal account; verify their business account situation independently",
+      "Agree to collect just one payment to help out",
+      "Suggest they use a colleague's account instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2688,10 +2688,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Agree to collect the payments into your personal account",
+      "Refuse — a real business does not route customer payments through a personal account; verify their business account situation independently",
+      "Agree to collect just one payment to help out",
+      "Suggest they use a colleague's account instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2714,10 +2714,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Forward the money to the account the sender specifies",
+      "Don't forward anything — report the unexplained transfer to your bank and let them handle the reversal",
+      "Forward only part of the amount",
+      "Tell the sender to contact your bank directly"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2740,10 +2740,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Forward the money to the account the sender specifies",
+      "Don't forward anything — report the unexplained transfer to your bank and let them handle the reversal",
+      "Forward only part of the amount",
+      "Tell the sender to contact your bank directly"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2766,10 +2766,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Withdraw the cash and hand it to the driver as instructed",
+      "Refuse — withdrawing and handing over cash to an unknown courier is a classic money-mule pattern",
+      "Withdraw and hand over only part of it",
+      "Ask a friend to meet the driver instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2792,10 +2792,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Withdraw the cash and hand it to the driver as instructed",
+      "Refuse — withdrawing and handing over cash to an unknown courier is a classic money-mule pattern",
+      "Withdraw and hand over only part of it",
+      "Ask a friend to meet the driver instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2818,10 +2818,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Accept the payment and let them use your account",
+      "Decline — 'renting out' your bank account is illegal and you remain fully liable for what moves through it",
+      "Let them use it for just one week to try it out",
+      "Suggest they rent a relative's account instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2844,10 +2844,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Accept the payment and let them use your account",
+      "Decline — 'renting out' your bank account is illegal and you remain fully liable for what moves through it",
+      "Let them use it for just one week to try it out",
+      "Suggest they rent a relative's account instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2870,10 +2870,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Open the account as requested",
+      "Refuse — opening an account for someone else's undisclosed business puts the legal liability entirely on you",
+      "Open the account but only use it minimally",
+      "Suggest they open the account themselves with proper documentation"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2896,10 +2896,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Open the account as requested",
+      "Refuse — opening an account for someone else's undisclosed business puts the legal liability entirely on you",
+      "Open the account but only use it minimally",
+      "Suggest they open the account themselves with proper documentation"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2922,10 +2922,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Receive the funds, convert to crypto, and send it as instructed",
+      "Refuse — converting someone else's funds to crypto and forwarding it is a common laundering technique regardless of the story",
+      "Convert and send only a portion of it",
+      "Ask someone else to handle the crypto conversion instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2948,10 +2948,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Receive the funds, convert to crypto, and send it as instructed",
+      "Refuse — converting someone else's funds to crypto and forwarding it is a common laundering technique regardless of the story",
+      "Convert and send only a portion of it",
+      "Ask someone else to handle the crypto conversion instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -2974,10 +2974,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Let donations be collected through your personal account",
+      "Decline — legitimate charities don't route donations through a personal account; verify the charity independently",
+      "Allow it for a short period only",
+      "Suggest another member collect the donations instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3000,10 +3000,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Let donations be collected through your personal account",
+      "Decline — legitimate charities don't route donations through a personal account; verify the charity independently",
+      "Allow it for a short period only",
+      "Suggest another member collect the donations instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3027,10 +3027,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Let them use your account to receive the tuition funds",
+      "Decline — receiving large overseas transfers on someone else's behalf carries real legal risk, even for a fellow student",
+      "Let them use it for a smaller partial amount",
+      "Suggest they ask the school's finance office instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3053,10 +3053,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Let them use your account to receive the tuition funds",
+      "Decline — receiving large overseas transfers on someone else's behalf carries real legal risk, even for a fellow student",
+      "Let them use it for a smaller partial amount",
+      "Suggest they ask the school's finance office instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3079,10 +3079,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Provide the reset code to make the requests stop",
+      "Never share a reset code — repeated reset attempts followed by a code request is a takeover attempt; secure the account instead",
+      "Share only part of the code",
+      "Ask someone else to check what's going on"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3105,10 +3105,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Provide the reset code to make the requests stop",
+      "Never share a reset code — repeated reset attempts followed by a code request is a takeover attempt; secure the account instead",
+      "Share only part of the code",
+      "Ask someone else to check what's going on"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3131,10 +3131,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Read out the recovery code to let them secure the account",
+      "Never read out a recovery code to a caller — use the account's own official recovery process instead",
+      "Read out part of the code",
+      "Ask the caller to call back through an official support line"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3157,10 +3157,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Read out the recovery code to let them secure the account",
+      "Never read out a recovery code to a caller — use the account's own official recovery process instead",
+      "Read out part of the code",
+      "Ask the caller to call back through an official support line"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3183,10 +3183,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Click the link and follow the steps to secure the account",
+      "Don't use the link — open the app or site directly yourself to check for real login activity and secure it",
+      "Click the link but avoid entering a password",
+      "Forward the alert to a friend to check first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3209,10 +3209,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Click the link and follow the steps to secure the account",
+      "Don't use the link — open the app or site directly yourself to check for real login activity and secure it",
+      "Click the link but avoid entering a password",
+      "Forward the alert to a friend to check first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3236,10 +3236,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Provide the security answers and backup email as requested",
+      "Refuse — real support never needs your security answers; verify through the platform's official help channel",
+      "Provide the backup email but not the security answers",
+      "Ask a friend to verify ownership on your behalf"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3262,10 +3262,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Provide the security answers and backup email as requested",
+      "Refuse — real support never needs your security answers; verify through the platform's official help channel",
+      "Provide the backup email but not the security answers",
+      "Ask a friend to verify ownership on your behalf"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3288,10 +3288,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Confirm the change since it's already been requested",
+      "Reject the change and secure the account immediately through its official settings, since you didn't request it",
+      "Confirm it but plan to change it back later",
+      "Ask someone else to look into it"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3314,10 +3314,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Confirm the change since it's already been requested",
+      "Reject the change and secure the account immediately through its official settings, since you didn't request it",
+      "Confirm it but plan to change it back later",
+      "Ask someone else to look into it"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3340,10 +3340,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Sign in again at the address shown",
+      "Don't sign in there — navigate to the real site or app directly yourself instead",
+      "Sign in but use a throwaway password first",
+      "Ask a colleague to check if the page is real"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3366,10 +3366,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Sign in again at the address shown",
+      "Don't sign in there — navigate to the real site or app directly yourself instead",
+      "Sign in but use a throwaway password first",
+      "Ask a colleague to check if the page is real"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3393,10 +3393,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the password to help them test it",
+      "Never share your password, even with a friend — offer to test the account yourself instead",
+      "Send a slightly altered version of the password",
+      "Suggest they ask someone else to help test it"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3419,10 +3419,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the password to help them test it",
+      "Never share your password, even with a friend — offer to test the account yourself instead",
+      "Send a slightly altered version of the password",
+      "Suggest they ask someone else to help test it"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3446,10 +3446,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Approve the request since they said it was a mistake",
+      "Don't approve a sign-in you didn't initiate — decline it and change your password, regardless of what the caller claims",
+      "Approve it just this once",
+      "Ask someone else nearby to decide"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3472,10 +3472,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Approve the request since they said it was a mistake",
+      "Don't approve a sign-in you didn't initiate — decline it and change your password, regardless of what the caller claims",
+      "Approve it just this once",
+      "Ask someone else nearby to decide"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3498,10 +3498,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the app immediately as instructed",
+      "Don't install apps from unsolicited messages — use your official app store and the account's real security settings instead",
+      "Install it but avoid granting permissions",
+      "Ask a friend to install it on their phone first to test"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3524,10 +3524,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the app immediately as instructed",
+      "Don't install apps from unsolicited messages — use your official app store and the account's real security settings instead",
+      "Install it but avoid granting permissions",
+      "Ask a friend to install it on their phone first to test"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3550,10 +3550,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Forward the code since they said it was a mistake",
+      "Never forward a login code to anyone — a code sent to your phone is meant to verify you, not them",
+      "Forward only part of the code",
+      "Ask them to contact the service directly instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3576,10 +3576,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Forward the code since they said it was a mistake",
+      "Never forward a login code to anyone — a code sent to your phone is meant to verify you, not them",
+      "Forward only part of the code",
+      "Ask them to contact the service directly instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3602,10 +3602,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Provide the verification details requested",
+      "Hang up and contact your network provider directly to confirm whether any upgrade is genuinely needed",
+      "Provide partial verification details",
+      "Ask a family member to handle the call"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3628,10 +3628,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Provide the verification details requested",
+      "Hang up and contact your network provider directly to confirm whether any upgrade is genuinely needed",
+      "Provide partial verification details",
+      "Ask a family member to handle the call"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3654,10 +3654,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Wait for service to return before doing anything",
+      "Contact your network provider and financial providers immediately through alternative means — sudden signal loss with reset attempts is a classic SIM-swap pattern",
+      "Try restarting your phone a few times first",
+      "Ask a friend to check your accounts for you"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3680,10 +3680,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Wait for service to return before doing anything",
+      "Contact your network provider and financial providers immediately through alternative means — sudden signal loss with reset attempts is a classic SIM-swap pattern",
+      "Try restarting your phone a few times first",
+      "Ask a friend to check your accounts for you"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3706,10 +3706,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Confirm the request since it's already been made",
+      "Reject it and contact your network provider directly, since you never made this request",
+      "Confirm it but plan to reverse it later",
+      "Ask someone else to confirm it for you"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3732,10 +3732,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Confirm the request since it's already been made",
+      "Reject it and contact your network provider directly, since you never made this request",
+      "Confirm it but plan to reverse it later",
+      "Ask someone else to confirm it for you"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3758,10 +3758,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Provide the OTP to restore service",
+      "Never share an OTP with a social media account — contact your provider only through their official app or verified line",
+      "Provide part of the OTP",
+      "Ask a friend to handle the chat instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3784,10 +3784,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Provide the OTP to restore service",
+      "Never share an OTP with a social media account — contact your provider only through their official app or verified line",
+      "Provide part of the OTP",
+      "Ask a friend to handle the chat instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3810,10 +3810,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Let the stranger handle cancelling the port",
+      "Handle the port cancellation yourself directly through your provider's official channel — don't let a stranger act on it",
+      "Let them help but watch what they do",
+      "Ask a different stranger to verify it first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3836,10 +3836,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Let the stranger handle cancelling the port",
+      "Handle the port cancellation yourself directly through your provider's official channel — don't let a stranger act on it",
+      "Let them help but watch what they do",
+      "Ask a different stranger to verify it first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3863,10 +3863,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the identity details and codes requested",
+      "Decline — SIM registration issues should only be resolved directly through your official network provider",
+      "Send partial identity details only",
+      "Ask a friend to send the details instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3889,10 +3889,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the identity details and codes requested",
+      "Decline — SIM registration issues should only be resolved directly through your official network provider",
+      "Send partial identity details only",
+      "Ask a friend to send the details instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3915,10 +3915,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the remote-support app as instructed",
+      "Refuse remote access and verify any roaming issue directly with your provider through their official channel",
+      "Install it but supervise closely",
+      "Ask a friend to install it on their phone instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3941,10 +3941,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the remote-support app as instructed",
+      "Refuse remote access and verify any roaming issue directly with your provider through their official channel",
+      "Install it but supervise closely",
+      "Ask a friend to install it on their phone instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3967,10 +3967,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Provide your identity details to help recover the number",
+      "Verify the relative's identity independently first — never use your own identity details to recover someone else's number",
+      "Provide partial identity details",
+      "Ask another relative to help instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -3993,10 +3993,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Provide your identity details to help recover the number",
+      "Verify the relative's identity independently first — never use your own identity details to recover someone else's number",
+      "Provide partial identity details",
+      "Ask another relative to help instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4020,10 +4020,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay and provide the password to get verified",
+      "Refuse — no legitimate verification process asks for your password; apply only through the platform's official process",
+      "Pay but withhold the password",
+      "Ask a friend to apply on your behalf"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4046,10 +4046,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay and provide the password to get verified",
+      "Refuse — no legitimate verification process asks for your password; apply only through the platform's official process",
+      "Pay but withhold the password",
+      "Ask a friend to apply on your behalf"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4072,10 +4072,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the emergency money to the new number",
+      "Verify with your friend through a different, trusted channel before sending anything to a new/unfamiliar number",
+      "Send a smaller amount first",
+      "Ask a mutual friend to send it instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4099,10 +4099,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the emergency money to the new number",
+      "Verify with your friend through a different, trusted channel before sending anything to a new/unfamiliar number",
+      "Send a smaller amount first",
+      "Ask a mutual friend to send it instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4127,10 +4127,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Click the link right away to check",
+      "Don't click it — verify with your friend directly through another channel whether they actually sent it",
+      "Click it but close immediately if asked to log in",
+      "Forward the link to someone else to check first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4154,10 +4154,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Click the link right away to check",
+      "Don't click it — verify with your friend directly through another channel whether they actually sent it",
+      "Click it but close immediately if asked to log in",
+      "Forward the link to someone else to check first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4182,10 +4182,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Contact the separate account to claim the prize",
+      "Ignore it — verify any giveaway through the original account's official posts, not a comment directing you elsewhere",
+      "Contact them but refuse to pay any fee",
+      "Ask a friend to contact them and check first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4208,10 +4208,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Contact the separate account to claim the prize",
+      "Ignore it — verify any giveaway through the original account's official posts, not a comment directing you elsewhere",
+      "Contact them but refuse to pay any fee",
+      "Ask a friend to contact them and check first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4235,10 +4235,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the credentials privately as requested",
+      "Never send credentials to a support account from a comment reply — use the platform's official, verified support channel",
+      "Send a username but withhold the password",
+      "Ask someone else to handle the complaint instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4261,10 +4261,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the credentials privately as requested",
+      "Never send credentials to a support account from a comment reply — use the platform's official, verified support channel",
+      "Send a username but withhold the password",
+      "Ask someone else to handle the complaint instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4287,10 +4287,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Click the link and verify immediately to avoid suspension",
+      "Don't use the link — check your account's real status directly through the official app or site",
+      "Click the link but stop before entering a password",
+      "Forward the message to a friend to check first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4313,10 +4313,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Click the link and verify immediately to avoid suspension",
+      "Don't use the link — check your account's real status directly through the official app or site",
+      "Click the link but stop before entering a password",
+      "Forward the message to a friend to check first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4340,10 +4340,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Join the private chat and invest as promised",
+      "Treat it as fake — public figures don't run guaranteed-return investments through random accounts; verify through their official channels",
+      "Invest a small 'test' amount first",
+      "Ask a friend to invest first to see if it's real"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4366,10 +4366,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Join the private chat and invest as promised",
+      "Treat it as fake — public figures don't run guaranteed-return investments through random accounts; verify through their official channels",
+      "Invest a small 'test' amount first",
+      "Ask a friend to invest first to see if it's real"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4393,10 +4393,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the requested personal details",
+      "Decline — no legitimate group requires a personal 'security register'; question the request or leave the group",
+      "Send partial details only",
+      "Suggest another member send the details instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4419,10 +4419,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the requested personal details",
+      "Decline — no legitimate group requires a personal 'security register'; question the request or leave the group",
+      "Send partial details only",
+      "Suggest another member send the details instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4445,10 +4445,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay to prevent it from being published",
+      "Don't pay — payment rarely stops the threat; stop engaging, preserve evidence, and report it to the platform",
+      "Negotiate a smaller payment",
+      "Ask a friend to handle the negotiation"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4472,10 +4472,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay to prevent it from being published",
+      "Don't pay — payment rarely stops the threat; stop engaging, preserve evidence, and report it to the platform",
+      "Negotiate a smaller payment",
+      "Ask a friend to handle the negotiation"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4500,10 +4500,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the app to see who viewed your profile",
+      "Don't install it — 'who viewed your profile' apps are almost always credential-harvesting or spam tools, not real features",
+      "Install it but deny it permissions",
+      "Ask a friend to try it first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4526,10 +4526,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the app to see who viewed your profile",
+      "Don't install it — 'who viewed your profile' apps are almost always credential-harvesting or spam tools, not real features",
+      "Install it but deny it permissions",
+      "Ask a friend to try it first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4552,10 +4552,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the processing fee to secure the job",
+      "Decline to pay — legitimate employers don't charge candidates to be hired; verify the recruiter and company independently",
+      "Pay a reduced amount to test it",
+      "Ask a friend to pay on your behalf"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4578,10 +4578,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the processing fee to secure the job",
+      "Decline to pay — legitimate employers don't charge candidates to be hired; verify the recruiter and company independently",
+      "Pay a reduced amount to test it",
+      "Ask a friend to pay on your behalf"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4605,10 +4605,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Enter your email password to create the profile",
+      "Never give your email password to a job site — create a new, separate password if an account is genuinely required",
+      "Enter an old, unused password instead",
+      "Ask someone else to create the profile for you"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4631,10 +4631,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Enter your email password to create the profile",
+      "Never give your email password to a job site — create a new, separate password if an account is genuinely required",
+      "Enter an old, unused password instead",
+      "Ask someone else to create the profile for you"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4657,10 +4657,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the software as instructed",
+      "Decline — legitimate interviews use standard, well-known video platforms; verify the recruiter and request an alternative",
+      "Install it but only on an old device",
+      "Ask a friend to install it and test it first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4683,10 +4683,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the software as instructed",
+      "Decline — legitimate interviews use standard, well-known video platforms; verify the recruiter and request an alternative",
+      "Install it but only on an old device",
+      "Ask a friend to install it and test it first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4709,10 +4709,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the fee to release the award",
+      "Don't pay — verify the scholarship directly with the institution's official office before sending anything",
+      "Pay a smaller amount than requested",
+      "Ask a family member to pay it instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4735,10 +4735,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the fee to release the award",
+      "Don't pay — verify the scholarship directly with the institution's official office before sending anything",
+      "Pay a smaller amount than requested",
+      "Ask a family member to pay it instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4761,10 +4761,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay and provide the login credentials",
+      "Refuse entirely — this is both a scam and academic fraud; report it to your institution",
+      "Provide the credentials but not the payment",
+      "Ask a classmate to handle it instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4787,10 +4787,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay and provide the login credentials",
+      "Refuse entirely — this is both a scam and academic fraud; report it to your institution",
+      "Provide the credentials but not the payment",
+      "Ask a classmate to handle it instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4813,10 +4813,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the ID copies as requested",
+      "Don't send ID documents to an unverified account — verify certificates only through the issuing institution's official process",
+      "Send a partially redacted copy",
+      "Ask someone else to send the documents"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4839,10 +4839,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the ID copies as requested",
+      "Don't send ID documents to an unverified account — verify certificates only through the issuing institution's official process",
+      "Send a partially redacted copy",
+      "Ask someone else to send the documents"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4865,10 +4865,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Deposit the cheque and follow the instructions",
+      "Don't act on the cheque until it has genuinely cleared and the employer is independently verified — this is a classic overpayment scam",
+      "Buy a cheaper item and return more of the balance",
+      "Ask a friend to handle the purchase instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4891,10 +4891,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Deposit the cheque and follow the instructions",
+      "Don't act on the cheque until it has genuinely cleared and the employer is independently verified — this is a classic overpayment scam",
+      "Buy a cheaper item and return more of the balance",
+      "Ask a friend to handle the purchase instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4917,10 +4917,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Provide the banking credentials requested",
+      "Never give banking credentials to 'confirm' a stipend — a real programme only needs an account number, not your login details",
+      "Provide partial account details only",
+      "Ask someone else to provide the details"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4943,10 +4943,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Provide the banking credentials requested",
+      "Never give banking credentials to 'confirm' a stipend — a real programme only needs an account number, not your login details",
+      "Provide partial account details only",
+      "Ask someone else to provide the details"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4969,10 +4969,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay to reserve the placement",
+      "Decline — legitimate internship placements aren't sold; verify the broker and opportunity independently first",
+      "Pay a smaller deposit",
+      "Ask a friend to pay and share the placement"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -4995,10 +4995,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay to reserve the placement",
+      "Decline — legitimate internship placements aren't sold; verify the broker and opportunity independently first",
+      "Pay a smaller deposit",
+      "Ask a friend to pay and share the placement"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5022,10 +5022,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the tuition to the personal account given",
+      "Refuse — tuition should only go to the school's official account; verify the claim directly with the school",
+      "Send a partial payment",
+      "Ask a classmate to verify and pay instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5048,10 +5048,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the tuition to the personal account given",
+      "Refuse — tuition should only go to the school's official account; verify the claim directly with the school",
+      "Send a partial payment",
+      "Ask a classmate to verify and pay instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5074,10 +5074,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the deposit to secure the apartment before viewing",
+      "Refuse to pay before viewing the property and verifying the landlord independently",
+      "Pay a smaller holding deposit",
+      "Ask a friend to view it and pay on your behalf"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5100,10 +5100,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the deposit to secure the apartment before viewing",
+      "Refuse to pay before viewing the property and verifying the landlord independently",
+      "Pay a smaller holding deposit",
+      "Ask a friend to view it and pay on your behalf"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5126,10 +5126,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the viewing fee to the personal account",
+      "Decline — legitimate viewing fees, if any, go through a verified business account; confirm the agent independently first",
+      "Pay a reduced viewing fee",
+      "Ask someone else to pay and view on your behalf"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5152,10 +5152,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the viewing fee to the personal account",
+      "Decline — legitimate viewing fees, if any, go through a verified business account; confirm the agent independently first",
+      "Pay a reduced viewing fee",
+      "Ask someone else to pay and view on your behalf"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5179,10 +5179,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Log in to your bank through the courier link to receive payment",
+      "Never log into your bank through a courier/delivery link — check for payment only through your bank's own app",
+      "Log in but only enter your username",
+      "Ask the buyer to pay a different way instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5205,10 +5205,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Log in to your bank through the courier link to receive payment",
+      "Never log into your bank through a courier/delivery link — check for payment only through your bank's own app",
+      "Log in but only enter your username",
+      "Ask the buyer to pay a different way instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5231,10 +5231,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Refund the difference shown in the screenshot",
+      "Don't refund based on a screenshot — check your own account balance directly before refunding anything",
+      "Refund only part of the difference",
+      "Ask the buyer to contact their bank about it instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5258,10 +5258,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Refund the difference shown in the screenshot",
+      "Don't refund based on a screenshot — check your own account balance directly before refunding anything",
+      "Refund only part of the difference",
+      "Ask the buyer to contact their bank about it instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5286,10 +5286,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Use the escrow site and provide the credentials",
+      "Refuse the unfamiliar escrow site — use a well-known, verified escrow or payment method instead",
+      "Provide limited account details only",
+      "Ask the buyer to suggest a different site"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5312,10 +5312,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Use the escrow site and provide the credentials",
+      "Refuse the unfamiliar escrow site — use a well-known, verified escrow or payment method instead",
+      "Provide limited account details only",
+      "Ask the buyer to suggest a different site"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5339,10 +5339,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the commitment fee to secure the deal",
+      "Verify the title document independently (e.g. at the land registry) before paying anything",
+      "Pay a smaller partial commitment fee",
+      "Ask a friend to verify the document instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5365,10 +5365,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the commitment fee to secure the deal",
+      "Verify the title document independently (e.g. at the land registry) before paying anything",
+      "Pay a smaller partial commitment fee",
+      "Ask a friend to verify the document instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5391,10 +5391,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay immediately to avoid losing the allocation",
+      "Don't pay under a same-day deadline — verify the allocation directly with the actual government agency first",
+      "Pay a partial amount to hold the spot",
+      "Ask a relative to pay on your behalf"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5417,10 +5417,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay immediately to avoid losing the allocation",
+      "Don't pay under a same-day deadline — verify the allocation directly with the actual government agency first",
+      "Pay a partial amount to hold the spot",
+      "Ask a relative to pay on your behalf"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5443,10 +5443,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the courier fee as requested",
+      "Refuse — a genuine buyer pays for their own courier; don't pay fees to receive someone else's payment",
+      "Pay a reduced courier fee",
+      "Ask the buyer to arrange the courier themselves instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5469,10 +5469,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the courier fee as requested",
+      "Refuse — a genuine buyer pays for their own courier; don't pay fees to receive someone else's payment",
+      "Pay a reduced courier fee",
+      "Ask the buyer to arrange the courier themselves instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5495,10 +5495,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Provide the OTP to release the balance",
+      "Never share an OTP with anyone claiming to be an admin — check your balance directly through the platform's official app",
+      "Provide part of the OTP",
+      "Ask another seller if this is normal first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5521,10 +5521,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Provide the OTP to release the balance",
+      "Never share an OTP with anyone claiming to be an admin — check your balance directly through the platform's official app",
+      "Provide part of the OTP",
+      "Ask another seller if this is normal first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5547,10 +5547,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Enter the card details to receive the refund",
+      "Never enter card details to 'receive' a refund — legitimate refunds don't require you to submit payment details",
+      "Enter only the card number, not the CVV",
+      "Ask someone else to handle the refund process"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5573,10 +5573,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Enter the card details to receive the refund",
+      "Never enter card details to 'receive' a refund — legitimate refunds don't require you to submit payment details",
+      "Enter only the card number, not the CVV",
+      "Ask someone else to handle the refund process"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5600,10 +5600,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Buy the gift cards immediately as instructed",
+      "Verify the request directly with the executive through a known, separate channel before doing anything — gift-card requests are a classic impersonation sign",
+      "Buy a smaller value of gift cards first",
+      "Ask a colleague to buy them instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5627,10 +5627,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Buy the gift cards immediately as instructed",
+      "Verify the request directly with the executive through a known, separate channel before doing anything — gift-card requests are a classic impersonation sign",
+      "Buy a smaller value of gift cards first",
+      "Ask a colleague to buy them instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5654,10 +5654,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay to the new bank details today as requested",
+      "Verify any bank-detail change with the supplier through a previously known contact method before paying anything",
+      "Pay a partial amount to the new account",
+      "Ask a colleague to confirm the change instead of doing it yourself"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5681,10 +5681,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay to the new bank details today as requested",
+      "Verify any bank-detail change with the supplier through a previously known contact method before paying anything",
+      "Pay a partial amount to the new account",
+      "Ask a colleague to confirm the change instead of doing it yourself"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5708,10 +5708,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the employee banking data as requested",
+      "Verify the request through an established, pre-approved internal process before sending any employee data",
+      "Send partial/redacted data",
+      "Forward the request to a colleague to handle"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5734,10 +5734,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the employee banking data as requested",
+      "Verify the request through an established, pre-approved internal process before sending any employee data",
+      "Send partial/redacted data",
+      "Forward the request to a colleague to handle"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5760,10 +5760,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the invoice to the new account number shown",
+      "Verify the invoice and account number directly with the vendor through a separate, known channel before paying",
+      "Pay part of the invoice amount",
+      "Forward the invoice to a colleague to pay instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5786,10 +5786,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the invoice to the new account number shown",
+      "Verify the invoice and account number directly with the vendor through a separate, known channel before paying",
+      "Pay part of the invoice amount",
+      "Forward the invoice to a colleague to pay instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5812,10 +5812,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Read out the verification code as requested",
+      "Never read out an internal verification code to an inbound caller — verify their identity through official channels first",
+      "Read out part of the code",
+      "Ask a colleague to handle the call instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5838,10 +5838,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Read out the verification code as requested",
+      "Never read out an internal verification code to an inbound caller — verify their identity through official channels first",
+      "Read out part of the code",
+      "Ask a colleague to handle the call instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5864,10 +5864,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Sign in with your work credentials on the unfamiliar domain",
+      "Don't sign in there — access the document only through your organisation's known, official platform",
+      "Sign in with a decoy password first",
+      "Ask a colleague to open the link and check first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5890,10 +5890,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Sign in with your work credentials on the unfamiliar domain",
+      "Don't sign in there — access the document only through your organisation's known, official platform",
+      "Sign in with a decoy password first",
+      "Ask a colleague to open the link and check first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5917,10 +5917,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Process the confidential transfer as the voice message requests",
+      "Verify the request through an independent channel before transferring anything — a realistic voice is not proof of identity",
+      "Transfer a smaller amount first",
+      "Ask a colleague to make the decision instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5943,10 +5943,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Process the confidential transfer as the voice message requests",
+      "Verify the request through an independent channel before transferring anything — a realistic voice is not proof of identity",
+      "Transfer a smaller amount first",
+      "Ask a colleague to make the decision instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5970,10 +5970,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the extension as instructed to join the meeting",
+      "Decline to install it — join through the organisation's standard, approved meeting platform instead",
+      "Install it on a personal, non-work device only",
+      "Ask IT to install it for everyone instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -5996,10 +5996,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the extension as instructed to join the meeting",
+      "Decline to install it — join through the organisation's standard, approved meeting platform instead",
+      "Install it on a personal, non-work device only",
+      "Ask IT to install it for everyone instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6022,10 +6022,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Process the salary-account change as requested",
+      "Verify the change request directly with the colleague through a known, separate channel before processing it",
+      "Process a partial change pending confirmation",
+      "Forward the request to someone else in payroll to process"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6048,10 +6048,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Process the salary-account change as requested",
+      "Verify the change request directly with the colleague through a known, separate channel before processing it",
+      "Process a partial change pending confirmation",
+      "Forward the request to someone else in payroll to process"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6075,10 +6075,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Grant remote access as requested",
+      "Refuse remote access and verify the technician's identity through your organisation's official IT helpdesk first",
+      "Grant limited remote access only",
+      "Ask a colleague to grant the access instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6101,10 +6101,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Grant remote access as requested",
+      "Refuse remote access and verify the technician's identity through your organisation's official IT helpdesk first",
+      "Grant limited remote access only",
+      "Ask a colleague to grant the access instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6128,10 +6128,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the money since the voice sounds exactly like them",
+      "Call them back on a number you already have, or use a family safe word, before sending anything",
+      "Send a smaller amount first",
+      "Ask another relative to verify instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6155,10 +6155,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the money since the voice sounds exactly like them",
+      "Call them back on a number you already have, or use a family safe word, before sending anything",
+      "Send a smaller amount first",
+      "Ask another relative to verify instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6182,10 +6182,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Process the payment since the video looks real",
+      "Verify the request through a separate, trusted channel — realistic video is not proof of identity for high-stakes requests",
+      "Process a smaller partial payment",
+      "Ask a colleague to make the call on this instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6209,10 +6209,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Process the payment since the video looks real",
+      "Verify the request through a separate, trusted channel — realistic video is not proof of identity for high-stakes requests",
+      "Process a smaller partial payment",
+      "Ask a colleague to make the call on this instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6237,10 +6237,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Upload the password database as requested",
+      "Never upload passwords to any support tool — legitimate diagnostics never require your password database",
+      "Upload a partial or old password list",
+      "Ask someone else to handle the chatbot"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6263,10 +6263,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Upload the password database as requested",
+      "Never upload passwords to any support tool — legitimate diagnostics never require your password database",
+      "Upload a partial or old password list",
+      "Ask someone else to handle the chatbot"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6289,10 +6289,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the remote-access software as instructed",
+      "Decline to install remote-access software during an interview — verify the recruiter and company independently",
+      "Install it but disconnect immediately after",
+      "Ask a friend to install it on their device to test"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6315,10 +6315,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the remote-access software as instructed",
+      "Decline to install remote-access software during an interview — verify the recruiter and company independently",
+      "Install it but disconnect immediately after",
+      "Ask a friend to install it on their device to test"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6342,10 +6342,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the emergency funds right away",
+      "Verify through a direct call or message to the relative on a number you already trust before sending anything",
+      "Send a smaller amount first",
+      "Ask another family member to verify instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6370,10 +6370,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Send the emergency funds right away",
+      "Verify through a direct call or message to the relative on a number you already trust before sending anything",
+      "Send a smaller amount first",
+      "Ask another family member to verify instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6399,10 +6399,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Make the investment as they've been building up to",
+      "Verify the person's identity and the investment independently through regulated, official channels before sending anything",
+      "Invest a small 'trial' amount",
+      "Ask them to prove themselves further over the same channel"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6425,10 +6425,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Make the investment as they've been building up to",
+      "Verify the person's identity and the investment independently through regulated, official channels before sending anything",
+      "Invest a small 'trial' amount",
+      "Ask them to prove themselves further over the same channel"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6451,10 +6451,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Follow the payment link to invest",
+      "Treat it as fake — verify any such announcement through the official's real, verified channels, not a video clip",
+      "Invest a small amount to test it",
+      "Ask a friend to check the link first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6477,10 +6477,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Follow the payment link to invest",
+      "Treat it as fake — verify any such announcement through the official's real, verified channels, not a video clip",
+      "Invest a small amount to test it",
+      "Ask a friend to check the link first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6504,10 +6504,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Complete the financial action since their voice matches",
+      "A voice alone is never proof of identity — verify independently through an official channel before acting",
+      "Complete a smaller version of the action",
+      "Ask them to verify with someone else instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6530,10 +6530,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Complete the financial action since their voice matches",
+      "A voice alone is never proof of identity — verify independently through an official channel before acting",
+      "Complete a smaller version of the action",
+      "Ask them to verify with someone else instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6556,10 +6556,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the settlement immediately to avoid legal action",
+      "Don't pay under pressure — verify the claim and the lawyer's identity independently, including through your own legal advice",
+      "Pay a partial settlement amount",
+      "Ask a family member to handle the payment"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6582,10 +6582,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the settlement immediately to avoid legal action",
+      "Don't pay under pressure — verify the claim and the lawyer's identity independently, including through your own legal advice",
+      "Pay a partial settlement amount",
+      "Ask a family member to handle the payment"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6608,10 +6608,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Update the bank details as shown in the meeting",
+      "Verify the new bank details directly with the supplier through a separate, previously known contact method",
+      "Update the details but only for a trial payment",
+      "Ask a colleague to make the update instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6634,10 +6634,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Update the bank details as shown in the meeting",
+      "Verify the new bank details directly with the supplier through a separate, previously known contact method",
+      "Update the details but only for a trial payment",
+      "Ask a colleague to make the update instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6661,10 +6661,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Call the number shown and follow their instructions",
+      "Close the page and ignore the popup — real security warnings don't come with a phone number to call",
+      "Call but hang up if they ask for payment",
+      "Ask a friend to call and check first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6687,10 +6687,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Call the number shown and follow their instructions",
+      "Close the page and ignore the popup — real security warnings don't come with a phone number to call",
+      "Call but hang up if they ask for payment",
+      "Ask a friend to call and check first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6713,10 +6713,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the software and grant remote control",
+      "Refuse remote access — contact your device or software maker's official support channel instead",
+      "Install it but watch closely while they work",
+      "Ask a friend to grant the access instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6739,10 +6739,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the software and grant remote control",
+      "Refuse remote access — contact your device or software maker's official support channel instead",
+      "Install it but watch closely while they work",
+      "Ask a friend to grant the access instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6765,10 +6765,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Download and run the installer offered",
+      "Ignore it — update your browser only through its own built-in update feature or official website",
+      "Download it but scan it with antivirus first",
+      "Ask someone else to download and check it"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6791,10 +6791,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Download and run the installer offered",
+      "Ignore it — update your browser only through its own built-in update feature or official website",
+      "Download it but scan it with antivirus first",
+      "Ask someone else to download and check it"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6817,10 +6817,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Plug it into your computer to see what's on it",
+      "Don't plug it in — hand it to IT/security to check safely, since unknown USB drives are a common malware delivery method",
+      "Plug it into an old, unused computer first",
+      "Ask a colleague to plug it in instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6843,10 +6843,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Plug it into your computer to see what's on it",
+      "Don't plug it in — hand it to IT/security to check safely, since unknown USB drives are a common malware delivery method",
+      "Plug it into an old, unused computer first",
+      "Ask a colleague to plug it in instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6869,10 +6869,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Grant administrator access to install it",
+      "Don't grant admin access to disable your own security settings — use only official, licensed software",
+      "Grant limited access only",
+      "Ask a friend to install it on their device first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6895,10 +6895,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Grant administrator access to install it",
+      "Don't grant admin access to disable your own security settings — use only official, licensed software",
+      "Grant limited access only",
+      "Ask a friend to install it on their device first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6921,10 +6921,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Open the attachment and enable macros as asked",
+      "Don't enable macros — verify the invoice with the sender through a separate channel first, macros are a common malware trigger",
+      "Open it but enable macros only briefly",
+      "Forward it to a colleague to open instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6947,10 +6947,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Open the attachment and enable macros as asked",
+      "Don't enable macros — verify the invoice with the sender through a separate channel first, macros are a common malware trigger",
+      "Open it but enable macros only briefly",
+      "Forward it to a colleague to open instead"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6973,10 +6973,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the cleaner app immediately",
+      "Ignore the popup — use only your phone's official app store and built-in security features to check for real issues",
+      "Install it but deny it extra permissions",
+      "Ask a friend to install it on their phone first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -6999,10 +6999,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the cleaner app immediately",
+      "Ignore the popup — use only your phone's official app store and built-in security features to check for real issues",
+      "Install it but deny it extra permissions",
+      "Ask a friend to install it on their phone first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -7026,10 +7026,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Scan and install the file from the unknown source",
+      "Don't install apps from outside your official app store — get updates only through it",
+      "Install it but disconnect from the internet first",
+      "Ask someone else to scan it and check first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -7052,10 +7052,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Scan and install the file from the unknown source",
+      "Don't install apps from outside your official app store — get updates only through it",
+      "Install it but disconnect from the internet first",
+      "Ask someone else to scan it and check first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -7078,10 +7078,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the VPN app to get online",
+      "Don't install an unfamiliar VPN — use a well-known, reputable VPN provider or avoid the network entirely",
+      "Install it but uninstall right after connecting",
+      "Ask someone else to check if it's safe first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -7104,10 +7104,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the VPN app to get online",
+      "Don't install an unfamiliar VPN — use a well-known, reputable VPN provider or avoid the network entirely",
+      "Install it but uninstall right after connecting",
+      "Ask someone else to check if it's safe first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -7131,10 +7131,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the extension and grant the access requested",
+      "Decline — an extension requesting access to all passwords and every website is an excessive, high-risk permission request",
+      "Install it but revoke some permissions after",
+      "Ask a friend to test it first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -7157,10 +7157,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Install the extension and grant the access requested",
+      "Decline — an extension requesting access to all passwords and every website is an excessive, high-risk permission request",
+      "Install it but revoke some permissions after",
+      "Ask a friend to test it first"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -7183,10 +7183,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Invest based on the guaranteed no-risk promise",
+      "Treat guaranteed no-risk returns as a red flag — verify the platform is licensed and regulated before investing anything",
+      "Invest a small 'test' amount first",
+      "Ask a friend to invest first to see if it's real"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -7209,10 +7209,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Invest based on the guaranteed no-risk promise",
+      "Treat guaranteed no-risk returns as a red flag — verify the platform is licensed and regulated before investing anything",
+      "Invest a small 'test' amount first",
+      "Ask a friend to invest first to see if it's real"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -7236,10 +7236,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the upfront fee to recover the lost money",
+      "Don't pay — genuine recovery of scammed funds doesn't require an upfront fee, and this is often a second scam targeting the same victim",
+      "Pay a reduced upfront fee",
+      "Ask a friend to pay on your behalf"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -7262,10 +7262,10 @@
       "Identity not independently verified"
     ],
     "options": [
-      "Act immediately as requested",
-      "Pause and verify independently using a trusted official channel or established process",
-      "Send a smaller amount or partial information first",
-      "Forward the request to someone else and continue following the sender’s instructions"
+      "Pay the upfront fee to recover the lost money",
+      "Don't pay — genuine recovery of scammed funds doesn't require an upfront fee, and this is often a second scam targeting the same victim",
+      "Pay a reduced upfront fee",
+      "Ask a friend to pay on your behalf"
     ],
     "correct": 1,
     "lesson": "Pause, verify independently, and keep control of your credentials, money and devices. Do not let pressure determine the next action.",
@@ -7288,10 +7288,10 @@
       "Independently verifiable"
     ],
     "options": [
-      "Reject it automatically because anything unexpected must be a scam",
-      "Proceed through the trusted, expected channel while keeping sensitive credentials private",
-      "Give a password or OTP if someone asks for it",
-      "Move the interaction to an unfamiliar channel"
+      "Treat it as suspicious just because it was unexpected",
+      "Confirm it matches something you actually expect, then proceed through the normal trusted channel",
+      "Hand over a password or OTP if it asks for one",
+      "Continue the interaction through a different, unfamiliar channel instead"
     ],
     "correct": 1,
     "lesson": "Good security is not automatic distrust. Verify through a trusted path and protect sensitive credentials.",
@@ -7314,10 +7314,10 @@
       "Independently verifiable"
     ],
     "options": [
-      "Reject it automatically because anything unexpected must be a scam",
-      "Proceed through the trusted, expected channel while keeping sensitive credentials private",
-      "Give a password or OTP if someone asks for it",
-      "Move the interaction to an unfamiliar channel"
+      "Treat it as suspicious just because it was unexpected",
+      "Confirm it matches something you actually expect, then proceed through the normal trusted channel",
+      "Hand over a password or OTP if it asks for one",
+      "Continue the interaction through a different, unfamiliar channel instead"
     ],
     "correct": 1,
     "lesson": "Good security is not automatic distrust. Verify through a trusted path and protect sensitive credentials.",
@@ -7340,10 +7340,10 @@
       "Independently verifiable"
     ],
     "options": [
-      "Reject it automatically because anything unexpected must be a scam",
-      "Proceed through the trusted, expected channel while keeping sensitive credentials private",
-      "Give a password or OTP if someone asks for it",
-      "Move the interaction to an unfamiliar channel"
+      "Treat it as suspicious just because it was unexpected",
+      "Confirm it matches something you actually expect, then proceed through the normal trusted channel",
+      "Hand over a password or OTP if it asks for one",
+      "Continue the interaction through a different, unfamiliar channel instead"
     ],
     "correct": 1,
     "lesson": "Good security is not automatic distrust. Verify through a trusted path and protect sensitive credentials.",
@@ -7366,10 +7366,10 @@
       "Independently verifiable"
     ],
     "options": [
-      "Reject it automatically because anything unexpected must be a scam",
-      "Proceed through the trusted, expected channel while keeping sensitive credentials private",
-      "Give a password or OTP if someone asks for it",
-      "Move the interaction to an unfamiliar channel"
+      "Treat it as suspicious just because it was unexpected",
+      "Confirm it matches something you actually expect, then proceed through the normal trusted channel",
+      "Hand over a password or OTP if it asks for one",
+      "Continue the interaction through a different, unfamiliar channel instead"
     ],
     "correct": 1,
     "lesson": "Good security is not automatic distrust. Verify through a trusted path and protect sensitive credentials.",
@@ -7392,10 +7392,10 @@
       "Independently verifiable"
     ],
     "options": [
-      "Reject it automatically because anything unexpected must be a scam",
-      "Proceed through the trusted, expected channel while keeping sensitive credentials private",
-      "Give a password or OTP if someone asks for it",
-      "Move the interaction to an unfamiliar channel"
+      "Treat it as suspicious just because it was unexpected",
+      "Confirm it matches something you actually expect, then proceed through the normal trusted channel",
+      "Hand over a password or OTP if it asks for one",
+      "Continue the interaction through a different, unfamiliar channel instead"
     ],
     "correct": 1,
     "lesson": "Good security is not automatic distrust. Verify through a trusted path and protect sensitive credentials.",
@@ -7418,10 +7418,10 @@
       "Independently verifiable"
     ],
     "options": [
-      "Reject it automatically because anything unexpected must be a scam",
-      "Proceed through the trusted, expected channel while keeping sensitive credentials private",
-      "Give a password or OTP if someone asks for it",
-      "Move the interaction to an unfamiliar channel"
+      "Treat it as suspicious just because it was unexpected",
+      "Confirm it matches something you actually expect, then proceed through the normal trusted channel",
+      "Hand over a password or OTP if it asks for one",
+      "Continue the interaction through a different, unfamiliar channel instead"
     ],
     "correct": 1,
     "lesson": "Good security is not automatic distrust. Verify through a trusted path and protect sensitive credentials.",
@@ -7444,10 +7444,10 @@
       "Independently verifiable"
     ],
     "options": [
-      "Reject it automatically because anything unexpected must be a scam",
-      "Proceed through the trusted, expected channel while keeping sensitive credentials private",
-      "Give a password or OTP if someone asks for it",
-      "Move the interaction to an unfamiliar channel"
+      "Treat it as suspicious just because it was unexpected",
+      "Confirm it matches something you actually expect, then proceed through the normal trusted channel",
+      "Hand over a password or OTP if it asks for one",
+      "Continue the interaction through a different, unfamiliar channel instead"
     ],
     "correct": 1,
     "lesson": "Good security is not automatic distrust. Verify through a trusted path and protect sensitive credentials.",
@@ -7470,10 +7470,10 @@
       "Independently verifiable"
     ],
     "options": [
-      "Reject it automatically because anything unexpected must be a scam",
-      "Proceed through the trusted, expected channel while keeping sensitive credentials private",
-      "Give a password or OTP if someone asks for it",
-      "Move the interaction to an unfamiliar channel"
+      "Treat it as suspicious just because it was unexpected",
+      "Confirm it matches something you actually expect, then proceed through the normal trusted channel",
+      "Hand over a password or OTP if it asks for one",
+      "Continue the interaction through a different, unfamiliar channel instead"
     ],
     "correct": 1,
     "lesson": "Good security is not automatic distrust. Verify through a trusted path and protect sensitive credentials.",
@@ -7496,10 +7496,10 @@
       "Independently verifiable"
     ],
     "options": [
-      "Reject it automatically because anything unexpected must be a scam",
-      "Proceed through the trusted, expected channel while keeping sensitive credentials private",
-      "Give a password or OTP if someone asks for it",
-      "Move the interaction to an unfamiliar channel"
+      "Treat it as suspicious just because it was unexpected",
+      "Confirm it matches something you actually expect, then proceed through the normal trusted channel",
+      "Hand over a password or OTP if it asks for one",
+      "Continue the interaction through a different, unfamiliar channel instead"
     ],
     "correct": 1,
     "lesson": "Good security is not automatic distrust. Verify through a trusted path and protect sensitive credentials.",
@@ -7522,10 +7522,10 @@
       "Independently verifiable"
     ],
     "options": [
-      "Reject it automatically because anything unexpected must be a scam",
-      "Proceed through the trusted, expected channel while keeping sensitive credentials private",
-      "Give a password or OTP if someone asks for it",
-      "Move the interaction to an unfamiliar channel"
+      "Treat it as suspicious just because it was unexpected",
+      "Confirm it matches something you actually expect, then proceed through the normal trusted channel",
+      "Hand over a password or OTP if it asks for one",
+      "Continue the interaction through a different, unfamiliar channel instead"
     ],
     "correct": 1,
     "lesson": "Good security is not automatic distrust. Verify through a trusted path and protect sensitive credentials.",
@@ -7548,10 +7548,10 @@
       "Independently verifiable"
     ],
     "options": [
-      "Reject it automatically because anything unexpected must be a scam",
-      "Proceed through the trusted, expected channel while keeping sensitive credentials private",
-      "Give a password or OTP if someone asks for it",
-      "Move the interaction to an unfamiliar channel"
+      "Treat it as suspicious just because it was unexpected",
+      "Confirm it matches something you actually expect, then proceed through the normal trusted channel",
+      "Hand over a password or OTP if it asks for one",
+      "Continue the interaction through a different, unfamiliar channel instead"
     ],
     "correct": 1,
     "lesson": "Good security is not automatic distrust. Verify through a trusted path and protect sensitive credentials.",
@@ -7574,10 +7574,10 @@
       "Independently verifiable"
     ],
     "options": [
-      "Reject it automatically because anything unexpected must be a scam",
-      "Proceed through the trusted, expected channel while keeping sensitive credentials private",
-      "Give a password or OTP if someone asks for it",
-      "Move the interaction to an unfamiliar channel"
+      "Treat it as suspicious just because it was unexpected",
+      "Confirm it matches something you actually expect, then proceed through the normal trusted channel",
+      "Hand over a password or OTP if it asks for one",
+      "Continue the interaction through a different, unfamiliar channel instead"
     ],
     "correct": 1,
     "lesson": "Good security is not automatic distrust. Verify through a trusted path and protect sensitive credentials.",
