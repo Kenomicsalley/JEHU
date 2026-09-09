@@ -114,7 +114,17 @@
         </div>
       </div>
     </div>
-    <div class="campaignControls"><button class="btn" onclick="campaignMove(-1)">← MOVE</button><button class="btn gold" onclick="campaignFire()">🏹 FIRE</button><button class="btn" onclick="campaignMove(1)">MOVE →</button><button class="ghost" onclick="beginCampaignMission()">↻ RESET MISSION</button></div>
+    <div class="gamepad">
+      <div class="joystickZone" id="joystickZone"><div class="joystickBase"><div class="joystickKnob" id="joystickKnob"></div></div><small>MOVE</small></div>
+      <div class="actionButtons">
+        <button class="actionBtn a" onclick="campaignFire()">A<small>FIRE</small></button>
+        <button class="actionBtn b" onclick="campaignJump()">B<small>JUMP</small></button>
+        <button class="actionBtn c" id="btnVolley" onclick="campaignVolley()">C<small>VOLLEY</small></button>
+        <button class="actionBtn d" id="btnRun" onclick="campaignRun()">D<small>RUN</small></button>
+      </div>
+      <button class="ghost resetBtn" onclick="beginCampaignMission()">↻ RESET</button>
+    </div>
+    <p class="controlHint">Keyboard also works: ← → move, Space fire, ↑ jump, Shift run.</p>
     <div class="campaignNarrative" id="campaignNarrative">The watchman sees the company approaching. The ride begins.</div>
   </div>
   <div class="campaignRules grid3"><article class="panel"><b>THE BOW</b><p class="muted">Tap FIRE to release an arrow. Hit hostile targets before they reach your formation.</p></article><article class="panel"><b>THE CHARIOT</b><p class="muted">Switch to the chariot chapter for rapid volley fire and formation defence.</p></article><article class="panel"><b>THE STORY</b><p class="muted">Chapters borrow settings and motifs from 2 Kings 9–10 while the playable battles are fictionalised and non-graphic.</p></article></div>
@@ -165,7 +175,7 @@
 </section>
 
 <section id="computerArena" class="screen">
-  <div class="arenaTop"><span id="botRoundNo">ROUND</span><span id="botCategory">THREAT</span><span class="botVs">YOU <b>VS</b> 🤖</span><strong><i id="botTimer">35</i>s</strong></div>
+  <div class="arenaTop"><span id="botRoundNo">ROUND</span><span id="botCategory">THREAT</span><span class="botVs">YOU <b>VS</b> 🤖</span><strong><i id="botTimer">40</i>s</strong></div>
   <div class="arenaGrid">
     <main class="scenario panel">
       <div class="eyebrow">PRESSURE PROTOCOL • AI CHALLENGE</div>
@@ -209,7 +219,7 @@
 </section>
 
 <section id="arena" class="screen">
-  <div class="arenaTop"><span id="roundNo">ROUND</span><span id="category">THREAT</span><span id="shieldWrap" class="shield hidden">HOUSEHOLD SHIELD <b id="shield">100%</b></span><strong><i id="timer">35</i>s</strong></div>
+  <div class="arenaTop"><span id="roundNo">ROUND</span><span id="category">THREAT</span><span id="shieldWrap" class="shield hidden">HOUSEHOLD SHIELD <b id="shield">100%</b></span><strong><i id="timer">40</i>s</strong></div>
   <div class="arenaGrid">
     <main class="scenario panel">
       <div class="eyebrow">PRESSURE PROTOCOL</div>

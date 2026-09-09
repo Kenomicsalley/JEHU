@@ -35,3 +35,21 @@
 .masteryStars{font-size:30px;letter-spacing:6px;margin:8px 0 16px}
 .masteryStars .starOn{color:#ffd166}
 .masteryStars .starOff{color:#2c3c4a}
+
+/* ---------- Chariot gamepad: joystick + ABCD action buttons ---------- */
+.gamepad{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:16px;flex-wrap:wrap}
+.joystickZone{width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,#0e2135,#071522);border:1px solid #23445f;position:relative;touch-action:none;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.joystickZone small{position:absolute;bottom:-20px;left:0;right:0;text-align:center;color:#5f7f95;font-size:10px;letter-spacing:.08em}
+.joystickBase{width:90px;height:90px;border-radius:50%;border:1px solid #2c5372;background:#0a1c2c;position:relative}
+.joystickKnob{width:42px;height:42px;border-radius:50%;background:linear-gradient(145deg,#ffd166,#e0a83b);position:absolute;top:24px;left:24px;box-shadow:0 6px 16px #0007;transition:transform .05s linear}
+.actionButtons{display:grid;grid-template-columns:repeat(2,56px);grid-template-rows:repeat(2,56px);gap:9px}
+.actionBtn{border:0;border-radius:50%;color:#04101a;font-weight:900;font-size:17px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;box-shadow:0 8px 18px #0006}
+.actionBtn small{font-size:7px;font-weight:800;letter-spacing:.04em;color:#04101a99}
+.actionBtn.a{background:#ffd166}
+.actionBtn.b{background:#8ee6a8}
+.actionBtn.c{background:#ff8a65}
+.actionBtn.d{background:#38d9ff}
+.actionBtn[disabled]{opacity:.35}
+.resetBtn{flex-shrink:0}
+.controlHint{color:#5f7f95;font-size:11px;text-align:center;margin-top:8px}
+@media(max-width:700px){.controlHint{display:none}.gamepad{justify-content:center}}
