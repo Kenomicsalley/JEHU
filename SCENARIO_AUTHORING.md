@@ -1,5 +1,24 @@
 # JEHU Scenario Authoring Guide
 
+## Options-authoring pass (v2.2)
+
+100 base scenarios (A089–A288, spanning 10 categories) previously shared
+one of two generic, cross-category templated option sets — a leftover
+from the script that expanded the dataset. Every one of the 100 has now
+been given genuinely scenario-specific options, written from its actual
+`title`/`message`, following a consistent structure: [0] comply
+immediately in the specific way asked, [1] the correct answer — verify
+independently through the appropriate channel for *that* scenario, [2] a
+partial-compliance middle ground, [3] deflect the decision to someone
+else. Each "— The Follow-Up" scenario (the escalation variant of the same
+scam) intentionally shares its base scenario's options — that's a
+deliberate pairing (same decision, tested again under more pressure), not
+a leftover duplicate. The one remaining group of 12 shared option sets
+(`A289`–`A300`, the LEGITIMATE VERIFICATION category) is similarly
+intentional — one coherent, correctly-matched set for that category.
+Result: 189 distinct option sets across 300 scenarios, largest remaining
+group is 12 (down from a single 200-scenario cross-category block).
+
 JEHU is designed so content grows without rewriting the game engine. Add or edit content in `data/scenarios.json`, `data/chains.json`, and `data/emergency.json`; the server/game rules stay unchanged.
 
 ## Scenario record

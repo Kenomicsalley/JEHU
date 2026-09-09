@@ -35,6 +35,31 @@ Bug 2 explains the reported symptom directly and affects both modes;
 bug 1 would have caused a second, separate failure specific to
 multiplayer even after bug 2 was fixed. Both needed fixing.
 
+## v2.2 fixes
+
+3. **Arena answer options looked identical round after round.** This
+   turned out to be a **content** bug, not a code bug: 200 of the 300
+   scenarios (spanning 10 different threat categories) shared the exact
+   same 4 generic answer options, a leftover from the content-expansion
+   script that generated them. Since two-thirds of the pool shared one
+   option set, most rounds showed the same four answers even though the
+   question text was genuinely different each time. **Fully re-authored:**
+   all 100 affected base scenarios now have their own scenario-specific
+   options, written from their actual title/message — see
+   `SCENARIO_AUTHORING.md` for the full breakdown. 189 distinct option
+   sets across 300 scenarios now (was 1 covering 200 of them). The only
+   remaining shared set (12 scenarios) is the single-category
+   LEGITIMATE VERIFICATION set, which is intentional, not leftover.
+4. **Case Files showed a blank grid.** All 10 case files require
+   difficulty 2 or higher, but "Rookie" (difficulty 1, the default for
+   every new player) filtered all 10 out, leaving nothing to show. Fixed
+   by no longer hard-filtering the 10 case files by difficulty — they're
+   a small, curated set, so all 10 now show for every difficulty, sorted
+   easiest-first, with their star rating visible for the player to judge.
+5. **Round timer:** now 40 seconds (was 35), updated in both the
+   server-authoritative round timer and the client display default, for
+   both Arena and Computer mode.
+
 ### JEHU — Train the Human Firewall
 
 JEHU Arena is a browser-based cybersecurity awareness game. V2 keeps the real-time multiplayer experience and adds **JEHU vs Computer**, with four difficulty levels.

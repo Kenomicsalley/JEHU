@@ -19,7 +19,7 @@ const wss = new WebSocketServer({ server });
 
 const MAX_PLAYERS = 8;
 const ROOM_TTL = 1000 * 60 * 60 * 3;
-const ROUND_TIME = 35;
+const ROUND_TIME = 40;
 const REVEAL_TIME = 8;
 
 // Fail loudly in Railway logs if a deployment contains a scenario payload that

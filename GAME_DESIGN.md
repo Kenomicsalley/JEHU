@@ -170,3 +170,25 @@ layers. Those need their own data model (persistent player progression)
 and are the natural next milestone once this three-chapter version has
 actually been played.
 
+### Campaign v1.2 — real controls and terrain hazards
+
+- **Joystick + gamepad buttons.** Movement is now a draggable on-screen
+  joystick (Pointer Events, so it works with touch or mouse) instead of
+  flat move buttons, alongside four action buttons: **A** fire, **B**
+  jump, **C** volley (a 5-arrow burst on a ~4s cooldown, available in
+  every chapter now, not just Chapter II), **D** run (a temporary speed
+  boost, also on cooldown, with a dust-trail visual). Keyboard works too:
+  arrow keys to move, Space to fire, ↑ to jump, Shift to run — same input
+  channel as the joystick, so both work simultaneously.
+- **Hurdles and traps.** Ground obstacles now spawn alongside the enemy
+  waves. Jumping over one in the right window clears it for a small score
+  bonus; missing the timing costs chariot integrity (less than an enemy
+  breakthrough, so it's a real but forgiving mechanic). You can still fire
+  while airborne — jumping was never meant to disable the bow.
+- **Terrain per chapter, not just color.** Chapter I (open road) has
+  wooden-barricade hurdles and caltrop traps; Chapter II (rocky pass) adds
+  a river band across the ground and boulder/pit hazards; Chapter III
+  (city gate) uses market-cart and collapsed-archway hazards against a
+  city-wall backdrop. Each terrain has its own ground color and hazard
+  sprite set rather than only a re-tinted background.
+

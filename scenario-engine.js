@@ -83,8 +83,14 @@ module.exports = { scenarios, chains, emergency, LEVELS, LEVEL_NAMES, levelOf, e
 // CASE FILE ENGINE: branching, multi-stage incident simulations.
 const casefiles = require('./data/casefiles.json');
 function caseFilesForDifficulty(difficulty = 'rookie') {
-  const level = levelOf(difficulty);
-  return casefiles.filter(c => (c.difficulty || 1) <= level).map(c => ({
+  // Case Files are a small, curated set (10 total) rather than a large pool
+  // like the 300 scenarios — hard-filtering by difficulty level left
+  // "Rookie" (the default for every first-time player) seeing zero results,
+  // since every case file requires difficulty >= 2. Show all of them,
+  // sorted easiest-first, and let the visible star rating communicate
+  // challenge level instead of hiding content behind an unmet threshold.
+  void levelOf(difficulty);
+  return casefiles.slice().sort((a, b) => (a.difficulty || 1) - (b.difficulty || 1)).map(c => ({
     id:c.id, title:c.title, category:c.category, difficulty:c.difficulty || 1,
     brief:c.brief, stages:c.nodes.filter(n => n.scenario).length
   }));
