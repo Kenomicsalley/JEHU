@@ -1,10 +1,195 @@
 [
-  {"id":"E01","title":"I Think My Account Was Hacked","category":"ACCOUNT TAKEOVER","steps":["Stop using suspicious links or messages connected to the incident.","Use the service's official recovery/security page from a trusted device.","Change the compromised password and any reused password; sign out unfamiliar sessions.","Turn on multi-factor authentication where available.","Check recovery email/phone, forwarding rules and recent activity for changes.","Contact the affected bank or service through its independently verified fraud/support channel if money or financial credentials are involved."],"avoid":["Do not send recovery codes to a person who contacts you.","Do not pay an unsolicited 'recovery expert'."]},
-  {"id":"E02","title":"I Gave Away My OTP, PIN or Password","category":"CREDENTIAL EXPOSURE","steps":["Treat the credential as exposed immediately.","Contact your bank/service through an official channel and explain exactly what was disclosed.","Change the exposed password and every account where it was reused.","Review active sessions, transactions and security settings.","Follow the provider's fraud and account-protection instructions."],"avoid":["Do not wait to see whether the attacker uses it.","Never give another code to 'undo' the first disclosure."]},
-  {"id":"E03","title":"Suspicious Money Entered My Account","category":"MONEY MULE / BANK FRAUD","steps":["Do not spend, withdraw or forward the unexplained funds.","Do not follow a caller's instruction to move the money to a 'safe' or different account.","Contact your bank through its official fraud/customer-service channel and report the unexpected transaction.","Keep the transaction reference, messages and other evidence.","Let the bank provide the legitimate reversal or investigation process."],"avoid":["Do not negotiate a private refund with a stranger.","Do not accept a commission for moving unexplained money."]},
-  {"id":"E04","title":"My SIM Suddenly Stopped Working","category":"SIM SWAP","steps":["Treat an unexpected loss of mobile service as a possible security incident when it is unusual or unexplained.","Contact your network provider through an official channel as quickly as possible.","Contact your bank and important account providers through trusted channels if account alerts also appeared.","Change critical passwords from a trusted device and review recent sessions.","Monitor financial transactions and security alerts."],"avoid":["Do not share OTPs or verification codes with callers claiming to be support."]},
-  {"id":"E05","title":"I Clicked a Suspicious Link","category":"PHISHING / MALWARE","steps":["Stop interacting with the page; do not enter additional credentials.","If you entered a password, change it through the real service using a trusted route.","If you entered financial information, contact your bank through an official channel.","If software was downloaded or installed, disconnect from sensitive services and seek trusted technical/security assistance.","Watch for new login alerts, password resets and unusual transactions."],"avoid":["Do not call a number shown by the suspicious page for 'support'."]},
-  {"id":"E06","title":"Money Was Sent to a Scammer","category":"FINANCIAL FRAUD","steps":["Contact your bank or payment provider immediately through its official fraud channel.","Give the transaction details and follow the provider's instructions about recall, dispute or account protection.","Preserve receipts, account details, messages and screenshots.","Secure the account if credentials were exposed.","Report the incident to the appropriate authority or platform where applicable."],"avoid":["Do not send more money to someone promising to recover the first payment."]},
-  {"id":"E07","title":"My WhatsApp or Social Account Was Taken Over","category":"ACCOUNT TAKEOVER","steps":["Warn close contacts through another trusted channel that the account may be compromised.","Use the platform's official account-recovery process.","Secure the email/phone account connected to the platform.","Review linked devices and sessions and remove anything unfamiliar.","Tell contacts not to send money or trust unusual messages from the compromised account."],"avoid":["Do not pay a stranger claiming they can recover the account."]},
-  {"id":"E08","title":"Someone Is Threatening Me Online","category":"EXTORTION AWARENESS","steps":["Do not send more money or more sensitive material just because the person threatens you.","Preserve relevant evidence such as messages, usernames, transaction details and timestamps.","Use the platform's reporting/blocking tools where appropriate.","Tell a trusted person and seek appropriate law-enforcement or specialist support when there is a credible threat.","Secure accounts and review privacy/security settings."],"avoid":["Do not meet an unknown person alone because they threaten you.","Do not delete the only copy of evidence before preserving it."]}
+  {
+    "id": "E01",
+    "title": "I Think My Account Was Hacked",
+    "category": "ACCOUNT TAKEOVER",
+    "steps": [
+      "Stop using suspicious links or messages connected to the incident.",
+      "Use the service's official recovery/security page from a trusted device.",
+      "Change the compromised password and any reused password; sign out unfamiliar sessions.",
+      "Turn on multi-factor authentication where available.",
+      "Check recovery email/phone, forwarding rules and recent activity for changes.",
+      "Contact the affected bank or service through its independently verified fraud/support channel if money or financial credentials are involved."
+    ],
+    "avoid": [
+      "Do not send recovery codes to a person who contacts you.",
+      "Do not pay an unsolicited 'recovery expert'."
+    ]
+  },
+  {
+    "id": "E02",
+    "title": "I Gave Away My OTP, PIN or Password",
+    "category": "CREDENTIAL EXPOSURE",
+    "steps": [
+      "Treat the credential as exposed immediately.",
+      "Contact your bank/service through an official channel and explain exactly what was disclosed.",
+      "Change the exposed password and every account where it was reused.",
+      "Review active sessions, transactions and security settings.",
+      "Follow the provider's fraud and account-protection instructions."
+    ],
+    "avoid": [
+      "Do not wait to see whether the attacker uses it.",
+      "Never give another code to 'undo' the first disclosure."
+    ]
+  },
+  {
+    "id": "E03",
+    "title": "Suspicious Money Entered My Account",
+    "category": "MONEY MULE / BANK FRAUD",
+    "steps": [
+      "Do not spend, withdraw or forward the unexplained funds.",
+      "Do not follow a caller's instruction to move the money to a 'safe' or different account.",
+      "Contact your bank through its official fraud/customer-service channel and report the unexpected transaction.",
+      "Keep the transaction reference, messages and other evidence.",
+      "Let the bank provide the legitimate reversal or investigation process."
+    ],
+    "avoid": [
+      "Do not negotiate a private refund with a stranger.",
+      "Do not accept a commission for moving unexplained money."
+    ]
+  },
+  {
+    "id": "E04",
+    "title": "My SIM Suddenly Stopped Working",
+    "category": "SIM SWAP",
+    "steps": [
+      "Treat an unexpected loss of mobile service as a possible security incident when it is unusual or unexplained.",
+      "Contact your network provider through an official channel as quickly as possible.",
+      "Contact your bank and important account providers through trusted channels if account alerts also appeared.",
+      "Change critical passwords from a trusted device and review recent sessions.",
+      "Monitor financial transactions and security alerts."
+    ],
+    "avoid": [
+      "Do not share OTPs or verification codes with callers claiming to be support."
+    ]
+  },
+  {
+    "id": "E05",
+    "title": "I Clicked a Suspicious Link",
+    "category": "PHISHING / MALWARE",
+    "steps": [
+      "Stop interacting with the page; do not enter additional credentials.",
+      "If you entered a password, change it through the real service using a trusted route.",
+      "If you entered financial information, contact your bank through an official channel.",
+      "If software was downloaded or installed, disconnect from sensitive services and seek trusted technical/security assistance.",
+      "Watch for new login alerts, password resets and unusual transactions."
+    ],
+    "avoid": [
+      "Do not call a number shown by the suspicious page for 'support'."
+    ]
+  },
+  {
+    "id": "E06",
+    "title": "Money Was Sent to a Scammer",
+    "category": "FINANCIAL FRAUD",
+    "steps": [
+      "Contact your bank or payment provider immediately through its official fraud channel.",
+      "Give the transaction details and follow the provider's instructions about recall, dispute or account protection.",
+      "Preserve receipts, account details, messages and screenshots.",
+      "Secure the account if credentials were exposed.",
+      "Report the incident to the appropriate authority or platform where applicable."
+    ],
+    "avoid": [
+      "Do not send more money to someone promising to recover the first payment."
+    ]
+  },
+  {
+    "id": "E07",
+    "title": "My WhatsApp or Social Account Was Taken Over",
+    "category": "ACCOUNT TAKEOVER",
+    "steps": [
+      "Warn close contacts through another trusted channel that the account may be compromised.",
+      "Use the platform's official account-recovery process.",
+      "Secure the email/phone account connected to the platform.",
+      "Review linked devices and sessions and remove anything unfamiliar.",
+      "Tell contacts not to send money or trust unusual messages from the compromised account."
+    ],
+    "avoid": [
+      "Do not pay a stranger claiming they can recover the account."
+    ]
+  },
+  {
+    "id": "E08",
+    "title": "Someone Is Threatening Me Online",
+    "category": "EXTORTION AWARENESS",
+    "steps": [
+      "Do not send more money or more sensitive material just because the person threatens you.",
+      "Preserve relevant evidence such as messages, usernames, transaction details and timestamps.",
+      "Use the platform's reporting/blocking tools where appropriate.",
+      "Tell a trusted person and seek appropriate law-enforcement or specialist support when there is a credible threat.",
+      "Secure accounts and review privacy/security settings."
+    ],
+    "avoid": [
+      "Do not meet an unknown person alone because they threaten you.",
+      "Do not delete the only copy of evidence before preserving it."
+    ]
+  },
+  {
+    "id": "E09",
+    "title": "We Suspect a Business Email Compromise",
+    "category": "ORGANIZATIONAL: BEC RESPONSE",
+    "steps": [
+      "Freeze any pending payment tied to the suspicious email immediately — contact your bank's fraud line to attempt a recall if a transfer already went out.",
+      "Verify the request through a separate, previously known channel (a phone call, not a reply to the email).",
+      "Preserve the original email with full headers; do not forward it in a way that strips that evidence.",
+      "Check for unauthorized mailbox rules (auto-forwarding, auto-delete) on the compromised account — these are a common way attackers stay hidden.",
+      "Reset the affected account's password and revoke active sessions; enable MFA if it wasn't already on.",
+      "Notify everyone who received similar requests recently, in case the same attacker contacted multiple people."
+    ],
+    "avoid": [
+      "Do not send any further payment 'to confirm' or 'to test' the account.",
+      "Do not assume it's an isolated incident until mailbox rules and recent sent mail have been checked."
+    ]
+  },
+  {
+    "id": "E10",
+    "title": "An Employee Fell for a Phishing Attempt",
+    "category": "ORGANIZATIONAL: INCIDENT RESPONSE",
+    "steps": [
+      "Have the employee report it immediately through the no-blame reporting channel — speed matters far more than avoiding embarrassment.",
+      "Isolate the affected device from the network if malware or a suspicious download was involved.",
+      "Reset any credentials entered on the phishing page, starting with the most sensitive systems.",
+      "Check whether the same phishing email was sent to other staff, and warn them before they interact with it.",
+      "Review account activity and mailbox rules for signs the attacker already acted on the access.",
+      "Log what happened and what worked, so the next incident (or the next training session) is faster."
+    ],
+    "avoid": [
+      "Do not discipline the employee for reporting it — that guarantees the next person stays quiet instead.",
+      "Do not delay isolating the device while deciding how serious it is; isolate first, assess after."
+    ]
+  },
+  {
+    "id": "E11",
+    "title": "We Need to Securely Offboard a Departing Employee",
+    "category": "ORGANIZATIONAL: ACCESS CONTROL",
+    "steps": [
+      "Revoke access to email, internal systems, shared drives, and any third-party tools on or before the employee's last working day.",
+      "Rotate any shared credentials the departing employee knew (shared logins, generic accounts, API keys).",
+      "Remove or reassign their access to social media, domain registrar, and other public-facing accounts.",
+      "Redirect or archive their email according to policy, and check for auto-forwarding rules they may have set up.",
+      "Collect company devices and confirm remote wipe capability was used if a personal device held company data.",
+      "Confirm completion against a written offboarding checklist — don't rely on memory for a process that runs every time someone leaves."
+    ],
+    "avoid": [
+      "Do not leave access active 'just in case' it's needed for a handover — grant temporary, logged access instead if that's genuinely required.",
+      "Do not treat offboarding as optional for amicable departures; the risk is the same regardless of how someone left."
+    ]
+  },
+  {
+    "id": "E12",
+    "title": "We Discovered a Vendor Payment Went to the Wrong Account",
+    "category": "ORGANIZATIONAL: VENDOR FRAUD RESPONSE",
+    "steps": [
+      "Contact your bank's fraud team immediately to attempt a recall — speed is the biggest factor in whether funds can be stopped.",
+      "Contact the real vendor through an independently verified channel to confirm the correct account and that they didn't receive payment.",
+      "Preserve the email or message that requested the bank-detail change, including headers, for the bank and any investigation.",
+      "Check whether the vendor's or your own email account shows signs of compromise (unusual mailbox rules, unfamiliar logins).",
+      "Report the incident through your local cybercrime reporting channel in addition to the bank.",
+      "Introduce or reinforce an independent verification step for any future vendor bank-detail change, so this can't repeat."
+    ],
+    "avoid": [
+      "Do not wait to 'gather more information' before contacting the bank — report first, investigate in parallel.",
+      "Do not rely solely on the vendor's own confirmation of a bank-detail change; verify through a channel they don't control."
+    ]
+  }
 ]

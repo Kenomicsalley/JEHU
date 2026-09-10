@@ -7586,5 +7586,269 @@
     "buttons": [
       "TRUST"
     ]
+  },
+  {
+    "id": "O01",
+    "title": "The Payment Approval Gap",
+    "category": "ORGANIZATIONAL SECURITY PRECAUTIONS",
+    "difficulty": 1,
+    "type": "scenario",
+    "message": "Your finance team discovers there is no dual-approval requirement for wire transfers above ₦5,000,000 — one person alone can approve and send. What do you do?",
+    "evidence": [
+      "No dual-approval control",
+      "Single point of failure",
+      "High-value transfers"
+    ],
+    "options": [
+      "Leave it as is since it hasn't caused a problem yet",
+      "Implement mandatory dual-approval for transfers above the threshold immediately",
+      "Add dual-approval only for transfers above ₦50,000,000",
+      "Ask the finance lead to informally double-check without a formal policy"
+    ],
+    "correct": 1,
+    "lesson": "A single point of approval for high-value transfers is exactly the gap business email compromise scams exploit. Formal dual-approval closes it structurally, not just by trusting one person's vigilance.",
+    "legitimate": false
+  },
+  {
+    "id": "O02",
+    "title": "The Shared Login",
+    "category": "ORGANIZATIONAL SECURITY PRECAUTIONS",
+    "difficulty": 1,
+    "type": "scenario",
+    "message": "Your team has been sharing one login for the company's accounting software for years because it's 'simpler'. What's the right move?",
+    "evidence": [
+      "Shared credentials",
+      "No individual accountability",
+      "Long-standing habit"
+    ],
+    "options": [
+      "Continue sharing it since it's convenient",
+      "Move to individual accounts with role-based access and enable MFA",
+      "Change the shared password monthly instead of individual accounts",
+      "Only share it with senior staff"
+    ],
+    "correct": 1,
+    "lesson": "Shared logins make it impossible to know who did what, and a single leaked password compromises everyone. Individual accounts with MFA fix both problems at once.",
+    "legitimate": false
+  },
+  {
+    "id": "O03",
+    "title": "The Ex-Employee's Access",
+    "category": "ORGANIZATIONAL SECURITY PRECAUTIONS",
+    "difficulty": 1,
+    "type": "scenario",
+    "message": "An employee resigned three weeks ago, but IT never received a formal offboarding request, so their access to email and internal systems is still active.",
+    "evidence": [
+      "No formal offboarding process",
+      "Access still active weeks later",
+      "Former employee"
+    ],
+    "options": [
+      "Wait until IT does its routine cleanup",
+      "Immediately revoke all access as part of a formal offboarding checklist",
+      "Just disable email but leave other systems",
+      "Ask the employee to confirm they've stopped using the accounts"
+    ],
+    "correct": 1,
+    "lesson": "Access should be revoked the moment someone leaves, not whenever it's convenient. A formal offboarding checklist makes this automatic instead of dependent on someone remembering.",
+    "legitimate": false
+  },
+  {
+    "id": "O04",
+    "title": "The New Vendor",
+    "category": "ORGANIZATIONAL SECURITY PRECAUTIONS",
+    "difficulty": 1,
+    "type": "scenario",
+    "message": "Your company is about to start paying a new vendor. There's currently no process to verify a vendor's bank details before the first payment.",
+    "evidence": [
+      "No vendor verification process",
+      "New payment relationship",
+      "Bank details from an invoice"
+    ],
+    "options": [
+      "Pay based on the details in their invoice",
+      "Verify the vendor's bank details through an independent channel — a phone call to a known contact, not the invoice — before the first payment",
+      "Ask the vendor to confirm their own details twice by email",
+      "Only verify for vendors above a certain contract size"
+    ],
+    "correct": 1,
+    "lesson": "Invoices can be intercepted or spoofed. Verifying bank details through a separate, independently-confirmed channel before the first payment is the single control that stops most vendor-fraud losses.",
+    "legitimate": false
+  },
+  {
+    "id": "O05",
+    "title": "The Password Policy",
+    "category": "ORGANIZATIONAL SECURITY PRECAUTIONS",
+    "difficulty": 2,
+    "type": "scenario",
+    "message": "An internal audit finds that most staff reuse the same password across multiple work systems, and there's no minimum password policy.",
+    "evidence": [
+      "Password reuse across systems",
+      "No minimum policy",
+      "Audit finding"
+    ],
+    "options": [
+      "Leave individual staff to manage their own passwords",
+      "Introduce a password manager, a unique-password policy, and MFA across all work systems",
+      "Just ask staff nicely to use stronger passwords",
+      "Force a password change only once a year"
+    ],
+    "correct": 1,
+    "lesson": "One reused password leaking anywhere compromises every system it's used on. A password manager plus MFA removes the temptation to reuse passwords in the first place.",
+    "legitimate": false
+  },
+  {
+    "id": "O06",
+    "title": "The Public Wi-Fi Habit",
+    "category": "ORGANIZATIONAL SECURITY PRECAUTIONS",
+    "difficulty": 2,
+    "type": "scenario",
+    "message": "Several staff regularly handle company email and files over public Wi-Fi at cafes, with no VPN requirement in place.",
+    "evidence": [
+      "Public Wi-Fi use",
+      "No VPN requirement",
+      "Sensitive company data"
+    ],
+    "options": [
+      "Allow it since it hasn't caused an issue",
+      "Require a company VPN for any work done over public networks",
+      "Ask staff to avoid email specifically on public Wi-Fi",
+      "Only restrict this for senior staff who handle sensitive data"
+    ],
+    "correct": 1,
+    "lesson": "Public networks make it easier to intercept unencrypted traffic. A VPN requirement is a simple, low-friction control that closes this gap for everyone, not just some staff.",
+    "legitimate": false
+  },
+  {
+    "id": "O07",
+    "title": "The Phishing Report Culture",
+    "category": "ORGANIZATIONAL SECURITY PRECAUTIONS",
+    "difficulty": 2,
+    "type": "scenario",
+    "message": "Staff who click suspicious links tend to stay quiet about it out of embarrassment, and there's no simple way to report a possible phishing email.",
+    "evidence": [
+      "Fear of blame",
+      "No reporting channel",
+      "Under-reported incidents"
+    ],
+    "options": [
+      "Leave it — most staff figure it out eventually",
+      "Set up a simple, no-blame reporting channel and normalize reporting early",
+      "Only address it after an actual incident occurs",
+      "Send an annual reminder email about phishing"
+    ],
+    "correct": 1,
+    "lesson": "A culture where people are afraid to report a mistake delays the response to a real incident by hours or days. A no-blame reporting channel gets IT involved while there's still time to limit the damage.",
+    "legitimate": false
+  },
+  {
+    "id": "O08",
+    "title": "The Unpatched Software",
+    "category": "ORGANIZATIONAL SECURITY PRECAUTIONS",
+    "difficulty": 2,
+    "type": "scenario",
+    "message": "IT discovers that critical software across the office hasn't been updated in several months because updates 'might disrupt work'.",
+    "evidence": [
+      "Months without updates",
+      "Known vulnerabilities unpatched",
+      "Fear of disruption"
+    ],
+    "options": [
+      "Continue delaying updates to avoid disruption",
+      "Schedule regular, tested update windows so security patches are applied promptly",
+      "Update only when something visibly breaks",
+      "Update only the software that handles payments"
+    ],
+    "correct": 1,
+    "lesson": "Unpatched software is one of the most common ways attackers get in — the vulnerability is often public knowledge. Scheduled, tested update windows balance stability with actually closing known holes.",
+    "legitimate": false
+  },
+  {
+    "id": "O09",
+    "title": "The Personal Device Policy",
+    "category": "ORGANIZATIONAL SECURITY PRECAUTIONS",
+    "difficulty": 3,
+    "type": "scenario",
+    "message": "Staff routinely use personal phones and laptops to access company email and documents, with no formal device security policy in place.",
+    "evidence": [
+      "Personal devices",
+      "No formal policy",
+      "Company data at risk"
+    ],
+    "options": [
+      "Continue allowing it freely",
+      "Introduce a bring-your-own-device policy requiring basic security — passcode, encryption, remote wipe capability — before access is granted",
+      "Ban personal devices entirely without an alternative",
+      "Only apply a policy to devices used by management"
+    ],
+    "correct": 1,
+    "lesson": "A lost or stolen personal phone with company email on it is a data breach waiting to happen. A BYOD policy with baseline security requirements protects company data without banning convenience outright.",
+    "legitimate": false
+  },
+  {
+    "id": "O10",
+    "title": "The Backup Gap",
+    "category": "ORGANIZATIONAL SECURITY PRECAUTIONS",
+    "difficulty": 3,
+    "type": "scenario",
+    "message": "Your company backs up files automatically, but nobody has ever tested whether those backups can actually be restored.",
+    "evidence": [
+      "Automatic backups running",
+      "Never tested for restoration",
+      "Assumed to work"
+    ],
+    "options": [
+      "Assume the backups are fine since they run on schedule",
+      "Regularly test restoring from backup to confirm it actually works",
+      "Only test backups after a major incident",
+      "Add more backup frequency instead of testing restoration"
+    ],
+    "correct": 1,
+    "lesson": "A backup that has never been tested is not a real backup plan — it's a hope. Ransomware recovery specifically depends on backups that are verified to actually restore, not just exist.",
+    "legitimate": false
+  },
+  {
+    "id": "O11",
+    "title": "The Social Media Access",
+    "category": "ORGANIZATIONAL SECURITY PRECAUTIONS",
+    "difficulty": 3,
+    "type": "scenario",
+    "message": "Several former employees and contractors still technically have login access to the company's social media accounts.",
+    "evidence": [
+      "Former staff retain access",
+      "No access review",
+      "Public-facing accounts"
+    ],
+    "options": [
+      "Leave it since they probably won't misuse it",
+      "Immediately revoke their access and rotate the account passwords as a standard offboarding step",
+      "Only worry about it if something goes wrong",
+      "Just remove them as 'admin' but leave other access levels"
+    ],
+    "correct": 1,
+    "lesson": "Public-facing accounts left open to former staff or contractors are a reputational risk, not just a security one. Revoking access and rotating credentials should be a standard, automatic offboarding step.",
+    "legitimate": false
+  },
+  {
+    "id": "O12",
+    "title": "The Incident Response Plan",
+    "category": "ORGANIZATIONAL SECURITY PRECAUTIONS",
+    "difficulty": 3,
+    "type": "scenario",
+    "message": "Your organization has never actually written down who does what if a cyberattack or data breach happens — it's assumed people will 'figure it out'.",
+    "evidence": [
+      "No written plan",
+      "Unclear roles",
+      "Never rehearsed"
+    ],
+    "options": [
+      "Continue without a formal plan since nothing has happened yet",
+      "Create and periodically rehearse a written incident response plan naming clear roles and responsibilities",
+      "Write a plan but never test or update it",
+      "Assign incident response informally to whoever is available at the time"
+    ],
+    "correct": 1,
+    "lesson": "During a real incident is the worst time to figure out who's in charge of what. A written, rehearsed plan turns a chaotic first hour into a manageable, practiced response.",
+    "legitimate": false
   }
 ]
