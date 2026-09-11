@@ -21,22 +21,37 @@
 <button id="homeDock" class="homeDock hidden" onclick="show('home')">⌂ HOME</button>
 
 <section id="home" class="screen active">
-  <div class="hero heroV2">
+  <div class="commandHero">
+    <div class="rankBadge"><span class="rankIcon">✦</span><div><small>CAMPAIGN RANK</small><b id="rankLabel">INITIATE</b></div></div>
+    <div class="eyebrow">JEHU • TRAIN THE HUMAN FIREWALL</div>
+    <h1>Defend the<br><em>human mind.</em></h1>
+    <p class="commandLead">JEHU is a living cybersecurity system built to train ordinary people against manipulation, fraud and AI-powered deception — and a story campaign about confronting corruption and restoring order. Pause. Verify. Decide. Defend.</p>
+    <div class="intelTicker"><span class="intelTag">INTEL</span><span id="intelLine">312 field-verified threat scenarios active in the archive.</span></div>
+    <button class="btn primary heroCTA" onclick="openJehuCampaign()">⚔️ ENTER THE CAMPAIGN</button>
+  </div>
+
+  <div class="pillarRow">
+    <button class="pillar pillarCampaign" onclick="openJehuCampaign()"><span class="pillarIcon">🐎</span><div class="pillarBody"><span class="eyebrow">PILLAR I</span><b>JEHU CAMPAIGN</b><small>A cinematic strategy-action story inspired by 2 Kings 9–10. Ride, fight, restore order.</small></div><strong>RIDE →</strong></button>
+    <button class="pillar pillarArena" onclick="document.getElementById('homeArena').scrollIntoView({behavior:'smooth'})"><span class="pillarIcon">⚔️</span><div class="pillarBody"><span class="eyebrow">PILLAR II</span><b>GRAND ARENA</b><small>Live multiplayer cyber-threat simulation. 2–8 defenders, or face the machine alone.</small></div><strong>PLAY →</strong></button>
+    <a class="pillar pillarAcademy" href="/solo/"><span class="pillarIcon">🎓</span><div class="pillarBody"><span class="eyebrow">PILLAR III</span><b>JEHU ACADEMY</b><small>Learn the patterns, practice the instincts, build your defender skill at your own pace.</small></div><strong>LEARN →</strong></a>
+  </div>
+
+  <div class="utilityRow">
+    <button class="utilityCard" onclick="openCaseFiles()"><span>📁</span><div><b>CASE FILES</b><small>Branching incidents where one decision changes the next stage.</small></div></button>
+    <button class="utilityCard" onclick="openEmergencyRoom()"><span>🚨</span><div><b>EMERGENCY ROOM</b><small>What do you do when the attack may have already happened?</small></div></button>
+  </div>
+
+  <div class="hero heroV2" id="arenaSetupHero">
     <div class="heroMain heroCinema">
-      <div class="eyebrow">JEHU • TRAIN THE HUMAN FIREWALL</div>
-      <h1>Defend the<br><em>human mind.</em></h1>
-      <p>JEHU is a living cybersecurity game built to train ordinary people against manipulation, fraud and AI-powered deception. Learn the pressure. Break the pressure. Defend the decision.</p>
-      <div class="principles"><span>PAUSE</span><span>VERIFY</span><span>DECIDE</span><span>DEFEND</span></div>
-      <div class="heroActions">
-        <button class="btn primary" onclick="document.getElementById('name').focus();document.getElementById('homeArena').scrollIntoView({behavior:'smooth'})">ENTER THE ARENA</button>
-        <button class="btn gold" onclick="openJehuCampaign()">⚔️ JEHU • BIBLICAL CAMPAIGN</button>
-      </div>
-      <div class="heroStats"><div><b>300+</b><small>Threat scenarios</small></div><div><b>40</b><small>Attack chains</small></div><div><b>10</b><small>Case Files</small></div><div><b>8</b><small>Emergency guides</small></div></div>
+      <div class="miniTitle">GRAND ARENA • PRESSURE PROTOCOL</div>
+      <h2>Choose your battlefield.</h2>
+      <p>Train alone, face the machine, or bring your people into the same threat.</p>
+      <div class="heroStats"><div><b>312</b><small>Threat scenarios</small></div><div><b>40</b><small>Attack chains</small></div><div><b>10</b><small>Case Files</small></div><div><b>12</b><small>Emergency guides</small></div></div>
     </div>
     <div class="heroCard" id="homeArena">
       <div class="miniTitle">PRESSURE PROTOCOL</div>
-      <h2>Choose your battlefield.</h2>
-      <p>Train alone, face the machine, or bring your people into the same threat.</p>
+      <h2>Set up your run.</h2>
+      <p>Everyone receives the same pressure scenario and must defend their own decision.</p>
       <label>Your defender name<input id="name" maxlength="22" placeholder="e.g. Ali"></label>
       <div class="avatars">
         <button class="avatarPick selected" data-a="🛡️">🛡️</button><button class="avatarPick" data-a="🦅">🦅</button>
@@ -55,14 +70,6 @@
     </div>
   </div>
 
-  <div class="moduleGrid">
-    <button class="moduleCard arenaModule" onclick="document.getElementById('homeArena').scrollIntoView({behavior:'smooth'})"><span class="moduleIcon">⚔️</span><div><b>JEHU ARENA</b><small>Live multiplayer cyber-threat simulation. 2–8 defenders.</small></div><strong>PLAY →</strong></button>
-    <button class="moduleCard" onclick="openEmergencyRoom()"><span class="moduleIcon">🚨</span><div><b>EMERGENCY ROOM</b><small>What do you do when the attack may have already happened?</small></div><strong>ENTER →</strong></button>
-    <button class="moduleCard" onclick="openCaseFiles()"><span class="moduleIcon">📁</span><div><b>CASE FILES</b><small>Branching incidents where one decision changes the next stage.</small></div><strong>OPEN →</strong></button>
-    <a class="moduleCard" href="/solo/"><span class="moduleIcon">🎓</span><div><b>JEHU ACADEMY</b><small>Learn the patterns, practice the instincts, build your defender skill.</small></div><strong>LEARN →</strong></a>
-    <button class="moduleCard campaignModule" onclick="openJehuCampaign()"><span class="moduleIcon">🐎</span><div><b>JEHU • BIBLICAL CAMPAIGN</b><small>A cinematic strategy-action story inspired by 2 Kings 9–10.</small></div><strong>RIDE →</strong></button>
-  </div>
-
   <div class="featureGrid">
     <article><b>🎭 Same threat, different decisions</b><small>Everyone receives the same pressure scenario and must defend their own decision.</small></article>
     <article><b>🧠 Learn the six pressure buttons</b><small>Trust, urgency, fear, curiosity, sympathy and greed become visible attack surfaces.</small></article>
@@ -72,17 +79,20 @@
 </section>
 
 <section id="jehuCampaign" class="screen">
+
   <div class="topline campaignTop"><div><div class="eyebrow">STORY CAMPAIGN • INSPIRED BY 2 KINGS 9–10</div><h2>JEHU: THE FURIOUS CHARIOT</h2><p class="muted">A cinematic, non-graphic action campaign inspired by the biblical account of Jehu. The campaign is a game adaptation, not a replacement for the biblical text.</p></div><button class="ghost" onclick="show('home')">⌂ HOME</button></div>
   <div class="campaignIntro panel">
     <div class="campaignCopy"><span class="campaignSeal">🐎</span><div><h1>Ride hard.<br><em>Answer to nothing but the mission.</em></h1><p>The throne has been given to corruption. The anointing has been placed on you to end it. Ride down the men sent to stop you, break the house that built its power on injustice, and clear out what's left standing in the stronghold — so that order, and something worth calling justice, can be rebuilt where it was lost.</p></div></div>
-    <div class="campaignChapters">
-      <button class="chapter active" data-mission="ride" onclick="selectCampaignMission('ride')"><span>Ⅰ</span><b>The Furious Ride</b><small>Horse • bow • pursuit</small></button>
-      <button class="chapter" data-mission="chariot" onclick="selectCampaignMission('chariot')"><span>Ⅱ</span><b>Chariot of Fire</b><small>Volley • formation • defense</small></button>
-      <button class="chapter" data-mission="city" onclick="selectCampaignMission('city')"><span>Ⅲ</span><b>Siege of the Stronghold</b><small>Strategy • gates • command</small></button>
-    </div>
+    <div class="campaignChapters" id="worldMap"></div>
+  </div>
+  <div class="panel progressionPanel">
+    <div class="topline"><div><div class="eyebrow">DEFENDER PROGRESSION</div><h2 style="margin:4px 0">Gold <b id="goldTotal">0</b> 🪙</h2></div><small class="muted">Earned from Treasure chests. Spend it to grow stronger before harder chapters.</small></div>
+    <div class="statUpgrades" id="statUpgrades"></div>
   </div>
   <div class="campaignGame panel">
-    <div class="campaignHUD"><span id="campaignMissionLabel">MISSION I • THE FURIOUS RIDE</span><span>WAVE <b id="campaignWave">1</b>/3</span><span>SCORE <b id="campaignScore">0</b></span><span>CHARIOT INTEGRITY <b id="campaignHP">100</b>%</span></div>
+    <div class="campaignHUD"><span id="campaignMissionLabel">MISSION I • THE FURIOUS RIDE</span><span>WAVE <b id="campaignWave">1</b>/3</span><span>SCORE <b id="campaignScore">0</b></span><span>GOLD <b id="campaignGold">0</b> 🪙</span><span>CHARIOT INTEGRITY <b id="campaignHP">100</b>%</span></div>
+    <div class="bossBar hidden" id="bossBar"><span id="bossName">BOSS</span><div class="meter"><i id="bossHpFill"></i></div></div>
+    <div class="bossBar wagonBar hidden" id="wagonBar"><span>🛒 SUPPLY WAGON</span><div class="meter"><i id="wagonHpFill" style="background:linear-gradient(90deg,#8cf4b2,#35dc7c)"></i></div></div>
     <div class="canvasWrap">
       <canvas id="jehuCanvas" width="1100" height="560" aria-label="JEHU biblical campaign game"></canvas>
       <div class="missionBriefing" id="missionBriefing">
@@ -94,6 +104,13 @@
             <div class="objective"><b>PRIMARY</b><span id="objPrimary"></span></div>
             <div class="objective"><b>SECONDARY</b><span id="objSecondary"></span></div>
             <div class="objective"><b>MASTERY</b><span id="objMaster"></span></div>
+          </div>
+          <div class="routeChoice hidden" id="routeChoice">
+            <div class="eyebrow">CHOOSE YOUR ROUTE</div>
+            <div class="routeOptions">
+              <button class="routeOpt selected" id="routeOpenBtn" onclick="selectRoute('open')"><b>OPEN ROAD</b><small>More riders. None of them elite.</small></button>
+              <button class="routeOpt" id="routeRiverBtn" onclick="selectRoute('river')"><b>RIVER SHORTCUT</b><small>Faster, but whoever's guarding it has had time to prepare.</small></button>
+            </div>
           </div>
           <button class="btn gold" onclick="beginCampaignMission()">⚔️ BEGIN MISSION</button>
         </div>
