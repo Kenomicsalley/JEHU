@@ -170,6 +170,111 @@ layers. Those need their own data model (persistent player progression)
 and are the natural next milestone once this three-chapter version has
 actually been played.
 
+### Campaign v1.3 — progression system, world map, bosses (the "not attempted" list, attempted)
+
+Everything flagged as deferred above is now built, using `localStorage`
+only — zero database, zero ongoing cost:
+
+- **Save state**: `localStorage` persists gold, four stat levels, and
+  per-chapter unlock/star state across sessions (`SAVE_KEY =
+  'jehuCampaignSave.v1'`). No accounts needed, same reasoning as JEHU CAMP's
+  zero-cost design elsewhere in this project.
+- **World map**: the chapter selector is now driven by save state —
+  locked chapters show 🔒 and can't be clicked; completed chapters show
+  their earned stars (★☆☆ to ★★★).
+- **Progression (Riding / Archery / Chariot / Command)**: four stats,
+  levels 1–5 each, bought with Gold on an increasing cost curve (50 → 100
+  → 175 → 275 per level, 600 to max one stat, 2,400 to max all four).
+  Riding raises move speed, Archery lowers fire cooldown, Chariot raises
+  max integrity and reduces damage taken, Command shortens Volley/Run
+  cooldowns. Verified numerically (not just read through) that every stat
+  scales monotonically across all 5 levels and respects its floor/ceiling.
+- **Gold economy**: earned from Treasure pickups during a run (+12 each)
+  and a mission-completion bonus (30 flat + 15 per star). Gold collected
+  during a run is kept even on failure — only the completion bonus and
+  chapter unlock require winning. A typical 3-star run funds roughly 1/6
+  of a single stat's full upgrade path.
+- **New chapter: Megiddo: The Pursuit** (Mission III), inserted between
+  Chariot of Fire and The Stronghold — a faster-paced pursuit chapter,
+  still on horseback, ending in a boss encounter.
+- **Bosses**: Megiddo's Pursuit Champion (3 hits) and the Stronghold's
+  final boss (6 hits) replace the last wave's normal formation with a
+  single multi-hit target that periodically attacks — jumping at the
+  right moment dodges the attack instead of just clearing a hurdle,
+  reusing the same jump mechanic for a second purpose rather than adding
+  a new one.
+- **Pickups**: Blood Bank (+15 integrity) and Treasure (+12 gold) spawn
+  on the ground track alongside hurdles and traps, auto-collected on
+  reaching the front line — no jump needed, since they're a bonus, not a
+  hazard.
+
+Still not attempted, and still a real future milestone, not a quiet
+downgrade of the ask: city-siege-specific strategy layers beyond the
+existing defensive framing, and cross-device save sync (today's save is
+per-browser, per-device, same as any `localStorage`-based save).
+
+### Master Blueprint v1.0 — Phase 1 (visual identity) + Phase 3 (combat depth)
+
+Following the blueprint's own sequencing ("no feature starts without
+fitting the system first"), this pass rebuilt the design foundation and
+the combat layer together.
+
+**Phase 1 — design system:**
+- New CSS design tokens: obsidian/charcoal base, aged gold (authority),
+  restrained crimson (danger), bone/ivory text. Electric cyan is now
+  *restricted* to Arena/cyber contexts specifically, not used globally —
+  matching the blueprint's critique that the old palette made every
+  module look the same.
+- Typography: Oswald (condensed display, for mission titles and impact
+  moments) + Inter (body/data), loaded via Google Fonts.
+- Command Center rebuild: a real hero with a rank badge (computed from
+  campaign star totals), a rotating "intel" ticker, and one dominant CTA
+  — replacing the old flat 5-card grid. Campaign / Grand Arena / Academy
+  are now three large, visually distinct primary pillars; Case Files and
+  Emergency Room are a visually subordinate secondary row, matching the
+  blueprint's hierarchy rule.
+- Explicitly *not* attempted: bespoke illustrated iconography (still
+  emoji-based in most spots) and composed audio — flagged as a real gap,
+  not silently skipped, since neither is achievable without an art/audio
+  pipeline this environment doesn't have.
+
+**Phase 3 — combat depth, plus a real bug fix found while building it:**
+- **Found and fixed:** roughly half of every wave's enemies (the "top
+  row" of the spawn grid) were mathematically unreachable by normal fire
+  — verified numerically before and after the fix. Fixed with a fire-time
+  aim-assist (arrows are biased 85% toward the nearest live target's
+  height at the moment they're loosed, not gradually homed in flight —
+  arrows cross the screen in about one frame at this game's speed, so
+  in-flight homing would have been meaningless; the bias had to happen at
+  the point of firing instead).
+- **Four enemy archetypes**, each with genuinely different movement and a
+  distinct sprite (not just a recolor): Rusher (default approach),
+  Weaver (sine-wave vertical movement, harder to predict), Blocker (slow,
+  2 hits to kill), Strafer (holds position, periodically attacks at
+  range — dodgeable with a well-timed jump, reusing the jump mechanic a
+  third way). Verified every mission's enemy-mix array references real
+  archetype keys (a typo here would have silently fallen back to Rusher
+  rather than erroring).
+- **Destructible crates**: a bonus, not a hazard — must be shot for +18
+  gold; ignoring one costs nothing. Genuine "environment matters"
+  interaction per the blueprint's ask.
+- **Rescue objective**: Chariot of Fire adds a Supply Wagon (visible on
+  screen, not just a HUD stat) that Raider-archetype enemies beeline for
+  instead of the player. Protecting it is a bonus (+25 gold), not a hard
+  requirement — deliberately kept non-blocking so it can't break the
+  existing, tested mastery-star formula for other missions.
+- **Branching route**: The Furious Ride now opens with a real choice —
+  Open Road (more enemies, easier mix) vs River Shortcut (fewer enemies,
+  tougher mix) — chosen at the briefing screen, changing that run's
+  actual enemy composition, not just flavor text.
+
+Deferred from the blueprint's "advanced version" tier on purpose: weapon
+loadouts with resource trade-offs, elite enemy variants, multi-phase
+telegraphed boss attacks with arena changes, and branching routes in more
+than one chapter. Same reasoning as everywhere else in this project: ship
+a real, tested version of the minimum viable tier before reaching for the
+advanced one.
+
 ### Campaign v1.2 — real controls and terrain hazards
 
 - **Joystick + gamepad buttons.** Movement is now a draggable on-screen

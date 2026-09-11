@@ -60,6 +60,49 @@ multiplayer even after bug 2 was fixed. Both needed fixing.
    server-authoritative round timer and the client display default, for
    both Arena and Computer mode.
 
+## v2.4 — Chariot progression system + new content
+
+**Chariot campaign is now a real progression game**, not three standalone
+levels — see `GAME_DESIGN.md`'s "Campaign v1.3" section for the full
+breakdown: a world map with lock/star state, four upgradeable stats
+(Riding/Archery/Chariot/Command) funded by Treasure pickups and mission
+gold, a new chapter (Megiddo: The Pursuit) between Chariot of Fire and The
+Stronghold, and boss encounters on the last wave of Megiddo and The
+Stronghold. All of it runs on `localStorage` — no database, no added
+cost. The stat-scaling formulas were verified numerically across their
+full range before shipping, not just read through.
+
+**Content expanded**: 12 new "Organizational Security Precautions"
+scenarios (O01–O12) — decision-based, same format as everything else,
+covering the proactive/policy side of cyber defense (dual-approval
+controls, offboarding, vendor verification, patching, backups, incident
+response plans) rather than only reactive scam recognition. Plus 4 new
+Emergency Room playbooks for organizational incidents (suspected BEC, an
+employee falling for phishing, secure offboarding, a vendor payment gone
+to the wrong account). Scenario bank: 300 → 312. Emergency playbooks: 8 →
+12.
+
+## v2.5 — Master Blueprint Phase 1 (visual system) + Phase 3 (combat depth)
+
+Built against `JEHU_Master_Redesign_Blueprint_1.0` — verified its central
+factual claims against the real data file before trusting the rest of it
+(it checked out exactly: 312 scenarios, 201 distinct option sets, 305/7
+correct-index split). Full breakdown in `GAME_DESIGN.md`'s "Master
+Blueprint v1.0" section. Highlights:
+
+- Real design system: new color tokens, typography, a rebuilt Command
+  Center with three primary pillars instead of a flat module grid.
+- **A genuine, previously-unknown gameplay bug found and fixed**: roughly
+  half of each wave's enemies were mathematically unreachable by normal
+  fire (verified numerically). Fixed with fire-time aim assist.
+- Four distinct enemy archetypes, destructible crates, a rescue objective
+  (protect the Supply Wagon), and a branching route choice in Mission I —
+  all in the "minimum viable" tier from the blueprint's own tables, with
+  the "advanced" tier (loadouts, elite variants, multi-phase bosses)
+  explicitly deferred, not silently dropped.
+- Phase 2 (Arena option/position rebalancing) intentionally deferred to
+  a later pass, per direct instruction.
+
 ### JEHU — Train the Human Firewall
 
 JEHU Arena is a browser-based cybersecurity awareness game. V2 keeps the real-time multiplayer experience and adds **JEHU vs Computer**, with four difficulty levels.
